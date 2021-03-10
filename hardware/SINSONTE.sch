@@ -101,8 +101,6 @@ F 3 "~" H 4250 2650 50  0001 C CNN
 	1    4250 2650
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	6300 3650 6500 3650
 $Comp
 L Switch:SW_Push SW1
 U 1 1 60495A78
@@ -126,17 +124,7 @@ F 3 "~" H 7850 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4600 5050 4600 4950
-Wire Wire Line
-	4600 2750 4900 2750
-Wire Wire Line
 	4300 5250 4300 4750
-Wire Wire Line
-	6500 3650 6500 4750
-Wire Wire Line
-	6500 4750 4750 4750
-Wire Wire Line
-	4750 4750 4750 4150
 Wire Wire Line
 	4750 4150 4300 4150
 Wire Wire Line
@@ -240,39 +228,7 @@ Wire Wire Line
 	7750 3150 7850 3150
 Wire Wire Line
 	7450 3150 6300 3150
-$Comp
-L Device:R R5
-U 1 1 605289B3
-P 8050 3150
-F 0 "R5" H 8120 3196 50  0000 L CNN
-F 1 "R" H 8120 3105 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 7980 3150 50  0001 C CNN
-F 3 "~" H 8050 3150 50  0001 C CNN
-	1    8050 3150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 60528F57
-P 8300 3400
-F 0 "C3" H 8415 3446 50  0000 L CNN
-F 1 "C" H 8415 3355 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8338 3250 50  0001 C CNN
-F 3 "~" H 8300 3400 50  0001 C CNN
-	1    8300 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7850 3150 7900 3150
 Connection ~ 7850 3150
-Wire Wire Line
-	8200 3150 8300 3150
-Wire Wire Line
-	8300 3150 8300 3250
-Wire Wire Line
-	8300 3550 8300 4950
-Wire Wire Line
-	8300 4950 7850 4950
 $Comp
 L Device:CP C4
 U 1 1 6052DBA1
@@ -298,28 +254,22 @@ $EndComp
 $Comp
 L Device:R R6
 U 1 1 60536D0E
-P 8650 2650
-F 0 "R6" H 8720 2696 50  0000 L CNN
-F 1 "R" H 8720 2605 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8580 2650 50  0001 C CNN
-F 3 "~" H 8650 2650 50  0001 C CNN
-	1    8650 2650
+P 8650 2900
+F 0 "R6" H 8720 2946 50  0000 L CNN
+F 1 "R" H 8720 2855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8580 2900 50  0001 C CNN
+F 3 "~" H 8650 2900 50  0001 C CNN
+	1    8650 2900
 	1    0    0    -1  
 $EndComp
-Connection ~ 8300 3150
 Wire Wire Line
 	8600 3150 8650 3150
 Wire Wire Line
-	8650 2800 8650 3150
+	8650 3050 8650 3150
 Connection ~ 8650 3150
 Wire Wire Line
 	8650 3150 8700 3150
-Wire Wire Line
-	8650 2500 8650 2150
-Wire Wire Line
-	8650 2150 6600 2150
 Connection ~ 6600 2150
-Connection ~ 8300 4950
 $Comp
 L Device:Speaker LS1
 U 1 1 60540C5C
@@ -333,9 +283,8 @@ F 3 "~" H 9190 2350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9000 2150 9000 2400
-Connection ~ 8650 2150
 Wire Wire Line
-	9000 2950 9000 2500
+	9000 2950 9000 2650
 $Comp
 L Connector:Conn_01x02_Male J3
 U 1 1 6047B078
@@ -349,15 +298,6 @@ F 3 "~" H 7500 3600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6300 2950 6700 2950
-Wire Wire Line
-	7300 4950 7050 4950
-Connection ~ 7850 4950
-Wire Wire Line
-	4600 4950 7050 4950
-Connection ~ 4600 4950
-Wire Wire Line
-	4600 4950 4600 2750
-Connection ~ 7300 4950
 Wire Wire Line
 	9000 4950 9000 3350
 $Comp
@@ -413,19 +353,8 @@ Wire Wire Line
 Wire Wire Line
 	6850 4150 6900 4150
 Wire Wire Line
-	6300 4150 6550 4150
-Wire Wire Line
-	7050 4350 7050 4950
-Connection ~ 7050 4950
-Wire Wire Line
 	7050 2950 6700 2950
 Connection ~ 6700 2950
-Wire Wire Line
-	8650 2150 9000 2150
-Wire Wire Line
-	8300 4950 9000 4950
-Wire Wire Line
-	7300 4950 7850 4950
 Wire Wire Line
 	7050 2950 7050 3950
 Wire Wire Line
@@ -434,4 +363,50 @@ Wire Wire Line
 	2900 2150 3800 2150
 Wire Wire Line
 	2900 5750 3800 5750
+Wire Wire Line
+	7850 4950 9000 4950
+Wire Wire Line
+	7850 3150 8300 3150
+Wire Wire Line
+	4900 4250 4600 4250
+Wire Wire Line
+	4900 4450 4800 4450
+Wire Wire Line
+	4800 4450 4800 4800
+Wire Wire Line
+	4800 4800 6550 4800
+Wire Wire Line
+	6550 4800 6550 4150
+Wire Wire Line
+	4900 4350 4750 4350
+Wire Wire Line
+	4750 4350 4750 4150
+Wire Wire Line
+	6300 2750 6450 2750
+Wire Wire Line
+	6450 2750 6450 4950
+Wire Wire Line
+	4600 4250 4600 4900
+Wire Wire Line
+	7300 4950 7850 4950
+Connection ~ 7300 4950
+Connection ~ 7850 4950
+Wire Wire Line
+	6600 2150 9000 2150
+Wire Wire Line
+	8650 2750 8650 2650
+Wire Wire Line
+	8650 2650 9000 2650
+Connection ~ 9000 2650
+Wire Wire Line
+	9000 2650 9000 2500
+Wire Wire Line
+	6450 4950 7300 4950
+Wire Wire Line
+	7050 4350 7050 4900
+Wire Wire Line
+	7050 4900 4600 4900
+Connection ~ 4600 4900
+Wire Wire Line
+	4600 4900 4600 5050
 $EndSCHEMATC
