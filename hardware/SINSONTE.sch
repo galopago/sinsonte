@@ -298,8 +298,6 @@ F 3 "~" H 7500 3600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6300 2950 6700 2950
-Wire Wire Line
-	9000 4950 9000 3350
 $Comp
 L Device:R R7
 U 1 1 604BEFDB
@@ -349,8 +347,6 @@ $EndComp
 Wire Wire Line
 	7850 3600 7850 4950
 Wire Wire Line
-	7300 3700 7300 4950
-Wire Wire Line
 	6850 4150 6900 4150
 Wire Wire Line
 	7050 2950 6700 2950
@@ -363,8 +359,6 @@ Wire Wire Line
 	2900 2150 3800 2150
 Wire Wire Line
 	2900 5750 3800 5750
-Wire Wire Line
-	7850 4950 9000 4950
 Wire Wire Line
 	7850 3150 8300 3150
 Wire Wire Line
@@ -388,10 +382,6 @@ Wire Wire Line
 Wire Wire Line
 	4600 4250 4600 4900
 Wire Wire Line
-	7300 4950 7850 4950
-Connection ~ 7300 4950
-Connection ~ 7850 4950
-Wire Wire Line
 	6600 2150 9000 2150
 Wire Wire Line
 	8650 2750 8650 2650
@@ -401,12 +391,27 @@ Connection ~ 9000 2650
 Wire Wire Line
 	9000 2650 9000 2500
 Wire Wire Line
-	6450 4950 7300 4950
-Wire Wire Line
 	7050 4350 7050 4900
 Wire Wire Line
 	7050 4900 4600 4900
 Connection ~ 4600 4900
 Wire Wire Line
 	4600 4900 4600 5050
+Wire Wire Line
+	6300 4250 6400 4250
+Wire Wire Line
+	6400 4250 6400 5000
+Wire Wire Line
+	6400 5000 7200 5000
+Wire Wire Line
+	9000 3350 9000 5000
+Wire Wire Line
+	6450 4950 7850 4950
+Wire Wire Line
+	7300 3700 7200 3700
+Wire Wire Line
+	7200 3700 7200 5000
+Connection ~ 7200 5000
+Wire Wire Line
+	7200 5000 9000 5000
 $EndSCHEMATC
