@@ -69,17 +69,6 @@ F 3 "~" H 4300 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R3
-U 1 1 60465274
-P 4050 5250
-F 0 "R3" H 4120 5296 50  0000 L CNN
-F 1 "R" H 4120 5205 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 3980 5250 50  0001 C CNN
-F 3 "~" H 4050 5250 50  0001 C CNN
-	1    4050 5250
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:CP C1
 U 1 1 60465AFE
 P 3800 5500
@@ -142,8 +131,6 @@ Wire Wire Line
 	4300 5750 4600 5750
 Connection ~ 4300 5750
 Wire Wire Line
-	4200 5250 4300 5250
-Wire Wire Line
 	3800 5350 3800 5250
 Wire Wire Line
 	3800 5650 3800 5750
@@ -183,8 +170,6 @@ Wire Wire Line
 Connection ~ 2900 3250
 Wire Wire Line
 	2900 3250 2900 2150
-Wire Wire Line
-	3800 5250 3900 5250
 Wire Wire Line
 	3800 2500 3800 2450
 Connection ~ 3800 2150
@@ -414,4 +399,6 @@ Wire Wire Line
 Connection ~ 7200 5000
 Wire Wire Line
 	7200 5000 9000 5000
+Wire Wire Line
+	3800 5250 4300 5250
 $EndSCHEMATC
