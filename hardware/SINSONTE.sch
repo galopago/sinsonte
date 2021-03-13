@@ -115,9 +115,7 @@ $EndComp
 Wire Wire Line
 	4300 5250 4300 4750
 Wire Wire Line
-	4750 4150 4300 4150
-Wire Wire Line
-	4300 4150 4300 4450
+	4300 4200 4300 4450
 Wire Wire Line
 	6300 2650 6600 2650
 Wire Wire Line
@@ -357,10 +355,6 @@ Wire Wire Line
 Wire Wire Line
 	6550 4800 6550 4150
 Wire Wire Line
-	4900 4350 4750 4350
-Wire Wire Line
-	4750 4350 4750 4150
-Wire Wire Line
 	6300 2750 6450 2750
 Wire Wire Line
 	6450 2750 6450 4950
@@ -401,4 +395,55 @@ Wire Wire Line
 	7200 5000 9000 5000
 Wire Wire Line
 	3800 5250 4300 5250
+$Comp
+L Connector:Conn_01x17_Male J4
+U 1 1 604C5DB6
+P 4550 3350
+F 0 "J4" H 4658 4331 50  0000 C CNN
+F 1 "Conn_01x17_Male" H 4658 4240 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x17_P2.54mm_Vertical" H 4550 3350 50  0001 C CNN
+F 3 "~" H 4550 3350 50  0001 C CNN
+	1    4550 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4350 4450 4200
+Wire Wire Line
+	4450 4200 4300 4200
+Wire Wire Line
+	4450 4350 4900 4350
+Wire Wire Line
+	4750 2550 4900 2550
+Wire Wire Line
+	4750 2650 4900 2650
+Wire Wire Line
+	4750 2750 4900 2750
+Wire Wire Line
+	4750 2850 4900 2850
+Wire Wire Line
+	4750 2950 4900 2950
+Wire Wire Line
+	4750 3050 4900 3050
+Wire Wire Line
+	4750 3150 4900 3150
+Wire Wire Line
+	4750 3250 4900 3250
+Wire Wire Line
+	4750 3350 4900 3350
+Wire Wire Line
+	4750 3450 4900 3450
+Wire Wire Line
+	4750 3550 4900 3550
+Wire Wire Line
+	4750 3650 4900 3650
+Wire Wire Line
+	4750 3750 4900 3750
+Wire Wire Line
+	4750 3850 4900 3850
+Wire Wire Line
+	4750 3950 4900 3950
+Wire Wire Line
+	4750 4050 4900 4050
+Wire Wire Line
+	4750 4150 4900 4150
 $EndSCHEMATC
