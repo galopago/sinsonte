@@ -240,11 +240,9 @@ Wire Wire Line
 Wire Wire Line
 	8250 3150 8300 3150
 Wire Wire Line
-	4900 4250 4600 4250
+	4900 4250 4800 4250
 Wire Wire Line
 	4900 4450 4800 4450
-Wire Wire Line
-	4800 4450 4800 4800
 Wire Wire Line
 	7100 4800 7100 4150
 Wire Wire Line
@@ -289,7 +287,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 2650 4900 2650
 Wire Wire Line
-	4750 2750 4900 2750
+	4750 2750 4800 2750
 Wire Wire Line
 	4750 2850 4900 2850
 Wire Wire Line
@@ -299,7 +297,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 3150 4900 3150
 Wire Wire Line
-	4750 3250 4900 3250
+	4750 3250 4800 3250
 Wire Wire Line
 	4750 3350 4900 3350
 Wire Wire Line
@@ -309,7 +307,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 3650 4900 3650
 Wire Wire Line
-	4750 3750 4900 3750
+	4750 3750 4800 3750
 Wire Wire Line
 	4750 3850 4900 3850
 Wire Wire Line
@@ -551,7 +549,7 @@ $EndComp
 Wire Wire Line
 	6300 3650 6600 3650
 Wire Wire Line
-	6450 2750 6450 4950
+	6450 2750 6450 3250
 $Comp
 L Connector:Conn_01x04_Male J12
 U 1 1 6084391D
@@ -633,4 +631,42 @@ Wire Wire Line
 	6300 4350 6600 4350
 Wire Wire Line
 	6300 4450 6600 4450
+Wire Wire Line
+	4800 2750 4800 3250
+Connection ~ 4800 2750
+Wire Wire Line
+	4800 2750 4900 2750
+Connection ~ 4800 3250
+Wire Wire Line
+	4800 3250 4900 3250
+Wire Wire Line
+	4800 3250 4800 3750
+Connection ~ 4800 3750
+Wire Wire Line
+	4800 3750 4900 3750
+Wire Wire Line
+	4800 3750 4800 4250
+Connection ~ 4800 4250
+Wire Wire Line
+	4800 4250 4600 4250
+Wire Wire Line
+	6400 3250 6450 3250
+Connection ~ 6400 3250
+Connection ~ 6450 3250
+Wire Wire Line
+	6450 3250 6450 4250
+Wire Wire Line
+	6400 4250 6450 4250
+Connection ~ 6400 4250
+Connection ~ 6450 4250
+Wire Wire Line
+	6450 4250 6450 4950
+Wire Wire Line
+	4800 4450 4800 4800
+Wire Wire Line
+	4600 4900 4600 5000
+Wire Wire Line
+	4600 5000 6400 5000
+Connection ~ 4600 4900
+Connection ~ 6400 5000
 $EndSCHEMATC
