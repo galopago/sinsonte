@@ -970,9 +970,9 @@ Discarded input sections
                 0x0000000000000000       0x46 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .rodata.__func__.4410
                 0x0000000000000000        0xd CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .text          0x0000000000000000        0x0 /tmp/ccZvAt3b.o
- .data          0x0000000000000000        0x0 /tmp/ccZvAt3b.o
- .bss           0x0000000000000000        0x0 /tmp/ccZvAt3b.o
+ .text          0x0000000000000000        0x0 /tmp/ccvYkae7.o
+ .data          0x0000000000000000        0x0 /tmp/ccvYkae7.o
+ .bss           0x0000000000000000        0x0 /tmp/ccvYkae7.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-atexit.o)
@@ -1084,7 +1084,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/ccZvAt3b.o
+ .boot2         0x0000000010000000      0x100 /tmp/ccvYkae7.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -2103,7 +2103,7 @@ LOAD CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_com
 LOAD CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 LOAD CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-LOAD /tmp/ccZvAt3b.o
+LOAD /tmp/ccvYkae7.o
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2200,7 +2200,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000000000005e1       0x2b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .ARM.attributes
-                0x000000000000060c       0x22 /tmp/ccZvAt3b.o
+                0x000000000000060c       0x22 /tmp/ccvYkae7.o
  .ARM.attributes
                 0x000000000000062e       0x1e /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes

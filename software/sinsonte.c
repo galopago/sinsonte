@@ -109,7 +109,7 @@ int main(void) {
 	
 	gpio_init(POWERON);
 	gpio_set_dir(POWERON,GPIO_OUT);
-	gpio_put(POWERON,1);
+	gpio_put(POWERON,0);
 		
 	// read actual hour data from flash!
 	
@@ -183,7 +183,7 @@ int main(void) {
 					}
 					
 					// Shut down I/O								
-					gpio_put(POWERON,0);
+					gpio_put(POWERON,1);
 						
 					while(1)
 					{sleep_us(1);}						
