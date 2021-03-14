@@ -199,7 +199,7 @@ F 3 "~" H 7200 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 3050 7200 3200
+	7200 2850 7200 3200
 Wire Wire Line
 	6300 3450 7050 3450
 Wire Wire Line
@@ -249,8 +249,6 @@ Wire Wire Line
 	7100 4800 7100 4150
 Wire Wire Line
 	6300 2750 6450 2750
-Wire Wire Line
-	6450 2750 6450 4950
 Wire Wire Line
 	8650 2750 8650 2650
 Wire Wire Line
@@ -336,21 +334,19 @@ Wire Wire Line
 Wire Wire Line
 	4600 4900 7650 4900
 Wire Wire Line
-	7200 3050 7650 3050
+	7200 2850 7650 2850
 Wire Wire Line
 	4800 4800 7100 4800
 Wire Wire Line
 	6600 2650 6450 2650
 Connection ~ 6450 2650
 Wire Wire Line
-	7650 3050 7650 3950
+	7650 2850 7650 3950
 Wire Wire Line
-	7200 3050 6400 3050
-Wire Wire Line
-	6400 3050 6400 2950
+	7200 2850 6400 2850
 Wire Wire Line
 	6400 2950 6300 2950
-Connection ~ 7200 3050
+Connection ~ 7200 2850
 $Comp
 L Connector:Conn_01x01_Male J6
 U 1 1 605AAAE1
@@ -402,8 +398,8 @@ Wire Wire Line
 Wire Wire Line
 	9000 2300 7650 2300
 Wire Wire Line
-	7650 2300 7650 3050
-Connection ~ 7650 3050
+	7650 2300 7650 2850
+Connection ~ 7650 2850
 Wire Wire Line
 	4600 4250 4600 4900
 Wire Wire Line
@@ -457,17 +453,6 @@ Wire Wire Line
 	6350 2400 4250 2400
 Wire Wire Line
 	4250 2400 4250 3450
-$Comp
-L Connector:Conn_01x02_Male J9
-U 1 1 607093E7
-P 3550 3900
-F 0 "J9" H 3550 4100 50  0000 C CNN
-F 1 "PROG" H 3450 4000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3550 3900 50  0001 C CNN
-F 3 "~" H 3550 3900 50  0001 C CNN
-	1    3550 3900
-	-1   0    0    -1  
-$EndComp
 Connection ~ 3900 2150
 Wire Wire Line
 	2500 2150 3900 2150
@@ -494,11 +479,7 @@ Connection ~ 2500 3000
 Wire Wire Line
 	2500 3000 2500 4900
 Wire Wire Line
-	3000 3900 3000 3850
-Wire Wire Line
 	3050 4000 3000 4000
-Wire Wire Line
-	3000 4000 3000 4050
 Wire Wire Line
 	3000 4150 2900 4150
 Wire Wire Line
@@ -536,14 +517,86 @@ Connection ~ 3750 3650
 Wire Wire Line
 	3750 3650 3900 3650
 Wire Wire Line
-	3350 4000 3300 4000
+	6450 4950 4250 4950
 Wire Wire Line
-	3300 4000 3300 4050
+	4250 4950 4250 4900
+Connection ~ 6450 4950
+Connection ~ 4250 4900
 Wire Wire Line
-	3300 4050 3000 4050
-Connection ~ 3000 4050
+	6400 2850 6400 2950
+$Comp
+L Connector:Conn_01x01_Male J10
+U 1 1 6082CC33
+P 6800 3050
+F 0 "J10" H 6772 3074 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 6772 2983 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6800 3050 50  0001 C CNN
+F 3 "~" H 6800 3050 50  0001 C CNN
+	1    6800 3050
+	-1   0    0    -1  
+$EndComp
 Wire Wire Line
-	3000 4050 3000 4150
+	6300 3050 6600 3050
+$Comp
+L Connector:Conn_01x01_Male J11
+U 1 1 60836840
+P 6800 3650
+F 0 "J11" H 6772 3674 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 6772 3583 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6800 3650 50  0001 C CNN
+F 3 "~" H 6800 3650 50  0001 C CNN
+	1    6800 3650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3650 6600 3650
+Wire Wire Line
+	6450 2750 6450 4950
+$Comp
+L Connector:Conn_01x04_Male J12
+U 1 1 6084391D
+P 6800 3950
+F 0 "J12" H 6772 3924 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 6772 3833 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6800 3950 50  0001 C CNN
+F 3 "~" H 6800 3950 50  0001 C CNN
+	1    6800 3950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3850 6600 3850
+Wire Wire Line
+	6300 3950 6600 3950
+Wire Wire Line
+	6300 4050 6600 4050
+Wire Wire Line
+	6300 4150 6600 4150
+$Comp
+L Connector:Conn_01x01_Male J13
+U 1 1 60872957
+P 6800 2550
+F 0 "J13" H 6772 2574 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 6772 2483 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6800 2550 50  0001 C CNN
+F 3 "~" H 6800 2550 50  0001 C CNN
+	1    6800 2550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 2550 6600 2550
+$Comp
+L Connector:Conn_01x03_Male J9
+U 1 1 60882A91
+P 3550 4000
+F 0 "J9" H 3522 4024 50  0000 R CNN
+F 1 "PROG" H 3522 3933 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3550 4000 50  0001 C CNN
+F 3 "~" H 3550 4000 50  0001 C CNN
+	1    3550 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3650 3000 3850
 Wire Wire Line
 	3350 3900 3300 3900
 Wire Wire Line
@@ -552,11 +605,32 @@ Wire Wire Line
 	3300 3850 3000 3850
 Connection ~ 3000 3850
 Wire Wire Line
-	3000 3850 3000 3650
+	3000 3850 3000 3900
 Wire Wire Line
-	6450 4950 4250 4950
+	3000 4000 3000 4050
 Wire Wire Line
-	4250 4950 4250 4900
-Connection ~ 6450 4950
-Connection ~ 4250 4900
+	3350 4000 3300 4000
+Wire Wire Line
+	3300 4000 3300 4050
+Wire Wire Line
+	3300 4050 3000 4050
+Connection ~ 3000 4050
+Wire Wire Line
+	3000 4050 3000 4150
+NoConn ~ 3350 4100
+$Comp
+L Connector:Conn_01x02_Male J14
+U 1 1 608B2996
+P 6800 4350
+F 0 "J14" H 6772 4324 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 6772 4233 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6800 4350 50  0001 C CNN
+F 3 "~" H 6800 4350 50  0001 C CNN
+	1    6800 4350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4350 6600 4350
+Wire Wire Line
+	6300 4450 6600 4450
 $EndSCHEMATC
