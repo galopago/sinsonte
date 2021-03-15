@@ -41,7 +41,7 @@ U 1 1 60462339
 P 4150 3650
 F 0 "Q1" H 4354 3696 50  0000 L CNN
 F 1 "2N7000" H 4354 3605 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4350 3575 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 4350 3575 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4150 3650 50  0001 L CNN
 	1    4150 3650
 	1    0    0    -1  
@@ -328,8 +328,6 @@ F 3 "~" H 6800 2650 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	6450 4950 8250 4950
-Wire Wire Line
 	4600 4900 7650 4900
 Wire Wire Line
 	7200 2850 7650 2850
@@ -515,10 +513,7 @@ Connection ~ 3750 3650
 Wire Wire Line
 	3750 3650 3900 3650
 Wire Wire Line
-	6450 4950 4250 4950
-Wire Wire Line
 	4250 4950 4250 4900
-Connection ~ 6450 4950
 Connection ~ 4250 4900
 Wire Wire Line
 	6400 2850 6400 2950
@@ -658,9 +653,20 @@ Wire Wire Line
 Wire Wire Line
 	6400 4250 6450 4250
 Connection ~ 6400 4250
+Wire Wire Line
+	4800 4450 4800 4800
+Wire Wire Line
+	4600 4900 4600 5000
+Wire Wire Line
+	4600 5000 6400 5000
+Connection ~ 4600 4900
+Connection ~ 6400 5000
+Wire Wire Line
+	6450 4950 8250 4950
+Wire Wire Line
+	6450 4950 4250 4950
+Connection ~ 6450 4950
 Connection ~ 6450 4250
 Wire Wire Line
 	6450 4250 6450 4950
-Wire Wire Line
-	4800 4450 4800 4800
 $EndSCHEMATC
