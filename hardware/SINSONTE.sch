@@ -610,7 +610,6 @@ Wire Wire Line
 Connection ~ 3000 4050
 Wire Wire Line
 	3000 4050 3000 4150
-NoConn ~ 3350 4100
 $Comp
 L Connector:Conn_01x02_Male J14
 U 1 1 608B2996
@@ -669,4 +668,9 @@ Connection ~ 6450 4950
 Connection ~ 6450 4250
 Wire Wire Line
 	6450 4250 6450 4950
+Wire Wire Line
+	3350 4100 3300 4100
+Wire Wire Line
+	3300 4100 3300 4050
+Connection ~ 3300 4050
 $EndSCHEMATC
