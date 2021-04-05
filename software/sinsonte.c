@@ -32,6 +32,7 @@
 #include "8.h"
 #include "9.h"
 #include "10.h"
+#include "11.h"
 
 int wav_position = 0;
 uint8_t hour_count = 0;
@@ -182,7 +183,12 @@ int main(void) {
 	if(hour_count==10)
 	{
 		wav_data = (const uint8_t *) &WAV_DATA_10;
-		wav_data_length = WAV_DATA_9_LENGTH;
+		wav_data_length = WAV_DATA_10_LENGTH;
+	}
+	if(hour_count==11)
+	{
+		wav_data = (const uint8_t *) &WAV_DATA_11;
+		wav_data_length = WAV_DATA_11_LENGTH;
 	}
 	
 	// start playing sound
@@ -198,7 +204,7 @@ int main(void) {
 					irq_set_enabled(PWM_IRQ_WRAP, false);			      				
 								    						
 					// calculate next hour
-					if(hour_count>9)
+					if(hour_count>10)
 					{hour_count=0;}
 					else
 					{hour_count++;}

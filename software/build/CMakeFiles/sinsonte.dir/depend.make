@@ -798,6 +798,7 @@ CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/p
 
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../1.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../10.h
+CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../11.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../12.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../2.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../3.h
