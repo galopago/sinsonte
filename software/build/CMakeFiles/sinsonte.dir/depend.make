@@ -797,11 +797,16 @@ CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/p
 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: generated/pico_base/pico/version.h
 
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../1.h
+CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../10.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../12.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../2.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../3.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../4.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../5.h
+CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../6.h
+CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../7.h
+CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../8.h
+CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../9.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: ../sinsonte.c
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/boards/include/boards/pico.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico.h

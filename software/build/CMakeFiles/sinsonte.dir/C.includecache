@@ -8,6 +8,8 @@
 
 /home/oportunidad/Desktop/repos/SINSONTE/software/1.h
 
+/home/oportunidad/Desktop/repos/SINSONTE/software/10.h
+
 /home/oportunidad/Desktop/repos/SINSONTE/software/12.h
 
 /home/oportunidad/Desktop/repos/SINSONTE/software/2.h
@@ -17,6 +19,14 @@
 /home/oportunidad/Desktop/repos/SINSONTE/software/4.h
 
 /home/oportunidad/Desktop/repos/SINSONTE/software/5.h
+
+/home/oportunidad/Desktop/repos/SINSONTE/software/6.h
+
+/home/oportunidad/Desktop/repos/SINSONTE/software/7.h
+
+/home/oportunidad/Desktop/repos/SINSONTE/software/8.h
+
+/home/oportunidad/Desktop/repos/SINSONTE/software/9.h
 
 /home/oportunidad/Desktop/repos/SINSONTE/software/sinsonte.c
 stdio.h
@@ -45,6 +55,16 @@ hardware/flash.h
 /home/oportunidad/Desktop/repos/SINSONTE/software/4.h
 5.h
 /home/oportunidad/Desktop/repos/SINSONTE/software/5.h
+6.h
+/home/oportunidad/Desktop/repos/SINSONTE/software/6.h
+7.h
+/home/oportunidad/Desktop/repos/SINSONTE/software/7.h
+8.h
+/home/oportunidad/Desktop/repos/SINSONTE/software/8.h
+9.h
+/home/oportunidad/Desktop/repos/SINSONTE/software/9.h
+10.h
+/home/oportunidad/Desktop/repos/SINSONTE/software/10.h
 
 /home/oportunidad/Desktop/repos/pico-sdk/src/boards/include/boards/pico.h
 
