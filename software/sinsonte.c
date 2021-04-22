@@ -16,7 +16,7 @@
 
 
 /* 
- * This include brings in static arrays which contain audio samples. 
+ * This includes brings in static arrays which contain audio samples. 
  * if you want to know how to make these please see the python code
  * for converting audio samples into static arrays. 
  */
@@ -42,7 +42,7 @@ const uint8_t * wav_data;
 uint8_t flash_buff[FLASH_PAGE_SIZE];
 uint32_t wav_data_length;
 
-const uint8_t * flash_storage_r = (const uint8_t *) (XIP_BASE+(FLASH_SECTOR_SIZE*511));		// first byte of last sector of flash
+const uint8_t * flash_storage_r = (const uint8_t *) (XIP_BASE+(FLASH_SECTOR_SIZE*511));		// first byte of last sector of flash used as storage
 const uint8_t * flash_storage_w = (const uint8_t *) (FLASH_SECTOR_SIZE*511);
 
 /*
@@ -214,6 +214,8 @@ int main(void) {
 					if (flash_updated == 0 )													
 					{
 						flash_updated = 1;
+						// crude flash storage code!!!
+						// one write/erase cycle per hour, 24 per day, 8760 per year. W25Q16JVUXIQ 100K cycles per sector, so a couple of years! 
 						flash_range_erase((uint32_t)flash_storage_w,FLASH_SECTOR_SIZE);
 						flash_range_program((uint32_t)flash_storage_w,flash_buff,FLASH_PAGE_SIZE);
 					}
@@ -226,6 +228,7 @@ int main(void) {
       			}
     			else
     			{
+    				// doing "someting" between sound samples interrupts
     				sleep_us(1);
     			}        		
     		}	
