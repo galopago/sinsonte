@@ -122,7 +122,6 @@ Wire Wire Line
 	8100 3150 8250 3150
 Wire Wire Line
 	7800 3150 6300 3150
-Connection ~ 8250 3150
 $Comp
 L Device:CP C4
 U 1 1 6052DBA1
@@ -132,7 +131,7 @@ F 1 "100uF" V 8286 3150 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 8488 3000 50  0001 C CNN
 F 3 "~" H 8450 3150 50  0001 C CNN
 	1    8450 3150
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $Comp
 L Transistor_BJT:PN2222A Q2
@@ -157,10 +156,7 @@ F 3 "~" H 8650 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8600 3150 8650 3150
-Wire Wire Line
 	8650 3050 8650 3150
-Connection ~ 8650 3150
 Wire Wire Line
 	8650 3150 8700 3150
 $Comp
@@ -237,8 +233,6 @@ Wire Wire Line
 	8250 3650 8250 4950
 Wire Wire Line
 	7400 4150 7500 4150
-Wire Wire Line
-	8250 3150 8300 3150
 Wire Wire Line
 	4900 4250 4800 4250
 Wire Wire Line
@@ -673,4 +667,10 @@ Wire Wire Line
 Wire Wire Line
 	3300 4100 3300 4050
 Connection ~ 3300 4050
+Wire Wire Line
+	8300 3150 8250 3150
+Connection ~ 8250 3150
+Wire Wire Line
+	8600 3150 8650 3150
+Connection ~ 8650 3150
 $EndSCHEMATC
