@@ -195,8 +195,6 @@ F 3 "~" H 7200 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 2850 7200 3200
-Wire Wire Line
 	6300 3450 7050 3450
 Wire Wire Line
 	7050 3450 7050 3600
@@ -255,16 +253,7 @@ Wire Wire Line
 Wire Wire Line
 	6400 4250 6400 5000
 Wire Wire Line
-	6400 5000 7900 5000
-Wire Wire Line
 	9000 3350 9000 5000
-Wire Wire Line
-	7950 3700 7900 3700
-Wire Wire Line
-	7900 3700 7900 5000
-Connection ~ 7900 5000
-Wire Wire Line
-	7900 5000 9000 5000
 $Comp
 L Connector:Conn_01x17_Male J4
 U 1 1 604C5DB6
@@ -324,8 +313,6 @@ $EndComp
 Wire Wire Line
 	4600 4900 7650 4900
 Wire Wire Line
-	7200 2850 7650 2850
-Wire Wire Line
 	4800 4800 7100 4800
 Wire Wire Line
 	6600 2650 6450 2650
@@ -333,10 +320,7 @@ Connection ~ 6450 2650
 Wire Wire Line
 	7650 2850 7650 3950
 Wire Wire Line
-	7200 2850 6400 2850
-Wire Wire Line
 	6400 2950 6300 2950
-Connection ~ 7200 2850
 $Comp
 L Connector:Conn_01x01_Male J6
 U 1 1 605AAAE1
@@ -673,4 +657,21 @@ Connection ~ 8250 3150
 Wire Wire Line
 	8600 3150 8650 3150
 Connection ~ 8650 3150
+Wire Wire Line
+	6400 5000 6950 5000
+Wire Wire Line
+	7750 3700 7750 2850
+Wire Wire Line
+	7750 2850 7650 2850
+Wire Wire Line
+	7750 3700 7950 3700
+Wire Wire Line
+	6400 2850 7650 2850
+Wire Wire Line
+	7200 3200 6950 3200
+Wire Wire Line
+	6950 3200 6950 5000
+Connection ~ 6950 5000
+Wire Wire Line
+	6950 5000 9000 5000
 $EndSCHEMATC
