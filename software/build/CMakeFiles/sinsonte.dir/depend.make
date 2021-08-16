@@ -269,6 +269,32 @@ CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_
 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.c.obj: generated/pico_base/pico/config_autogen.h
 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.c.obj: generated/pico_base/pico/version.h
 
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/boards/include/boards/pico.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico/assert.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico/config.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico/error.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico/types.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: generated/pico_base/pico/config_autogen.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: generated/pico_base/pico/version.h
+
 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/boards/include/boards/pico.h
 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico.h
 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico/assert.h
@@ -818,6 +844,7 @@ CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/include/pico/time.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h
@@ -826,12 +853,14 @@ CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h
+CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pwm.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h
+CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h
 CMakeFiles/sinsonte.dir/sinsonte.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h

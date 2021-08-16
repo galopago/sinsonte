@@ -45,6 +45,8 @@ hardware/sync.h
 /home/oportunidad/Desktop/repos/SINSONTE/software/hardware/sync.h
 hardware/flash.h
 /home/oportunidad/Desktop/repos/SINSONTE/software/hardware/flash.h
+hardware/adc.h
+/home/oportunidad/Desktop/repos/SINSONTE/software/hardware/adc.h
 12.h
 /home/oportunidad/Desktop/repos/SINSONTE/software/12.h
 1.h
@@ -136,6 +138,8 @@ hardware/timer.h
 hardware/regs/addressmap.h
 /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/hardware/regs/addressmap.h
 
+/home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h
+
 /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
 
 /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
@@ -151,6 +155,12 @@ hardware/regs/addressmap.h
 /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
 
 /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h
+
+/home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h
+hardware/address_mapped.h
+/home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/address_mapped.h
+hardware/regs/adc.h
+/home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/regs/adc.h
 
 /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
 hardware/address_mapped.h
@@ -197,6 +207,14 @@ hardware/address_mapped.h
 /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/address_mapped.h
 hardware/regs/uart.h
 /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/regs/uart.h
+
+/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h
+pico.h
+/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include/hardware/pico.h
+hardware/structs/adc.h
+/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include/hardware/hardware/structs/adc.h
+hardware/gpio.h
+/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include/hardware/hardware/gpio.h
 
 /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
 pico.h

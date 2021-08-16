@@ -269,6 +269,32 @@ CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
  generated/pico_base/pico/config_autogen.h
  generated/pico_base/pico/version.h
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+ /home/oportunidad/Desktop/repos/pico-sdk/src/boards/include/boards/pico.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico/assert.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico/config.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico/error.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico/types.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
+ generated/pico_base/pico/config_autogen.h
+ generated/pico_base/pico/version.h
 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
  /home/oportunidad/Desktop/repos/pico-sdk/src/boards/include/boards/pico.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_base/include/pico.h
@@ -819,6 +845,7 @@ CMakeFiles/sinsonte.dir/sinsonte.c.obj
  /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/include/pico/time.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h
@@ -827,12 +854,14 @@ CMakeFiles/sinsonte.dir/sinsonte.c.obj
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pwm.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h
+ /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h

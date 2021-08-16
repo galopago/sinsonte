@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/datetime.c.obj"
   "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj"
   "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.c.obj"
+  "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
   "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
   "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
   "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"

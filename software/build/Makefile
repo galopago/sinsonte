@@ -418,6 +418,33 @@ home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.c.s:
 	$(MAKE) -f CMakeFiles/sinsonte.dir/build.make CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.c.s
 
+home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.obj: home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+
+.PHONY : home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.obj
+
+# target to build an object file
+home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj:
+	$(MAKE) -f CMakeFiles/sinsonte.dir/build.make CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+.PHONY : home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+
+home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.i: home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+.PHONY : home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.i
+
+# target to preprocess a source file
+home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.i:
+	$(MAKE) -f CMakeFiles/sinsonte.dir/build.make CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.s: home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
+.PHONY : home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.s
+
+# target to generate assembly for a file
+home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.s:
+	$(MAKE) -f CMakeFiles/sinsonte.dir/build.make CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
 home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.obj: home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
 .PHONY : home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.obj
@@ -1286,6 +1313,9 @@ help:
 	@echo "... home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.obj"
 	@echo "... home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.i"
 	@echo "... home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.s"
+	@echo "... home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.obj"
+	@echo "... home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.i"
+	@echo "... home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.s"
 	@echo "... home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.obj"
 	@echo "... home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.i"
 	@echo "... home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.s"

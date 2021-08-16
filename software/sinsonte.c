@@ -5,14 +5,17 @@
 #include "hardware/gpio.h" // gpio push-button 
 #include "hardware/sync.h" // wait for interrupt 
 #include "hardware/flash.h" // read/store from flash
+#include "hardware/adc.h" // analog light sensor
 
  
 // Audio PIN is to match some of the design guide shields. 
 #define AUDIO_PIN 28  // you can change this to whatever you like
 
 
-#define LED 	25 	// Onboard debug led
-#define POWERON 14  // Poweron/poweroff pin (via external mosfet)
+#define LED 		   25	// Onboard debug led
+#define POWERON 	   14	// Poweron/poweroff pin (via external mosfet)
+#define LIGHTSENSOR    26	// analog light sensor to detect nightime
+#define ADC_INPUT_LIGHT 0	// analog light sensor to detect nightime
 
 
 /* 
@@ -34,6 +37,9 @@
 #include "10.h"
 #include "11.h"
 
+const float adc_conv_factor = 3.3f / (1<<12);
+const float light_sensor_threshold = 0.08 ;
+bool nightime = 0;
 int wav_position = 0;
 uint8_t hour_count = 0;
 bool play_sound = 0;
@@ -58,8 +64,15 @@ void pwm_interrupt_handler() {
     // set pwm level 
     // allow the pwm value to repeat for 8 cycles this is >>3 
     
-    if (wav_position < (wav_data_length<<3) - 1) { 
-			pwm_set_gpio_level(AUDIO_PIN, wav_data[wav_position>>3]);  
+    if (wav_position < (wav_data_length<<3) - 1) {
+    		if(nightime==1) 
+    			{
+    				pwm_set_gpio_level(AUDIO_PIN, 0);  
+    			}
+    		else
+    			{	
+					pwm_set_gpio_level(AUDIO_PIN, wav_data[wav_position>>3]);  
+				}
 			wav_position++;         						
 		}
 	else
@@ -116,6 +129,21 @@ int main(void) {
 	gpio_init(POWERON);
 	gpio_set_dir(POWERON,GPIO_OUT);
 	gpio_put(POWERON,0);
+
+	// Init adc and check light sensor (nightime!)
+	adc_init();	
+	adc_gpio_init(LIGHTSENSOR);
+	adc_select_input(ADC_INPUT_LIGHT);
+	uint16_t adcresult=adc_read();
+	printf("Raw:0x%03x,Volt:%f V\n",adcresult,adcresult * adc_conv_factor);
+	if(adcresult * adc_conv_factor < light_sensor_threshold )
+		{
+			nightime=1;
+		}
+	else
+		{
+			nightime=0;	
+		}
 		
 	// read actual hour data from flash!
 	

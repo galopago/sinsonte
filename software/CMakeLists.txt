@@ -32,6 +32,7 @@ target_link_libraries(sinsonte
 		pico_stdlib
 		hardware_pwm
 		hardware_flash
+		hardware_adc
 		)
 
 pico_add_extra_outputs(sinsonte)

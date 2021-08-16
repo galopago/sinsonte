@@ -580,6 +580,19 @@ CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c -o CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: CMakeFiles/sinsonte.dir/flags.make
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj   -c /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c
+
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c > CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c -o CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
 # Object files for target sinsonte
 sinsonte_OBJECTS = \
 "CMakeFiles/sinsonte.dir/sinsonte.c.obj" \
@@ -628,7 +641,8 @@ sinsonte_OBJECTS = \
 "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj" \
 "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
 "CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" \
-"CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
+"CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj" \
+"CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
 
 # External object files for target sinsonte
 sinsonte_EXTERNAL_OBJECTS =
@@ -680,10 +694,11 @@ sinsonte.elf: CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/sr
 sinsonte.elf: CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 sinsonte.elf: CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 sinsonte.elf: CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+sinsonte.elf: CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
 sinsonte.elf: CMakeFiles/sinsonte.dir/build.make
 sinsonte.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 sinsonte.elf: CMakeFiles/sinsonte.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Linking CXX executable sinsonte.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Linking CXX executable sinsonte.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sinsonte.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objcopy -Oihex sinsonte.elf sinsonte.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary sinsonte.elf sinsonte.bin

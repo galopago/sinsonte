@@ -83,6 +83,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/include"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pwm/include"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/include"
+  "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include"
   )
 set(CMAKE_DEPENDS_CHECK_C
   "/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/critical_section.c" "/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/critical_section.c.obj"
@@ -94,6 +95,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/datetime.c" "/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/datetime.c.obj"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c" "/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.c" "/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/queue.c.obj"
+  "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c" "/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c" "/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c" "/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
@@ -186,6 +188,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/include"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pwm/include"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/include"
+  "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "/home/oportunidad/Desktop/repos/SINSONTE/software/build/CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
@@ -255,6 +258,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/include"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pwm/include"
   "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/include"
+  "/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include"
   )
 
 # Targets to which this target links.
