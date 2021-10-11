@@ -13,15 +13,14 @@
 #define AUDIO_PIN 28  // you can change this to whatever you like
 
 
-#define LED 		   25	// Onboard debug led
-#define POWERON 	   14	// Poweron/poweroff pin (via external mosfet)
-#define LIGHTSENSOR    26	// analog light sensor to detect nightime
-#define ADC_INPUT_LIGHT 0	// analog light sensor to detect nightime
-
-#define UART_ID uart1
-#define BAUD_RATE 115200
-#define UART_TX_PIN 4
-#define UART_RX_PIN 5
+#define LED 		   		25	// Onboard debug led
+#define POWERON 	   		14	// Poweron/poweroff pin (via external mosfet)
+#define LIGHTSENSOR    		26	// analog light sensor to detect nightime
+#define ADC_INPUT_LIGHT 	 0	// analog light sensor to detect nightime
+#define UART_ID 		 uart0  // UART0 is used by printf()
+#define BAUD_RATE  		115200
+#define UART_TX_PIN 		 0
+#define UART_RX_PIN 		 1
 
 /* 
  * This includes brings in static arrays which contain audio samples. 
@@ -42,9 +41,24 @@
 #include "10.h"
 #include "11.h"
 
+// *****************************************************
+// TEPT5700 sensor with 10K resistor aprox ADC readings
+// *****************************************************
+// LUX(MS6610)    RAW		    VOLT
+//
+//  48			0x0a8		0.135352
+//  33			0x070		0.090234
+//  21			0x054		0.067676
+//  14			0x03b		0.047534
+//   7			0x033		0.041089
+//   6			0x029		0.033032
+//   5			0x031		0.039478
+//   4			0x026		0.030615
+   
 const float adc_conv_factor = 3.3f / (1<<12);
-const float light_sensor_threshold = 0.08 ;
+const float light_sensor_threshold = 0.039 ;
 bool nightime = 0;
+
 int wav_position = 0;
 uint8_t hour_count = 0;
 bool play_sound = 0;
@@ -98,7 +112,6 @@ int main(void) {
      */
     stdio_init_all();
     set_sys_clock_khz(176000, true); 
-    //set_sys_clock_khz(48000, true); 			// UART debug ADC
     gpio_set_function(AUDIO_PIN, GPIO_FUNC_PWM);
 
     int audio_pin_slice = pwm_gpio_to_slice_num(AUDIO_PIN);
@@ -136,30 +149,18 @@ int main(void) {
 	gpio_set_dir(POWERON,GPIO_OUT);
 	gpio_put(POWERON,0);
 
-	// Set up our UART with the required speed.
+	//UART for debug setup
     uart_init(UART_ID, BAUD_RATE);
-
-    // Set the TX and RX pins by using the function select on the GPIO
-    // Set datasheet for more information on function select
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
     gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
     
-	// Init adc and check light sensor (nightime!)
-	
-	
+	// Init adc and check light sensor (nightime!)		
 	adc_init();	
 	adc_gpio_init(LIGHTSENSOR);
 	adc_select_input(ADC_INPUT_LIGHT);
 	uint16_t adcresult=adc_read();
-	//printf("ZZ\n",adcresult,adcresult * adc_conv_factor);
-	//printf("Raw:0x%03x,Volt:%f V\n",adcresult,adcresult * adc_conv_factor);
 
-	// Send out a character without any conversions
-    uart_putc_raw(UART_ID, 'A');
-    // Send out a character but do CR/LF conversions
-    uart_putc(UART_ID, 'B');
-    // Send out a string, with CR/LF conversions
-    uart_puts(UART_ID, " Hello, UART!\n");	
+	//printf("Raw:0x%03x,Volt:%f V\n",adcresult,adcresult * adc_conv_factor);
     
     
 	if(adcresult * adc_conv_factor < light_sensor_threshold )
