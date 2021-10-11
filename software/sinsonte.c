@@ -6,6 +6,7 @@
 #include "hardware/sync.h" // wait for interrupt 
 #include "hardware/flash.h" // read/store from flash
 #include "hardware/adc.h" // analog light sensor
+#include "hardware/uart.h" // analog light sensor
 
  
 // Audio PIN is to match some of the design guide shields. 
@@ -17,6 +18,10 @@
 #define LIGHTSENSOR    26	// analog light sensor to detect nightime
 #define ADC_INPUT_LIGHT 0	// analog light sensor to detect nightime
 
+#define UART_ID uart1
+#define BAUD_RATE 115200
+#define UART_TX_PIN 4
+#define UART_RX_PIN 5
 
 /* 
  * This includes brings in static arrays which contain audio samples. 
@@ -93,6 +98,7 @@ int main(void) {
      */
     stdio_init_all();
     set_sys_clock_khz(176000, true); 
+    //set_sys_clock_khz(48000, true); 			// UART debug ADC
     gpio_set_function(AUDIO_PIN, GPIO_FUNC_PWM);
 
     int audio_pin_slice = pwm_gpio_to_slice_num(AUDIO_PIN);
@@ -130,12 +136,32 @@ int main(void) {
 	gpio_set_dir(POWERON,GPIO_OUT);
 	gpio_put(POWERON,0);
 
+	// Set up our UART with the required speed.
+    uart_init(UART_ID, BAUD_RATE);
+
+    // Set the TX and RX pins by using the function select on the GPIO
+    // Set datasheet for more information on function select
+    gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
+    gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
+    
 	// Init adc and check light sensor (nightime!)
+	
+	
 	adc_init();	
 	adc_gpio_init(LIGHTSENSOR);
 	adc_select_input(ADC_INPUT_LIGHT);
 	uint16_t adcresult=adc_read();
-	printf("Raw:0x%03x,Volt:%f V\n",adcresult,adcresult * adc_conv_factor);
+	//printf("ZZ\n",adcresult,adcresult * adc_conv_factor);
+	//printf("Raw:0x%03x,Volt:%f V\n",adcresult,adcresult * adc_conv_factor);
+
+	// Send out a character without any conversions
+    uart_putc_raw(UART_ID, 'A');
+    // Send out a character but do CR/LF conversions
+    uart_putc(UART_ID, 'B');
+    // Send out a string, with CR/LF conversions
+    uart_puts(UART_ID, " Hello, UART!\n");	
+    
+    
 	if(adcresult * adc_conv_factor < light_sensor_threshold )
 		{
 			nightime=1;
@@ -144,7 +170,7 @@ int main(void) {
 		{
 			nightime=0;	
 		}
-		
+			
 	// read actual hour data from flash!
 	
 	if(flash_storage_r[0]>11)

@@ -47,6 +47,8 @@ hardware/flash.h
 /home/oportunidad/Desktop/repos/SINSONTE/software/hardware/flash.h
 hardware/adc.h
 /home/oportunidad/Desktop/repos/SINSONTE/software/hardware/adc.h
+hardware/uart.h
+/home/oportunidad/Desktop/repos/SINSONTE/software/hardware/uart.h
 12.h
 /home/oportunidad/Desktop/repos/SINSONTE/software/12.h
 1.h
