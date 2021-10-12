@@ -14,6 +14,7 @@
 
 
 #define LED 		   		25	// Onboard debug led
+#define LED_EXTERNAL   		21	// External led
 #define POWERON 	   		14	// Poweron/poweroff pin (via external mosfet)
 #define LIGHTSENSOR    		26	// analog light sensor to detect nightime
 #define ADC_INPUT_LIGHT 	 0	// analog light sensor to detect nightime
@@ -21,6 +22,7 @@
 #define BAUD_RATE  		115200
 #define UART_TX_PIN 		 0
 #define UART_RX_PIN 		 1
+
 
 /* 
  * This includes brings in static arrays which contain audio samples. 
@@ -91,6 +93,16 @@ void pwm_interrupt_handler() {
     		else
     			{	
 					pwm_set_gpio_level(AUDIO_PIN, wav_data[wav_position>>3]);  
+					
+					// External led blink with sound
+					if( wav_data[wav_position>>3] > 128 )
+					{
+						gpio_put(LED_EXTERNAL,1);
+					}
+					else
+					{
+						gpio_put(LED_EXTERNAL,0);
+					}
 				}
 			wav_position++;         						
 		}
@@ -144,6 +156,10 @@ int main(void) {
 	gpio_init(LED);
 	gpio_set_dir(LED,GPIO_OUT);
 	gpio_put(LED,1);
+
+	gpio_init(LED_EXTERNAL);
+	gpio_set_dir(LED_EXTERNAL,GPIO_OUT);
+	gpio_put(LED_EXTERNAL,0);
 	
 	gpio_init(POWERON);
 	gpio_set_dir(POWERON,GPIO_OUT);

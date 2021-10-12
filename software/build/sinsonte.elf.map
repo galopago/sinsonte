@@ -755,6 +755,8 @@ Discarded input sections
                 0x0000000000000000       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.float2ufix64
                 0x0000000000000000       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .text.__wrap___aeabi_f2d
+                0x0000000000000000       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.__wrap_srqtf
                 0x0000000000000000       0x24 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.__wrap_cosf
@@ -868,6 +870,8 @@ Discarded input sections
                 0x0000000000000000       0x4c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .text.d2fix_a_float
                 0x0000000000000000       0x5c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .text.float2double_shim
+                0x0000000000000000       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .text          0x0000000000000000        0x0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -961,9 +965,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
- .text          0x0000000000000000        0x0 /tmp/cccz5YvT.o
- .data          0x0000000000000000        0x0 /tmp/cccz5YvT.o
- .bss           0x0000000000000000        0x0 /tmp/cccz5YvT.o
+ .text          0x0000000000000000        0x0 /tmp/ccMihdJT.o
+ .data          0x0000000000000000        0x0 /tmp/ccMihdJT.o
+ .bss           0x0000000000000000        0x0 /tmp/ccMihdJT.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-atexit.o)
@@ -1075,11 +1079,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/cccz5YvT.o
+ .boot2         0x0000000010000000      0x100 /tmp/ccMihdJT.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x50b0
+.text           0x0000000010000100     0x5080
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1139,451 +1143,444 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .text*)
  .text          0x00000000100002c4       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  .text.pwm_interrupt_handler
-                0x000000001000035c       0x7c CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x000000001000035c       0xa0 CMakeFiles/sinsonte.dir/sinsonte.c.obj
                 0x000000001000035c                pwm_interrupt_handler
- .text.main     0x00000000100003d8      0x358 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x00000000100003d8                main
+ .text.main     0x00000000100003fc      0x34c CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x00000000100003fc                main
  .text.set_sys_clock_pll
-                0x0000000010000730       0x7c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-                0x0000000010000730                set_sys_clock_pll
+                0x0000000010000748       0x7c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+                0x0000000010000748                set_sys_clock_pll
  .text.check_sys_clock_khz
-                0x00000000100007ac       0xb0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-                0x00000000100007ac                check_sys_clock_khz
+                0x00000000100007c4       0xb0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+                0x00000000100007c4                check_sys_clock_khz
  .text.gpio_set_function
-                0x000000001000085c       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x000000001000085c                gpio_set_function
+                0x0000000010000874       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000874                gpio_set_function
  .text.gpio_set_pulls
-                0x000000001000088c       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x000000001000088c                gpio_set_pulls
+                0x00000000100008a4       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x00000000100008a4                gpio_set_pulls
  .text.gpio_set_input_enabled
-                0x00000000100008c0       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x00000000100008c0                gpio_set_input_enabled
+                0x00000000100008d8       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x00000000100008d8                gpio_set_input_enabled
  .text.gpio_init
-                0x00000000100008f0       0x16 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x00000000100008f0                gpio_init
- *fill*         0x0000000010000906        0x2 
+                0x0000000010000908       0x16 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000908                gpio_init
+ *fill*         0x000000001000091e        0x2 
  .text.hw_claim_lock
-                0x0000000010000908       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010000908                hw_claim_lock
+                0x0000000010000920       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010000920                hw_claim_lock
  .text.hw_claim_unlock
-                0x0000000010000920       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010000920                hw_claim_unlock
+                0x0000000010000938       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010000938                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x0000000010000934       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010000934                hw_claim_or_assert
+                0x000000001000094c       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x000000001000094c                hw_claim_or_assert
  .text.spin_locks_reset
-                0x0000000010000968       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000968                spin_locks_reset
+                0x0000000010000980       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000980                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x0000000010000988       0x1c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000988                next_striped_spin_lock_num
+                0x00000000100009a0       0x1c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x00000000100009a0                next_striped_spin_lock_num
  .text.running_on_fpga
-                0x00000000100009a4       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x00000000100009a4                running_on_fpga
+                0x00000000100009bc       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x00000000100009bc                running_on_fpga
  .text.uart_set_baudrate
-                0x00000000100009b8       0x64 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x00000000100009b8                uart_set_baudrate
+                0x00000000100009d0       0x64 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x00000000100009d0                uart_set_baudrate
  .text.uart_set_translate_crlf
-                0x0000000010000a1c       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x0000000010000a1c                uart_set_translate_crlf
+                0x0000000010000a34       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x0000000010000a34                uart_set_translate_crlf
  .text.uart_init
-                0x0000000010000a44       0x80 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x0000000010000a44                uart_init
+                0x0000000010000a5c       0x80 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x0000000010000a5c                uart_init
  .text.sev_callback
-                0x0000000010000ac4        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000adc        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
  .text.timer_pool_entry_comparator
-                0x0000000010000acc       0x7c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000acc                timer_pool_entry_comparator
+                0x0000000010000ae4       0x7c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000ae4                timer_pool_entry_comparator
  .text.ph_add_child_node
-                0x0000000010000b48       0xa4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000b60       0xa4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
  .text.ph_merge_nodes
-                0x0000000010000bec       0x3e CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x0000000010000c2a        0x2 
+                0x0000000010000c04       0x3e CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x0000000010000c42        0x2 
  .text.add_alarm_under_lock
-                0x0000000010000c2c      0x178 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000c44      0x178 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x0000000010000da4      0x2e8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000dbc      0x2e8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_get_default
-                0x000000001000108c       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
-                0x000000001000108c                alarm_pool_get_default
+                0x00000000100010a4       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100010a4                alarm_pool_get_default
  .text.alarm_pool_create
-                0x00000000100010b4       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100010b4                alarm_pool_create
+                0x00000000100010cc       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100010cc                alarm_pool_create
  .text.alarm_pool_init_default
-                0x0000000010001120       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001120                alarm_pool_init_default
+                0x0000000010001138       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001138                alarm_pool_init_default
  .text.alarm_pool_add_alarm_at
-                0x0000000010001140      0x12c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001140                alarm_pool_add_alarm_at
+                0x0000000010001158      0x12c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001158                alarm_pool_add_alarm_at
  .text.sleep_until
-                0x000000001000126c       0x94 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
-                0x000000001000126c                sleep_until
+                0x0000000010001284       0x94 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001284                sleep_until
  .text.sleep_us
-                0x0000000010001300       0x2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001300                sleep_us
+                0x0000000010001318       0x2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001318                sleep_us
  .text.hardware_alarm_irq_handler
-                0x000000001000132c       0x8c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001344       0x8c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x00000000100013b8       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100013b8                hardware_alarm_claim
- .text.time_us_64
                 0x00000000100013d0       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100013d0                time_us_64
+                0x00000000100013d0                hardware_alarm_claim
+ .text.time_us_64
+                0x00000000100013e8       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100013e8                time_us_64
  .text.busy_wait_until
-                0x00000000100013e8       0x24 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100013e8                busy_wait_until
+                0x0000000010001400       0x24 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001400                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x000000001000140c       0x90 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x000000001000140c                hardware_alarm_set_callback
+                0x0000000010001424       0x90 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001424                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x000000001000149c       0xd0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x000000001000149c                hardware_alarm_set_target
+                0x00000000100014b4       0xd0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100014b4                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x000000001000156c       0x40 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x000000001000156c                hardware_alarm_cancel
+                0x0000000010001584       0x40 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001584                hardware_alarm_cancel
  .text.lock_init
-                0x00000000100015ac       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x00000000100015ac                lock_init
+                0x00000000100015c4       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x00000000100015c4                lock_init
  .text.mutex_init
-                0x00000000100015dc       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x00000000100015dc                mutex_init
- *fill*         0x00000000100015f6        0x2 
+                0x00000000100015f4       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000000100015f4                mutex_init
+ *fill*         0x000000001000160e        0x2 
  .text.ph_add_child_node
-                0x00000000100015f8       0xa4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001610       0xa4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_merge_nodes
-                0x000000001000169c       0x3e CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x00000000100016da        0x2 
+                0x00000000100016b4       0x3e CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x00000000100016f2        0x2 
  .text.ph_clear
-                0x00000000100016dc       0x74 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x00000000100016dc                ph_clear
+                0x00000000100016f4       0x74 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000000100016f4                ph_clear
  .text.ph_create
-                0x0000000010001750       0x2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001750                ph_create
+                0x0000000010001768       0x2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001768                ph_create
  .text.ph_merge_two_pass
-                0x000000001000177c       0xa8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x000000001000177c                ph_merge_two_pass
+                0x0000000010001794       0xa8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001794                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x0000000010001824      0x108 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000183c      0x108 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head_reserve
-                0x000000001000192c       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x000000001000192c                ph_remove_head_reserve
+                0x0000000010001944       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001944                ph_remove_head_reserve
  .text.ph_delete
-                0x0000000010001940       0xf8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001940                ph_delete
+                0x0000000010001958       0xf8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001958                ph_delete
  .text.runtime_init
-                0x0000000010001a38       0xcc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001a38                runtime_init
- .text._exit    0x0000000010001b04        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001b04                _exit
- .text._sbrk    0x0000000010001b08       0x38 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001b08                _sbrk
- .text.exit     0x0000000010001b40        0x6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001b40                exit
- *fill*         0x0000000010001b46        0x2 
+                0x0000000010001a50       0xcc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010001a50                runtime_init
+ .text._exit    0x0000000010001b1c        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010001b1c                _exit
+ .text._sbrk    0x0000000010001b20       0x38 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010001b20                _sbrk
+ .text.exit     0x0000000010001b58        0x6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010001b58                exit
+ *fill*         0x0000000010001b5e        0x2 
  .text.__assert_func
-                0x0000000010001b48       0x3c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001b48                __assert_func
- .text.panic    0x0000000010001b84       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001b84                panic
+                0x0000000010001b60       0x3c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010001b60                __assert_func
+ .text.panic    0x0000000010001b9c       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010001b9c                panic
  .text.clock_configure
-                0x0000000010001bb4       0xe8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010001bb4                clock_configure
+                0x0000000010001bcc       0xe8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010001bcc                clock_configure
  .text.clocks_init
-                0x0000000010001c9c      0x124 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010001c9c                clocks_init
+                0x0000000010001cb4      0x124 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010001cb4                clocks_init
  .text.clock_get_hz
-                0x0000000010001dc0        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010001dc0                clock_get_hz
+                0x0000000010001dd8        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010001dd8                clock_get_hz
  .text.watchdog_start_tick
-                0x0000000010001dcc       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010001dcc                watchdog_start_tick
+                0x0000000010001de4       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010001de4                watchdog_start_tick
  .text.xosc_init
-                0x0000000010001ddc       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x0000000010001ddc                xosc_init
+                0x0000000010001df4       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x0000000010001df4                xosc_init
  .text.pll_init
-                0x0000000010001e04       0xd4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x0000000010001e04                pll_init
+                0x0000000010001e1c       0xd4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000000010001e1c                pll_init
  .text.set_raw_irq_handler_and_unlock
-                0x0000000010001ed8       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001ef0       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.make_branch
-                0x0000000010001f00       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001f18       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.insert_branch_and_link
-                0x0000000010001f34       0x40 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001f4c       0x40 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_is_enabled
-                0x0000000010001f74       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001f74                irq_is_enabled
+                0x0000000010001f8c       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001f8c                irq_is_enabled
  .text.irq_set_mask_enabled
-                0x0000000010001f8c       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001f8c                irq_set_mask_enabled
+                0x0000000010001fa4       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001fa4                irq_set_mask_enabled
  .text.irq_set_enabled
-                0x0000000010001fac        0xe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001fac                irq_set_enabled
- *fill*         0x0000000010001fba        0x2 
+                0x0000000010001fc4        0xe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001fc4                irq_set_enabled
+ *fill*         0x0000000010001fd2        0x2 
  .text.irq_get_vtable_handler
-                0x0000000010001fbc       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001fbc                irq_get_vtable_handler
+                0x0000000010001fd4       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001fd4                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x0000000010001fcc       0x54 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001fcc                irq_set_exclusive_handler
+                0x0000000010001fe4       0x54 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001fe4                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x0000000010002020      0x1b4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010002020                irq_remove_handler
+                0x0000000010002038      0x1b4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010002038                irq_remove_handler
  .text.irq_set_priority
-                0x00000000100021d4       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100021d4                irq_set_priority
+                0x00000000100021ec       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100021ec                irq_set_priority
  .text.irq_add_tail_to_free_list
-                0x00000000100021fc       0xf8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100021fc                irq_add_tail_to_free_list
+                0x0000000010002214       0xf8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010002214                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x00000000100022f4       0x16 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100022f4                irq_init_priorities
+                0x000000001000230c       0x16 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000230c                irq_init_priorities
  .text._out_null
-                0x000000001000230a        0x2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002322        0x2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x000000001000230c        0xe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._atoi    0x000000001000231a       0x24 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002324        0xe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._atoi    0x0000000010002332       0x24 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x000000001000233e       0xae CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002356       0xae CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x00000000100023ec      0x110 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002404      0x110 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long
-                0x00000000100024fc       0xbc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002514       0xbc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long_long
-                0x00000000100025b8       0xe2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x000000001000269a        0x2 
- .text._etoa    0x000000001000269c      0x3f4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x0000000010002a90      0x354 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100025d0       0xe2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x00000000100026b2        0x2 
+ .text._etoa    0x00000000100026b4      0x3f4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x0000000010002aa8      0x354 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x0000000010002de4      0x628 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002dfc      0x628 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x000000001000340c       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x000000001000340c                vfctprintf
- .text          0x000000001000342c       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000010003424       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010003424                vfctprintf
+ .text          0x0000000010003444       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x000000001000343c       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000343c                rom_func_lookup
+                0x0000000010003454       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010003454                rom_func_lookup
  .text.rom_data_lookup
-                0x000000001000344c       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000344c                rom_data_lookup
+                0x0000000010003464       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010003464                rom_data_lookup
  .text.rom_funcs_lookup
-                0x000000001000345c       0x36 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000345c                rom_funcs_lookup
- *fill*         0x0000000010003492        0x2 
+                0x0000000010003474       0x36 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010003474                rom_funcs_lookup
+ *fill*         0x00000000100034aa        0x2 
  .text.__wrap___aeabi_idiv
-                0x0000000010003494       0x58 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010003494                __wrap___aeabi_idivmod
-                0x0000000010003494                divmod_s32s32
-                0x0000000010003494                div_s32s32
-                0x0000000010003494                __wrap___aeabi_idiv
-                0x000000001000349c                divmod_s32s32_unsafe
-                0x00000000100034c8                divmod_s32s32_savestate
+                0x00000000100034ac       0x58 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x00000000100034ac                __wrap___aeabi_idivmod
+                0x00000000100034ac                divmod_s32s32
+                0x00000000100034ac                div_s32s32
+                0x00000000100034ac                __wrap___aeabi_idiv
+                0x00000000100034b4                divmod_s32s32_unsafe
+                0x00000000100034e0                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x00000000100034ec       0x54 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x00000000100034ec                __wrap___aeabi_uidiv
-                0x00000000100034ec                __wrap___aeabi_uidivmod
-                0x00000000100034ec                div_u32u32
-                0x00000000100034ec                divmod_u32u32
-                0x00000000100034f4                divmod_u32u32_unsafe
-                0x000000001000351c                divmod_u32u32_savestate
+                0x0000000010003504       0x54 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010003504                __wrap___aeabi_uidiv
+                0x0000000010003504                __wrap___aeabi_uidivmod
+                0x0000000010003504                div_u32u32
+                0x0000000010003504                divmod_u32u32
+                0x000000001000350c                divmod_u32u32_unsafe
+                0x0000000010003534                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x0000000010003540      0x430 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010003540                div_s64s64
-                0x0000000010003540                divmod_s64s64
-                0x0000000010003540                __wrap___aeabi_ldivmod
-                0x0000000010003578                div_u64u64
-                0x0000000010003578                divmod_u64u64
-                0x0000000010003578                __wrap___aeabi_uldivmod
-                0x0000000010003588                divmod_u64u64_savestate
-                0x00000000100035b0                divmod_s64s64_unsafe
-                0x0000000010003638                divmod_u64u64_unsafe
+                0x0000000010003558      0x430 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010003558                div_s64s64
+                0x0000000010003558                divmod_s64s64
+                0x0000000010003558                __wrap___aeabi_ldivmod
+                0x0000000010003590                div_u64u64
+                0x0000000010003590                divmod_u64u64
+                0x0000000010003590                __wrap___aeabi_uldivmod
+                0x00000000100035a0                divmod_u64u64_savestate
+                0x00000000100035c8                divmod_s64s64_unsafe
+                0x0000000010003650                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x0000000010003970       0x54 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003970                __wrap___aeabi_drsub
-                0x0000000010003976                __wrap___aeabi_dsub
-                0x0000000010003988                __wrap___aeabi_dadd
-                0x000000001000399a                __wrap___aeabi_ddiv
-                0x00000000100039ac                __wrap___aeabi_dmul
+                0x0000000010003988       0x54 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003988                __wrap___aeabi_drsub
+                0x000000001000398e                __wrap___aeabi_dsub
+                0x00000000100039a0                __wrap___aeabi_dadd
+                0x00000000100039b2                __wrap___aeabi_ddiv
+                0x00000000100039c4                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x00000000100039c4       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100039c4                __wrap___aeabi_cdrcmple
-                0x00000000100039d4                __wrap___aeabi_cdcmple
-                0x00000000100039d4                __wrap___aeabi_cdcmpeq
+                0x00000000100039dc       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100039dc                __wrap___aeabi_cdrcmple
+                0x00000000100039ec                __wrap___aeabi_cdcmple
+                0x00000000100039ec                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x0000000010003a30        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003a30                __wrap___aeabi_dcmplt
+                0x0000000010003a48        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003a48                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x0000000010003a3c       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003a3c                __wrap___aeabi_dcmple
+                0x0000000010003a54       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003a54                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x0000000010003a4c       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003a4c                __wrap___aeabi_dcmpge
+                0x0000000010003a64       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003a64                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x0000000010003a5c        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003a5c                __wrap___aeabi_dcmpgt
+                0x0000000010003a74        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003a74                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x0000000010003a66       0x1c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003a66                __wrap___aeabi_dcmpun
- *fill*         0x0000000010003a82        0x2 
+                0x0000000010003a7e       0x1c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003a7e                __wrap___aeabi_dcmpun
+ *fill*         0x0000000010003a9a        0x2 
  .text.__wrap___aeabi_i2d
-                0x0000000010003a84       0x38 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003a84                __wrap___aeabi_ui2d
-                0x0000000010003a8c                __wrap___aeabi_i2d
+                0x0000000010003a9c       0x38 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003a9c                __wrap___aeabi_ui2d
+                0x0000000010003aa4                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x0000000010003abc       0x48 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003abc                __wrap___aeabi_d2iz
-                0x0000000010003abc                double2int_z
+                0x0000000010003ad4       0x48 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003ad4                __wrap___aeabi_d2iz
+                0x0000000010003ad4                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x0000000010003b04       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003b04                double2uint
-                0x0000000010003b04                __wrap___aeabi_d2uiz
+                0x0000000010003b1c       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003b1c                double2uint
+                0x0000000010003b1c                __wrap___aeabi_d2uiz
  .text.__aeabi_double_init
-                0x0000000010003b1c       0xb4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000010003b1c                __aeabi_double_init
+                0x0000000010003b34       0xb4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000010003b34                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x0000000010003bd0       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010003bd0                double_table_shim_on_use_helper
+                0x0000000010003be8       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003be8                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x0000000010003c04       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010003c04                drsub_shim
-                0x0000000010003c0a                dsub_shim
+                0x0000000010003c1c       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003c1c                drsub_shim
+                0x0000000010003c22                dsub_shim
  .text.dadd_shim
-                0x0000000010003c14      0x15c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010003c14                dadd_shim
+                0x0000000010003c2c      0x15c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003c2c                dadd_shim
  .text.dmul_shim
-                0x0000000010003d70      0x15c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010003d70                dmul_shim
+                0x0000000010003d88      0x15c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003d88                dmul_shim
  .text.ddiv_shim
-                0x0000000010003ecc      0x1b0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010003ecc                ddiv_shim
+                0x0000000010003ee4      0x1b0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003ee4                ddiv_shim
  .text.dcordic_rot_step
-                0x000000001000407c       0x7c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x000000001000407c                dcordic_rot_step
+                0x0000000010004094       0x7c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004094                dcordic_rot_step
  .text.double2uint_shim
-                0x00000000100040f8        0xe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100040f8                double2uint_shim
-                0x00000000100040fa                double2ufix_shim
- *fill*         0x0000000010004106        0x2 
+                0x0000000010004110        0xe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004110                double2uint_shim
+                0x0000000010004112                double2ufix_shim
+ *fill*         0x000000001000411e        0x2 
  .text.double2uint64_shim
-                0x0000000010004108       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004108                double2uint64_shim
-                0x000000001000410a                double2ufix64_shim
-                0x0000000010004124                d2fix_a
+                0x0000000010004120       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004120                double2uint64_shim
+                0x0000000010004122                double2ufix64_shim
+                0x000000001000413c                d2fix_a
  .text.dunpacks
-                0x0000000010004174       0x3c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004174                dunpacks
+                0x000000001000418c       0x3c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x000000001000418c                dunpacks
  .text.__wrap___aeabi_farithmetic
-                0x00000000100041b0       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x00000000100041b0                __wrap___aeabi_frsub
-                0x00000000100041b6                __wrap___aeabi_fsub
-                0x00000000100041c0                __wrap___aeabi_fadd
-                0x00000000100041ca                __wrap___aeabi_fdiv
-                0x00000000100041d4                __wrap___aeabi_fmul
+                0x00000000100041c8       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100041c8                __wrap___aeabi_frsub
+                0x00000000100041ce                __wrap___aeabi_fsub
+                0x00000000100041d8                __wrap___aeabi_fadd
+                0x00000000100041e2                __wrap___aeabi_fdiv
+                0x00000000100041ec                __wrap___aeabi_fmul
  .text.__wrap___aeabi_cfcmple
-                0x00000000100041e4       0x50 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x00000000100041e4                __wrap___aeabi_cfrcmple
-                0x00000000100041f0                __wrap___aeabi_cfcmpeq
-                0x00000000100041f0                __wrap___aeabi_cfcmple
+                0x00000000100041fc       0x50 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100041fc                __wrap___aeabi_cfrcmple
+                0x0000000010004208                __wrap___aeabi_cfcmpeq
+                0x0000000010004208                __wrap___aeabi_cfcmple
  .text.__wrap___aeabi_fcmplt
-                0x0000000010004234        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010004234                __wrap___aeabi_fcmplt
+                0x000000001000424c        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x000000001000424c                __wrap___aeabi_fcmplt
  .text.__wrap___aeabi_i2f
-                0x0000000010004240       0x44 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010004240                __wrap___aeabi_i2f
- .text.__wrap___aeabi_f2d
-                0x0000000010004284       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010004284                __wrap___aeabi_f2d
+                0x0000000010004258       0x44 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000010004258                __wrap___aeabi_i2f
  .text.__aeabi_float_init
-                0x0000000010004298       0xfc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000010004298                __aeabi_float_init
+                0x000000001000429c       0xfc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x000000001000429c                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x0000000010004394       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x0000000010004394                float_table_shim_on_use_helper
- .text.float2double_shim
-                0x00000000100043c8       0x30 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x00000000100043c8                float2double_shim
+                0x0000000010004398       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x0000000010004398                float_table_shim_on_use_helper
  .text.__wrap_malloc
-                0x00000000100043f8        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
-                0x00000000100043f8                __wrap_malloc
+                0x00000000100043cc        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x00000000100043cc                __wrap_malloc
  .text.__wrap_calloc
-                0x0000000010004400        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
-                0x0000000010004400                __wrap_calloc
- .text          0x0000000010004408       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010004408                __aeabi_mem_init
- .text.memset   0x0000000010004418        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010004418                __wrap_memset
- .text.memcpy   0x0000000010004424        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010004424                __wrap___aeabi_memcpy
-                0x0000000010004424                __wrap_memcpy
+                0x00000000100043d4        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x00000000100043d4                __wrap_calloc
+ .text          0x00000000100043dc       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000000100043dc                __aeabi_mem_init
+ .text.memset   0x00000000100043ec        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000000100043ec                __wrap_memset
+ .text.memcpy   0x00000000100043f8        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000000100043f8                __wrap___aeabi_memcpy
+                0x00000000100043f8                __wrap_memcpy
  .text.stdio_out_chars_crlf
-                0x0000000010004430       0x80 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004404       0x80 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush
-                0x00000000100044b0       0x44 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004484       0x44 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x00000000100044f4       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100044c8       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
-                0x0000000010004514       0x2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004514                stdout_serialize_begin
+                0x00000000100044e8       0x2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100044e8                stdout_serialize_begin
  .text.stdout_serialize_end
-                0x0000000010004540       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004540                stdout_serialize_end
+                0x0000000010004514       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004514                stdout_serialize_end
  .text.stdio_put_string
-                0x0000000010004550       0x84 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004524       0x84 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_set_driver_enabled
-                0x00000000100045d4       0x38 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100045d4                stdio_set_driver_enabled
+                0x00000000100045a8       0x38 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100045a8                stdio_set_driver_enabled
  .text.stdio_flush
-                0x000000001000460c       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x000000001000460c                stdio_flush
+                0x00000000100045e0       0x20 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100045e0                stdio_flush
  .text.__wrap_puts
-                0x000000001000462c       0x1c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x000000001000462c                __wrap_puts
+                0x0000000010004600       0x1c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004600                __wrap_puts
  .text.__wrap_vprintf
-                0x0000000010004648       0x44 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004648                __wrap_vprintf
+                0x000000001000461c       0x44 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x000000001000461c                __wrap_vprintf
  .text.__wrap_printf
-                0x000000001000468c       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x000000001000468c                __wrap_printf
+                0x0000000010004660       0x18 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004660                __wrap_printf
  .text.stdio_init_all
-                0x00000000100046a4        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100046a4                stdio_init_all
+                0x0000000010004678        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004678                stdio_init_all
  .text.stdio_uart_out_chars
-                0x00000000100046ac       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010004680       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x0000000010004718       0x58 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010004718                stdio_uart_in_chars
+                0x00000000100046ec       0x58 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100046ec                stdio_uart_in_chars
  .text.stdio_uart_init_full
-                0x0000000010004770       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010004770                stdio_uart_init_full
+                0x0000000010004744       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010004744                stdio_uart_init_full
  .text.stdio_uart_init
-                0x00000000100047a4       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x00000000100047a4                stdio_uart_init
+                0x0000000010004778       0x28 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010004778                stdio_uart_init
  .text.adc_init
-                0x00000000100047cc       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
-                0x00000000100047cc                adc_init
- .text          0x0000000010004800       0x18 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
-                0x0000000010004800                calloc
- .text          0x0000000010004818       0x5c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
-                0x0000000010004818                _calloc_r
- .text          0x0000000010004874       0x28 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
-                0x0000000010004874                malloc
-                0x0000000010004888                free
- .text          0x000000001000489c      0x58c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
-                0x000000001000489c                _malloc_r
- .text          0x0000000010004e28        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
-                0x0000000010004e28                __malloc_lock
-                0x0000000010004e2c                __malloc_unlock
- .text          0x0000000010004e30       0x24 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
-                0x0000000010004e30                _sbrk_r
- .text          0x0000000010004e54       0x68 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
-                0x0000000010004e54                strlen
- .text          0x0000000010004ebc      0x27c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
-                0x0000000010004ebc                _malloc_trim_r
-                0x0000000010004f5c                _free_r
+                0x00000000100047a0       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+                0x00000000100047a0                adc_init
+ .text          0x00000000100047d4       0x18 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
+                0x00000000100047d4                calloc
+ .text          0x00000000100047ec       0x5c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
+                0x00000000100047ec                _calloc_r
+ .text          0x0000000010004848       0x28 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
+                0x0000000010004848                malloc
+                0x000000001000485c                free
+ .text          0x0000000010004870      0x58c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
+                0x0000000010004870                _malloc_r
+ .text          0x0000000010004dfc        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
+                0x0000000010004dfc                __malloc_lock
+                0x0000000010004e00                __malloc_unlock
+ .text          0x0000000010004e04       0x24 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
+                0x0000000010004e04                _sbrk_r
+ .text          0x0000000010004e28       0x68 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+                0x0000000010004e28                strlen
+ .text          0x0000000010004e90      0x27c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
+                0x0000000010004e90                _malloc_trim_r
+                0x0000000010004f30                _free_r
  *(.fini)
- .fini          0x0000000010005138        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000010005138                _fini
- *fill*         0x000000001000513c        0x4 
- .fini.__stub   0x0000000010005140       0x70 linker stubs
+ .fini          0x000000001000510c        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x000000001000510c                _fini
+ .fini.__stub   0x0000000010005110       0x70 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -1595,290 +1592,291 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x00000000100051b0        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x00000000100051b0                . = ALIGN (0x4)
+ .eh_frame      0x0000000010005180        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010005180                . = ALIGN (0x4)
 
-.glue_7         0x00000000100051b0        0x0
- .glue_7        0x00000000100051b0        0x0 linker stubs
+.glue_7         0x0000000010005180        0x0
+ .glue_7        0x0000000010005180        0x0 linker stubs
 
-.glue_7t        0x00000000100051b0        0x0
- .glue_7t       0x00000000100051b0        0x0 linker stubs
+.glue_7t        0x0000000010005180        0x0
+ .glue_7t       0x0000000010005180        0x0 linker stubs
 
-.vfp11_veneer   0x00000000100051b0        0x0
- .vfp11_veneer  0x00000000100051b0        0x0 linker stubs
+.vfp11_veneer   0x0000000010005180        0x0
+ .vfp11_veneer  0x0000000010005180        0x0 linker stubs
 
-.v4_bx          0x00000000100051b0        0x0
- .v4_bx         0x00000000100051b0        0x0 linker stubs
+.v4_bx          0x0000000010005180        0x0
+ .v4_bx         0x0000000010005180        0x0 linker stubs
 
-.iplt           0x00000000100051b0        0x0
- .iplt          0x00000000100051b0        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000010005180        0x0
+ .iplt          0x0000000010005180        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x00000000100051b0    0xd447c
+.rodata         0x0000000010005180    0xd446c
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.main.str1.4
-                0x00000000100051b0       0x4a CMakeFiles/sinsonte.dir/sinsonte.c.obj
- *fill*         0x00000000100051fa        0x2 
+                0x0000000010005180       0x32 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+ *fill*         0x00000000100051b2        0x2 
  .rodata.WAV_DATA_1
-                0x00000000100051fc    0x18143 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x00000000100051fc                WAV_DATA_1
- *fill*         0x000000001001d33f        0x1 
+                0x00000000100051b4    0x18143 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x00000000100051b4                WAV_DATA_1
+ *fill*         0x000000001001d2f7        0x1 
  .rodata.WAV_DATA_10
-                0x000000001001d340     0xd1c4 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x000000001001d340                WAV_DATA_10
+                0x000000001001d2f8     0xd1c4 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x000000001001d2f8                WAV_DATA_10
  .rodata.WAV_DATA_11
-                0x000000001002a504     0xe75d CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x000000001002a504                WAV_DATA_11
- *fill*         0x0000000010038c61        0x3 
+                0x000000001002a4bc     0xe75d CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x000000001002a4bc                WAV_DATA_11
+ *fill*         0x0000000010038c19        0x3 
  .rodata.WAV_DATA_12
-                0x0000000010038c64     0xacc0 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x0000000010038c64                WAV_DATA_12
+                0x0000000010038c1c     0xacc0 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x0000000010038c1c                WAV_DATA_12
  .rodata.WAV_DATA_2
-                0x0000000010043924    0x1edd3 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x0000000010043924                WAV_DATA_2
- *fill*         0x00000000100626f7        0x1 
+                0x00000000100438dc    0x1edd3 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x00000000100438dc                WAV_DATA_2
+ *fill*         0x00000000100626af        0x1 
  .rodata.WAV_DATA_3
-                0x00000000100626f8    0x13e1b CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x00000000100626f8                WAV_DATA_3
- *fill*         0x0000000010076513        0x1 
+                0x00000000100626b0    0x13e1b CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x00000000100626b0                WAV_DATA_3
+ *fill*         0x00000000100764cb        0x1 
  .rodata.WAV_DATA_4
-                0x0000000010076514    0x14697 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x0000000010076514                WAV_DATA_4
- *fill*         0x000000001008abab        0x1 
+                0x00000000100764cc    0x14697 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x00000000100764cc                WAV_DATA_4
+ *fill*         0x000000001008ab63        0x1 
  .rodata.WAV_DATA_5
-                0x000000001008abac    0x13a13 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x000000001008abac                WAV_DATA_5
- *fill*         0x000000001009e5bf        0x1 
+                0x000000001008ab64    0x13a13 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x000000001008ab64                WAV_DATA_5
+ *fill*         0x000000001009e577        0x1 
  .rodata.WAV_DATA_6
-                0x000000001009e5c0    0x14f12 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x000000001009e5c0                WAV_DATA_6
- *fill*         0x00000000100b34d2        0x2 
+                0x000000001009e578    0x14f12 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x000000001009e578                WAV_DATA_6
+ *fill*         0x00000000100b348a        0x2 
  .rodata.WAV_DATA_7
-                0x00000000100b34d4    0x102c4 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x00000000100b34d4                WAV_DATA_7
+                0x00000000100b348c    0x102c4 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x00000000100b348c                WAV_DATA_7
  .rodata.WAV_DATA_8
-                0x00000000100c3798     0xa85f CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x00000000100c3798                WAV_DATA_8
- *fill*         0x00000000100cdff7        0x1 
+                0x00000000100c3750     0xa85f CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x00000000100c3750                WAV_DATA_8
+ *fill*         0x00000000100cdfaf        0x1 
  .rodata.WAV_DATA_9
-                0x00000000100cdff8     0xa6f6 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                0x00000000100cdff8                WAV_DATA_9
- *fill*         0x00000000100d86ee        0x2 
+                0x00000000100cdfb0     0xa6f6 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+                0x00000000100cdfb0                WAV_DATA_9
+ *fill*         0x00000000100d86a6        0x2 
  .rodata.alarm_pool_dump_key.str1.4
-                0x00000000100d86f0       0x7b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d876b        0x1 
+                0x00000000100d86a8       0x7b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d8723        0x1 
  .rodata.ph_add_child_node.str1.4
-                0x00000000100d876c       0xa2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d880e        0x2 
+                0x00000000100d8724       0xa2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d87c6        0x2 
  .rodata.add_alarm_under_lock.str1.4
-                0x00000000100d8810       0x27 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d8837        0x1 
+                0x00000000100d87c8       0x27 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d87ef        0x1 
  .rodata.alarm_pool_alarm_callback.str1.4
-                0x00000000100d8838       0x7d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d88b5        0x3 
+                0x00000000100d87f0       0x7d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d886d        0x3 
  .rodata.alarm_pool_get_default.str1.4
-                0x00000000100d88b8       0x13 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d88cb        0x1 
+                0x00000000100d8870       0x13 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d8883        0x1 
  .rodata.__func__.5915
-                0x00000000100d88cc        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100d8884        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.5922
-                0x00000000100d88d8       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d88ea        0x2 
+                0x00000000100d8890       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d88a2        0x2 
  .rodata.__func__.5937
-                0x00000000100d88ec        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d88f6        0x2 
+                0x00000000100d88a4        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d88ae        0x2 
  .rodata.__func__.5959
-                0x00000000100d88f8       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100d88b0       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.6229
-                0x00000000100d890c       0x17 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d8923        0x1 
+                0x00000000100d88c4       0x17 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d88db        0x1 
  .rodata.__func__.6234
-                0x00000000100d8924        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d892e        0x2 
+                0x00000000100d88dc        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d88e6        0x2 
  .rodata.__func__.6239
-                0x00000000100d8930       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d8942        0x2 
+                0x00000000100d88e8       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d88fa        0x2 
  .rodata.__func__.6260
-                0x00000000100d8944       0x15 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d8959        0x3 
+                0x00000000100d88fc       0x15 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d8911        0x3 
  .rodata.__func__.6277
-                0x00000000100d895c       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x00000000100d8976        0x2 
+                0x00000000100d8914       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x00000000100d892e        0x2 
  .rodata.hardware_alarm_claim.str1.4
-                0x00000000100d8978       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x00000000100d899a        0x2 
+                0x00000000100d8930       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x00000000100d8952        0x2 
  .rodata.hardware_alarm_set_target.str1.4
-                0x00000000100d899c       0x73 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x00000000100d8a0f        0x1 
+                0x00000000100d8954       0x73 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x00000000100d89c7        0x1 
  .rodata.__func__.4502
-                0x00000000100d8a10       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x00000000100d8a2a        0x2 
+                0x00000000100d89c8       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x00000000100d89e2        0x2 
  .rodata.lock_init.str1.4
-                0x00000000100d8a2c       0x76 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
- *fill*         0x00000000100d8aa2        0x2 
+                0x00000000100d89e4       0x76 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ *fill*         0x00000000100d8a5a        0x2 
  .rodata.__func__.4344
-                0x00000000100d8aa4        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
- *fill*         0x00000000100d8aae        0x2 
+                0x00000000100d8a5c        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ *fill*         0x00000000100d8a66        0x2 
  .rodata.str1.4
-                0x00000000100d8ab0       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000000100d8a68       0x6c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
  .rodata.__func__.4559
-                0x00000000100d8b1c       0x15 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
- *fill*         0x00000000100d8b31        0x3 
+                0x00000000100d8ad4       0x15 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
+ *fill*         0x00000000100d8ae9        0x3 
  .rodata.__func__.4587
-                0x00000000100d8b34        0xb CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000000100d8aec        0xb CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x00000000100d8b3f       0xa2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x00000000100d8b3f        0x1 
+                0x00000000100d8af7       0xa2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x00000000100d8af7        0x1 
  .rodata.ph_remove_any_head.str1.4
-                0x00000000100d8b40       0x9c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000000100d8af8       0x9c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.ph_delete.str1.4
-                0x00000000100d8bdc       0x26 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x00000000100d8c02        0x2 
+                0x00000000100d8b94       0x26 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x00000000100d8bba        0x2 
  .rodata.__func__.5696
-                0x00000000100d8c04        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000000100d8bbc        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.__func__.5703
-                0x00000000100d8c10       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x00000000100d8c22        0x2 
+                0x00000000100d8bc8       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x00000000100d8bda        0x2 
  .rodata.__func__.5776
-                0x00000000100d8c24       0x13 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x00000000100d8c37        0x1 
+                0x00000000100d8bdc       0x13 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x00000000100d8bef        0x1 
  .rodata.__func__.5794
-                0x00000000100d8c38        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x00000000100d8c42        0x2 
+                0x00000000100d8bf0        0xa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x00000000100d8bfa        0x2 
  .rodata.__assert_func.str1.4
-                0x00000000100d8c44       0x3f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100d8bfc       0x3f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                          0x43 (size before relaxing)
- *fill*         0x00000000100d8c83        0x1 
+ *fill*         0x00000000100d8c3b        0x1 
  .rodata.panic.str1.4
-                0x00000000100d8c84       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                                         0x12 (size before relaxing)
+                0x00000000100d8c3c       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x00000000100d8c4e        0x2 
  .rodata.clock_configure.str1.4
-                0x00000000100d8c94       0x65 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- *fill*         0x00000000100d8cf9        0x3 
+                0x00000000100d8c50       0x65 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ *fill*         0x00000000100d8cb5        0x3 
  .rodata.__func__.4638
-                0x00000000100d8cfc       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x00000000100d8cb8       0x10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.pll_init.str1.4
-                0x00000000100d8d0c       0xe7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x00000000100d8df3        0x1 
+                0x00000000100d8cc8       0xe7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x00000000100d8daf        0x1 
  .rodata.__func__.4372
-                0x00000000100d8df4        0x9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x00000000100d8dfd        0x3 
+                0x00000000100d8db0        0x9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x00000000100d8db9        0x3 
  .rodata.make_branch.str1.4
-                0x00000000100d8e00       0x5b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x00000000100d8e5b        0x1 
+                0x00000000100d8dbc       0x5b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100d8e17        0x1 
  .rodata.irq_set_exclusive_handler.str1.4
-                0x00000000100d8e5c       0x36 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x00000000100d8e92        0x2 
+                0x00000000100d8e18       0x36 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100d8e4e        0x2 
  .rodata.irq_add_shared_handler.str1.4
-                0x00000000100d8e94       0xd9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x00000000100d8f6d        0x3 
+                0x00000000100d8e50       0xd9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100d8f29        0x3 
  .rodata.irq_remove_handler.str1.4
-                0x00000000100d8f70       0x2a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x00000000100d8f9a        0x2 
+                0x00000000100d8f2c       0x2a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100d8f56        0x2 
  .rodata.irq_add_tail_to_free_list.str1.4
-                0x00000000100d8f9c       0x32 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100d8f58       0x32 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
                                          0x3a (size before relaxing)
- *fill*         0x00000000100d8fce        0x2 
+ *fill*         0x00000000100d8f8a        0x2 
  .rodata.__func__.4463
-                0x00000000100d8fd0       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x00000000100d8fea        0x2 
+                0x00000000100d8f8c       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100d8fa6        0x2 
  .rodata.__func__.4477
-                0x00000000100d8fec        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100d8fa8        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.4485
-                0x00000000100d8ff8       0x17 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x00000000100d900f        0x1 
+                0x00000000100d8fb4       0x17 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100d8fcb        0x1 
  .rodata.__func__.4489
-                0x00000000100d9010        0xf CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x00000000100d901f        0x1 
+                0x00000000100d8fcc        0xf CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100d8fdb        0x1 
  .rodata.__func__.4525
-                0x00000000100d9020       0x13 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x00000000100d9033        0x1 
+                0x00000000100d8fdc       0x13 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100d8fef        0x1 
  .rodata.__func__.4544
-                0x00000000100d9034       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x00000000100d904e        0x2 
+                0x00000000100d8ff0       0x1a CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100d900a        0x2 
  .rodata._ftoa.str1.4
-                0x00000000100d9050       0x15 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x00000000100d9065        0x3 
+                0x00000000100d900c       0x15 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x00000000100d9021        0x3 
  .rodata._vsnprintf
-                0x00000000100d9068      0x1e0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100d9024      0x1e0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x00000000100d9204        0x4 
  .rodata.pow10.5410
-                0x00000000100d9248       0x50 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100d9208       0x50 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__aeabi_double_init.str1.4
-                0x00000000100d9298       0xb6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- *fill*         0x00000000100d934e        0x2 
+                0x00000000100d9258       0xb6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ *fill*         0x00000000100d930e        0x2 
  .rodata.__func__.4654
-                0x00000000100d9350       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x00000000100d9310       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__aeabi_float_init.str1.4
-                0x00000000100d9364       0x88 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x00000000100d9324       0x88 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                          0x8c (size before relaxing)
  .rodata.__func__.4656
-                0x00000000100d93ec       0x13 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- *fill*         0x00000000100d93ff        0x1 
+                0x00000000100d93ac       0x13 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ *fill*         0x00000000100d93bf        0x1 
  .rodata.str1.4
-                0x00000000100d9400       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d93c0       0x34 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_40
-                0x00000000100d9434        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d93f4        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_52
-                0x00000000100d9440        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d9400        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_71
-                0x00000000100d944c        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d940c        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.5953
-                0x00000000100d9458        0x2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x00000000100d945a        0x2 
+                0x00000000100d9418        0x2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x00000000100d941a        0x2 
  .rodata.str1.4
-                0x00000000100d945c       0x2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100d941c       0x2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_27.4685
-                0x00000000100d9488        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100d9448        0xc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_28.4689
-                0x00000000100d9494        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100d9454        0x8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.str1.4
-                0x00000000100d949c      0x165 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- *fill*         0x00000000100d9601        0x3 
+                0x00000000100d945c      0x165 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ *fill*         0x00000000100d95c1        0x3 
  .rodata.__func__.4351
-                0x00000000100d9604       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- *fill*         0x00000000100d9616        0x2 
+                0x00000000100d95c4       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ *fill*         0x00000000100d95d6        0x2 
  .rodata.__func__.4375
-                0x00000000100d9618       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x00000000100d962c                . = ALIGN (0x4)
+                0x00000000100d95d8       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x00000000100d95ec                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x00000000100d962c                . = ALIGN (0x4)
+                0x00000000100d95ec                . = ALIGN (0x4)
 
-.rel.dyn        0x00000000100d962c        0x0
- .rel.iplt      0x00000000100d962c        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x00000000100d95ec        0x0
+ .rel.iplt      0x00000000100d95ec        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000000100d962c                __exidx_start = .
+                0x00000000100d95ec                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000000100d962c                __exidx_end = .
-                0x00000000100d962c                . = ALIGN (0x4)
-                0x00000000100d962c                __binary_info_start = .
+                0x00000000100d95ec                __exidx_end = .
+                0x00000000100d95ec                . = ALIGN (0x4)
+                0x00000000100d95ec                __binary_info_start = .
 
-.binary_info    0x00000000100d962c       0x24
+.binary_info    0x00000000100d95ec       0x24
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr18
-                0x00000000100d962c        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d95ec        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr26
-                0x00000000100d9630        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d95f0        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr34
-                0x00000000100d9634        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d95f4        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr40
-                0x00000000100d9638        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d95f8        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr46
-                0x00000000100d963c        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d95fc        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr52
-                0x00000000100d9640        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d9600        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr71
-                0x00000000100d9644        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100d9604        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr27
-                0x00000000100d9648        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100d9608        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr28
-                0x00000000100d964c        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x00000000100d9650                __binary_info_end = .
-                0x00000000100d9650                . = ALIGN (0x4)
-                0x00000000100d9650                __etext = .
+                0x00000000100d960c        0x4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100d9610                __binary_info_end = .
+                0x00000000100d9610                . = ALIGN (0x4)
+                0x00000000100d9610                __etext = .
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -1887,7 +1885,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
                 0x0000000020000000       0xc0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0      0xb94 load address 0x00000000100d9650
+.data           0x00000000200000c0      0xb94 load address 0x00000000100d9610
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -1990,33 +1988,33 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
                 0x0000000020000c54                __data_end__ = .
 
 .tm_clone_table
-                0x0000000020000c54        0x0 load address 0x00000000100da1e4
+                0x0000000020000c54        0x0 load address 0x00000000100da1a4
  .tm_clone_table
                 0x0000000020000c54        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x0000000020000c54        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x0000000020000c54        0x0 load address 0x00000000100da1e4
+.igot.plt       0x0000000020000c54        0x0 load address 0x00000000100da1a4
  .igot.plt      0x0000000020000c54        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x0000000020000c54        0x0 load address 0x00000000100da1e4
+                0x0000000020000c54        0x0 load address 0x00000000100da1a4
                 0x0000000020000c54                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x00000000100da1e4
+.scratch_x      0x0000000020040000        0x0 load address 0x00000000100da1a4
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x00000000100da1e4                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x00000000100da1a4                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x00000000100da1e4
+.scratch_y      0x0000000020041000        0x0 load address 0x00000000100da1a4
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x00000000100da1e4                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x00000000100da1a4                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x0000000020000c54      0x4d8
                 0x0000000020000c54                . = ALIGN (0x4)
@@ -2095,8 +2093,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x00000000100da1e4        0x0
-                0x00000000100da1e4                __flash_binary_end = .
+.flash_end      0x00000000100da1a4        0x0
+                0x00000000100da1a4                __flash_binary_end = .
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2153,7 +2151,7 @@ LOAD CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_com
 LOAD CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 LOAD CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 LOAD CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
-LOAD /tmp/cccz5YvT.o
+LOAD /tmp/ccMihdJT.o
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2252,7 +2250,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000000000000060c       0x2b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
  .ARM.attributes
-                0x0000000000000637       0x22 /tmp/cccz5YvT.o
+                0x0000000000000637       0x22 /tmp/ccMihdJT.o
  .ARM.attributes
                 0x0000000000000659       0x1e /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -2322,142 +2320,142 @@ LOAD linker stubs
  .comment       0x00000000000000a7       0x4f /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
  .comment       0x00000000000000a7       0x5a /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 
-.debug_info     0x0000000000000000    0x1f400
- .debug_info    0x0000000000000000     0x220a CMakeFiles/sinsonte.dir/sinsonte.c.obj
- .debug_info    0x000000000000220a      0x504 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
- .debug_info    0x000000000000270e     0x1111 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x000000000000381f      0x608 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x0000000000003e27      0x48d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x00000000000042b4      0x1bd CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x0000000000004471      0xb2d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_info    0x0000000000004f9e     0x3a10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- .debug_info    0x00000000000089ae      0xf61 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x000000000000990f      0x1b9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x0000000000009ac8      0xcdb CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_info    0x000000000000a7a3     0x19fd CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_info    0x000000000000c1a0     0x125b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x000000000000d3fb     0x1007 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x000000000000e402      0xd2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x000000000000f12e      0x1fc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x000000000000f32a      0x382 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x000000000000f6ac     0x17ad CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x0000000000010e59       0x26 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
- .debug_info    0x0000000000010e7f     0x1f92 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x0000000000012e11       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x0000000000012e33      0x20d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x0000000000013040       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x0000000000013062       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x0000000000013084      0xaf9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x0000000000013b7d       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x0000000000013b9f       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x0000000000013bc1      0xb48 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x0000000000014709       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_info    0x000000000001472b      0xa8d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_info    0x00000000000151b8       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x00000000000151da       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x00000000000151fc      0x2c6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x00000000000154c2     0x18a6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x0000000000016d68      0xbd1 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_info    0x0000000000017939      0xb17 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_info    0x0000000000018450      0x2af CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
- .debug_info    0x00000000000186ff       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_info    0x0000000000018725      0x988 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
- .debug_info    0x00000000000190ad      0xc2f /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
- .debug_info    0x0000000000019cdc      0x92a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
- .debug_info    0x000000000001a606      0x9b6 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
- .debug_info    0x000000000001afbc      0xf1a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
- .debug_info    0x000000000001bed6      0x961 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
- .debug_info    0x000000000001c837      0x9fb /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
- .debug_info    0x000000000001d232      0x973 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
- .debug_info    0x000000000001dba5      0xd99 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
- .debug_info    0x000000000001e93e      0xac2 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
+.debug_info     0x0000000000000000    0x1f588
+ .debug_info    0x0000000000000000     0x2392 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+ .debug_info    0x0000000000002392      0x504 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+ .debug_info    0x0000000000002896     0x1111 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x00000000000039a7      0x608 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x0000000000003faf      0x48d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x000000000000443c      0x1bd CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x00000000000045f9      0xb2d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_info    0x0000000000005126     0x3a10 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_info    0x0000000000008b36      0xf61 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x0000000000009a97      0x1b9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x0000000000009c50      0xcdb CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x000000000000a92b     0x19fd CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_info    0x000000000000c328     0x125b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x000000000000d583     0x1007 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x000000000000e58a      0xd2c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x000000000000f2b6      0x1fc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x000000000000f4b2      0x382 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x000000000000f834     0x17ad CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x0000000000010fe1       0x26 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_info    0x0000000000011007     0x1f92 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x0000000000012f99       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x0000000000012fbb      0x20d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x00000000000131c8       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x00000000000131ea       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x000000000001320c      0xaf9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x0000000000013d05       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x0000000000013d27       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x0000000000013d49      0xb48 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x0000000000014891       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_info    0x00000000000148b3      0xa8d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_info    0x0000000000015340       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x0000000000015362       0x22 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x0000000000015384      0x2c6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x000000000001564a     0x18a6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x0000000000016ef0      0xbd1 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_info    0x0000000000017ac1      0xb17 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_info    0x00000000000185d8      0x2af CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+ .debug_info    0x0000000000018887       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00000000000188ad      0x988 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
+ .debug_info    0x0000000000019235      0xc2f /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
+ .debug_info    0x0000000000019e64      0x92a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
+ .debug_info    0x000000000001a78e      0x9b6 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
+ .debug_info    0x000000000001b144      0xf1a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
+ .debug_info    0x000000000001c05e      0x961 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
+ .debug_info    0x000000000001c9bf      0x9fb /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
+ .debug_info    0x000000000001d3ba      0x973 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_info    0x000000000001dd2d      0xd99 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
+ .debug_info    0x000000000001eac6      0xac2 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
 
-.debug_abbrev   0x0000000000000000     0x6863
- .debug_abbrev  0x0000000000000000      0x452 CMakeFiles/sinsonte.dir/sinsonte.c.obj
- .debug_abbrev  0x0000000000000452      0x1b1 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
- .debug_abbrev  0x0000000000000603      0x309 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_abbrev  0x000000000000090c      0x276 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_abbrev  0x0000000000000b82      0x212 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_abbrev  0x0000000000000d94       0xe7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_abbrev  0x0000000000000e7b      0x2d4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_abbrev  0x000000000000114f      0x626 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- .debug_abbrev  0x0000000000001775      0x34c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_abbrev  0x0000000000001ac1      0x133 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_abbrev  0x0000000000001bf4      0x34f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_abbrev  0x0000000000001f43      0x3ad CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_abbrev  0x00000000000022f0      0x446 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_abbrev  0x0000000000002736      0x397 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_abbrev  0x0000000000002acd      0x2d8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_abbrev  0x0000000000002da5      0x12c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_abbrev  0x0000000000002ed1      0x1c0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_abbrev  0x0000000000003091      0x4a3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_abbrev  0x0000000000003534       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
- .debug_abbrev  0x0000000000003548      0x4a1 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_abbrev  0x00000000000039e9       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_abbrev  0x00000000000039fb       0xf8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_abbrev  0x0000000000003af3       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_abbrev  0x0000000000003b05       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_abbrev  0x0000000000003b17      0x2ab CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_abbrev  0x0000000000003dc2       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_abbrev  0x0000000000003dd4       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_abbrev  0x0000000000003de6      0x2c3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_abbrev  0x00000000000040a9       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_abbrev  0x00000000000040bb      0x286 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_abbrev  0x0000000000004341       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_abbrev  0x0000000000004353       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_abbrev  0x0000000000004365       0xad CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_abbrev  0x0000000000004412      0x5d3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_abbrev  0x00000000000049e5      0x3bc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_abbrev  0x0000000000004da1      0x26f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_abbrev  0x0000000000005010       0xff CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
- .debug_abbrev  0x000000000000510f       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_abbrev  0x0000000000005123      0x225 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
- .debug_abbrev  0x0000000000005348      0x275 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
- .debug_abbrev  0x00000000000055bd      0x1b8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
- .debug_abbrev  0x0000000000005775      0x22d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
- .debug_abbrev  0x00000000000059a2      0x321 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
- .debug_abbrev  0x0000000000005cc3      0x203 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
- .debug_abbrev  0x0000000000005ec6      0x250 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
- .debug_abbrev  0x0000000000006116      0x1e8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
- .debug_abbrev  0x00000000000062fe      0x2b9 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
- .debug_abbrev  0x00000000000065b7      0x2ac /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
+.debug_abbrev   0x0000000000000000     0x6865
+ .debug_abbrev  0x0000000000000000      0x454 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+ .debug_abbrev  0x0000000000000454      0x1b1 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+ .debug_abbrev  0x0000000000000605      0x309 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_abbrev  0x000000000000090e      0x276 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_abbrev  0x0000000000000b84      0x212 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_abbrev  0x0000000000000d96       0xe7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_abbrev  0x0000000000000e7d      0x2d4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_abbrev  0x0000000000001151      0x626 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_abbrev  0x0000000000001777      0x34c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_abbrev  0x0000000000001ac3      0x133 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_abbrev  0x0000000000001bf6      0x34f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_abbrev  0x0000000000001f45      0x3ad CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_abbrev  0x00000000000022f2      0x446 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_abbrev  0x0000000000002738      0x397 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_abbrev  0x0000000000002acf      0x2d8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_abbrev  0x0000000000002da7      0x12c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_abbrev  0x0000000000002ed3      0x1c0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_abbrev  0x0000000000003093      0x4a3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_abbrev  0x0000000000003536       0x14 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_abbrev  0x000000000000354a      0x4a1 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_abbrev  0x00000000000039eb       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_abbrev  0x00000000000039fd       0xf8 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_abbrev  0x0000000000003af5       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_abbrev  0x0000000000003b07       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_abbrev  0x0000000000003b19      0x2ab CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_abbrev  0x0000000000003dc4       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_abbrev  0x0000000000003dd6       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_abbrev  0x0000000000003de8      0x2c3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_abbrev  0x00000000000040ab       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_abbrev  0x00000000000040bd      0x286 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_abbrev  0x0000000000004343       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_abbrev  0x0000000000004355       0x12 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_abbrev  0x0000000000004367       0xad CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_abbrev  0x0000000000004414      0x5d3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_abbrev  0x00000000000049e7      0x3bc CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_abbrev  0x0000000000004da3      0x26f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_abbrev  0x0000000000005012       0xff CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+ .debug_abbrev  0x0000000000005111       0x14 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x0000000000005125      0x225 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
+ .debug_abbrev  0x000000000000534a      0x275 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
+ .debug_abbrev  0x00000000000055bf      0x1b8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000005777      0x22d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
+ .debug_abbrev  0x00000000000059a4      0x321 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
+ .debug_abbrev  0x0000000000005cc5      0x203 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
+ .debug_abbrev  0x0000000000005ec8      0x250 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
+ .debug_abbrev  0x0000000000006118      0x1e8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_abbrev  0x0000000000006300      0x2b9 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
+ .debug_abbrev  0x00000000000065b9      0x2ac /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
 
-.debug_loc      0x0000000000000000     0xe12e
- .debug_loc     0x0000000000000000      0x6b6 CMakeFiles/sinsonte.dir/sinsonte.c.obj
- .debug_loc     0x00000000000006b6      0x2d7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
- .debug_loc     0x000000000000098d      0xafe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_loc     0x000000000000148b      0x457 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_loc     0x00000000000018e2      0x1d7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_loc     0x0000000000001ab9       0xe9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_loc     0x0000000000001ba2      0x50b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_loc     0x00000000000020ad     0x27aa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- .debug_loc     0x0000000000004857      0x831 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_loc     0x0000000000005088       0xa2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_loc     0x000000000000512a      0x627 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_loc     0x0000000000005751     0x137e CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_loc     0x0000000000006acf      0x3d7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_loc     0x0000000000006ea6      0x890 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_loc     0x0000000000007736      0x267 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_loc     0x000000000000799d       0x71 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_loc     0x0000000000007a0e      0x263 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_loc     0x0000000000007c71     0x1248 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_loc     0x0000000000008eb9     0x20d5 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_loc     0x000000000000af8e      0x16f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_loc     0x000000000000b0fd       0x59 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_loc     0x000000000000b156       0x73 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_loc     0x000000000000b1c9       0xbe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_loc     0x000000000000b287      0x971 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_loc     0x000000000000bbf8      0x527 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_loc     0x000000000000c11f      0x633 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_loc     0x000000000000c752       0x8c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
- .debug_loc     0x000000000000c7de       0x64 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
- .debug_loc     0x000000000000c842      0x299 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
- .debug_loc     0x000000000000cadb       0x64 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
- .debug_loc     0x000000000000cb3f      0xf19 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
- .debug_loc     0x000000000000da58       0x79 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
- .debug_loc     0x000000000000dad1       0xa3 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
- .debug_loc     0x000000000000db74      0x4a9 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
- .debug_loc     0x000000000000e01d      0x111 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
+.debug_loc      0x0000000000000000     0xe29e
+ .debug_loc     0x0000000000000000      0x826 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+ .debug_loc     0x0000000000000826      0x2d7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+ .debug_loc     0x0000000000000afd      0xafe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_loc     0x00000000000015fb      0x457 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_loc     0x0000000000001a52      0x1d7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_loc     0x0000000000001c29       0xe9 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_loc     0x0000000000001d12      0x50b CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_loc     0x000000000000221d     0x27aa CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_loc     0x00000000000049c7      0x831 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_loc     0x00000000000051f8       0xa2 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_loc     0x000000000000529a      0x627 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_loc     0x00000000000058c1     0x137e CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_loc     0x0000000000006c3f      0x3d7 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_loc     0x0000000000007016      0x890 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_loc     0x00000000000078a6      0x267 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_loc     0x0000000000007b0d       0x71 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_loc     0x0000000000007b7e      0x263 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_loc     0x0000000000007de1     0x1248 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_loc     0x0000000000009029     0x20d5 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_loc     0x000000000000b0fe      0x16f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_loc     0x000000000000b26d       0x59 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_loc     0x000000000000b2c6       0x73 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_loc     0x000000000000b339       0xbe CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_loc     0x000000000000b3f7      0x971 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_loc     0x000000000000bd68      0x527 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_loc     0x000000000000c28f      0x633 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_loc     0x000000000000c8c2       0x8c CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+ .debug_loc     0x000000000000c94e       0x64 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
+ .debug_loc     0x000000000000c9b2      0x299 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
+ .debug_loc     0x000000000000cc4b       0x64 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
+ .debug_loc     0x000000000000ccaf      0xf19 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
+ .debug_loc     0x000000000000dbc8       0x79 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
+ .debug_loc     0x000000000000dc41       0xa3 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_loc     0x000000000000dce4      0x4a9 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
+ .debug_loc     0x000000000000e18d      0x111 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
 
 .debug_aranges  0x0000000000000000      0xed0
  .debug_aranges
@@ -2596,59 +2594,59 @@ LOAD linker stubs
  .debug_ranges  0x0000000000002620       0x40 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
  .debug_ranges  0x0000000000002660       0x38 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
 
-.debug_line     0x0000000000000000     0xf117
- .debug_line    0x0000000000000000      0xc9b CMakeFiles/sinsonte.dir/sinsonte.c.obj
- .debug_line    0x0000000000000c9b      0x597 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
- .debug_line    0x0000000000001232      0x894 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x0000000000001ac6      0x409 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x0000000000001ecf      0x3a4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x0000000000002273      0x1b5 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x0000000000002428      0x718 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_line    0x0000000000002b40     0x16ba CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
- .debug_line    0x00000000000041fa      0xa0f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x0000000000004c09      0x213 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x0000000000004e1c      0x786 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_line    0x00000000000055a2      0x87e CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_line    0x0000000000005e20      0x876 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x0000000000006696      0xa64 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x00000000000070fa      0x3d6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x00000000000074d0      0x25f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x000000000000772f      0x356 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x0000000000007a85      0xd57 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x00000000000087dc       0x92 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
- .debug_line    0x000000000000886e     0x1146 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x00000000000099b4      0x155 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x0000000000009b09      0x169 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x0000000000009c72      0x2d6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x0000000000009f48      0x411 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x000000000000a359      0x325 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x000000000000a67e      0x6ac CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x000000000000ad2a      0x3cf CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x000000000000b0f9      0x31d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x000000000000b416      0x1d5 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line    0x000000000000b5eb      0x1b6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_line    0x000000000000b7a1       0xcf CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x000000000000b870       0xe0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x000000000000b950      0x171 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x000000000000bac1      0xc98 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x000000000000c759      0x7c4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_line    0x000000000000cf1d      0x5a3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_line    0x000000000000d4c0      0x2c3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
- .debug_line    0x000000000000d783       0x60 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_line    0x000000000000d7e3      0x14c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
- .debug_line    0x000000000000d92f      0x1e7 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
- .debug_line    0x000000000000db16       0xe3 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
- .debug_line    0x000000000000dbf9      0x16e /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
- .debug_line    0x000000000000dd67      0x89d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
- .debug_line    0x000000000000e604      0x13d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
- .debug_line    0x000000000000e741      0x185 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
- .debug_line    0x000000000000e8c6      0x1c2 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
- .debug_line    0x000000000000ea88      0x482 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
- .debug_line    0x000000000000ef0a      0x20d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
+.debug_line     0x0000000000000000     0xf18c
+ .debug_line    0x0000000000000000      0xd10 CMakeFiles/sinsonte.dir/sinsonte.c.obj
+ .debug_line    0x0000000000000d10      0x597 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+ .debug_line    0x00000000000012a7      0x894 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x0000000000001b3b      0x409 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x0000000000001f44      0x3a4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x00000000000022e8      0x1b5 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x000000000000249d      0x718 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_line    0x0000000000002bb5     0x16ba CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_line    0x000000000000426f      0xa0f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x0000000000004c7e      0x213 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x0000000000004e91      0x786 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x0000000000005617      0x87e CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_line    0x0000000000005e95      0x876 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x000000000000670b      0xa64 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x000000000000716f      0x3d6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x0000000000007545      0x25f CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x00000000000077a4      0x356 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x0000000000007afa      0xd57 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x0000000000008851       0x92 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_line    0x00000000000088e3     0x1146 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x0000000000009a29      0x155 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x0000000000009b7e      0x169 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x0000000000009ce7      0x2d6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x0000000000009fbd      0x411 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x000000000000a3ce      0x325 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x000000000000a6f3      0x6ac CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x000000000000ad9f      0x3cf CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x000000000000b16e      0x31d CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x000000000000b48b      0x1d5 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line    0x000000000000b660      0x1b6 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_line    0x000000000000b816       0xcf CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x000000000000b8e5       0xe0 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x000000000000b9c5      0x171 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x000000000000bb36      0xc98 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x000000000000c7ce      0x7c4 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_line    0x000000000000cf92      0x5a3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_line    0x000000000000d535      0x2c3 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+ .debug_line    0x000000000000d7f8       0x60 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x000000000000d858      0x14c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-calloc.o)
+ .debug_line    0x000000000000d9a4      0x1e7 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-callocr.o)
+ .debug_line    0x000000000000db8b       0xe3 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
+ .debug_line    0x000000000000dc6e      0x16e /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-malloc.o)
+ .debug_line    0x000000000000dddc      0x89d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mallocr.o)
+ .debug_line    0x000000000000e679      0x13d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-mlock.o)
+ .debug_line    0x000000000000e7b6      0x185 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-sbrkr.o)
+ .debug_line    0x000000000000e93b      0x1c2 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-strlen-stub.o)
+ .debug_line    0x000000000000eafd      0x482 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-freer.o)
+ .debug_line    0x000000000000ef7f      0x20d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-reent.o)
 
 .debug_str      0x0000000000000000     0x41c7
  .debug_str     0x0000000000000000      0xda8 CMakeFiles/sinsonte.dir/sinsonte.c.obj
-                                        0xefc (size before relaxing)
+                                        0xef5 (size before relaxing)
  .debug_str     0x0000000000000da8      0x1a5 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
                                         0x3f9 (size before relaxing)
  .debug_str     0x0000000000000f4d      0x299 CMakeFiles/sinsonte.dir/home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
