@@ -1,3 +1,10 @@
+// **************************************************
+// WAV audio player based on Rpi Pico
+// audio data is stored in onboard flash
+// plays one clip of sound on every power on
+// and uses external circuit for very low power 
+// **************************************************
+
 #include <stdio.h>
 #include "pico/stdlib.h"   // stdlib 
 #include "hardware/irq.h"  // interrupts
@@ -57,8 +64,8 @@
 //   5			0x031		0.039478
 //   4			0x026		0.030615
    
-const float adc_conv_factor = 3.3f / (1<<12);
-const float light_sensor_threshold = 0.039 ;
+const float ADC_CONV_FACTOR = 3.3f / (1<<12);
+const float LIGHT_SENSOR_THRESHOLD = 0.039 ;
 bool nightime = 0;
 
 int wav_position = 0;
@@ -179,7 +186,7 @@ int main(void) {
 	//printf("Raw:0x%03x,Volt:%f V\n",adcresult,adcresult * adc_conv_factor);
     
     
-	if(adcresult * adc_conv_factor < light_sensor_threshold )
+	if(adcresult * ADC_CONV_FACTOR < LIGHT_SENSOR_THRESHOLD )
 		{
 			nightime=1;
 		}
