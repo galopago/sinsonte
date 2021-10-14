@@ -36,9 +36,13 @@ El directorio software contiene el codigo fuente del programa.
 
 El directorio docs contiene archivos adicionales
 
-
 ## Como usar este repositorio
 
+Descripcion breve de como instalar el Rpi Pico SDK. para mayor informacion ir a la guia oficial
+(~~~)
+sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
+git clone -b master https://github.com/raspberrypi/pico-sdk.git
+(~~~)
 
 ## Enloquecio el puerto USB!
 Si por alguna razon experimentando con el codigo se comete algun error, el puerto usb no responde o envia secuencias de teclas de forma muy rapida, se puede "formatear" la memoria haciendo lo siguiente: Desconecte el Rpi Pico, presione bootsel y mantenga presionado, conecte al computador y deje de presionar bootsel. Copi el archivo flash_nuke.uf2 que se encuentra en la carpeta util al directorio raiz de la unidad de memoria USB. Ahora el Rpi Pico esta como nuevo.
