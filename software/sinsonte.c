@@ -1,9 +1,9 @@
-// **************************************************
+// ***************************************************************************************
 // WAV audio player based on Rpi Pico
-// audio data is stored in onboard flash
+// audio data is stored in onboard flash Up to 24 seconds in total of 8 bit mono wav sounds @44 KHz
 // plays one clip of sound on every power on
 // and uses external circuit for very low power 
-// **************************************************
+// ***************************************************************************************
 
 #include <stdio.h>
 #include "pico/stdlib.h"   // stdlib 
@@ -36,6 +36,8 @@
  * if you want to know how to make these please see the python code
  * for converting audio samples into static arrays. 
  */
+
+/* Clock example: 12 sounds, 1 sound per hour. Each sound ~2 sec play*/
 
 #include "12.h"
 #include "1.h"
