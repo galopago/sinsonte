@@ -1,6 +1,6 @@
-# PEDAL USB BASADO EN RPI PICO
+# REPRODUCTOR DE SONIDO BASADO EN RPI PICO
 
-Pedal USB basado en Rpi Pico. Configurable mediante archivo de texto, puede emular pulsaciones de teclas y combinaciones de ellas con sus pies!. Aparece en el PC como un teclado USB estandar. util para edicion de video (pausar/play), comando para maquinas CNC/3D sin usar las manos, entre otras.
+Reproductor de sonido basado en Rpi Pico. Almacena los datos de sonido en la memoria interna. Requiere muy pocos componentes externos y faciles de ensamblar. Fue diseñado con el objetivo de permanecer en modo espera durante muy largo tiempo alimentado por baterias. Puede usarse en relojes de pared musicales o como voz para alguna muñeca o juguete. Facil de ensamblar
 
 ![TARJETA](sinsonte.jpg)
 
@@ -12,17 +12,18 @@ Lea esto en otros idiomas: [English](../README.md)
 
 ## Estructura de directorios
 
-* El directorio raiz contiene el programa en CircuitPython y el archivo de configuracion.
-* El directorio utils contiene archivos binarios.
-* El directorio lib contiene bibliotecas adicionales de CircuitPython.
+* El directorio software contiene el codigo fuente del programa.
+* El directorio hardware contiene el esquematico y circuito impreso.
 * El directorio docs contiene archivos adicionales
 
 ## Como usar este repositorio
-El proyecto esta desarrollado en CircuitPython V6.3
-* Conecte interruptores normalmente abiertos (botones, pedales, palancas) entre cada uno de los GPIO requeridos y pines de tierra.
-* Conecte un cable Micro USB a USB al Rpi Pico (No lo conecte al computador aun)
-* Presione el boton bootsel y mantengalo presionado mientras lo conecta al puerto USB del computador. Una vez conectado deje de presionar bootsel.
-* El Rpi Pico aparecera en el escritorio como una unidad de almacenamiento USB llamada Pi RP2 Boot
+Hardware: El proyecto esta desarrollado en KiCad V6.3
+* El directorio /hardware/ contiene el proyecto completo en KiCad.
+* El directorio /hardware/gerber contiene los archivos de fabricacion del circuito impreso.
+* El directorio /hardware/modules contiene footprints adicionales necesarios para poder editar el circuito impreso.
+* El directorio /hardware/library contiene simbolos adicionales necesarios para poder editar el esquematico.
+
+Software: 
 * Copie el instalador de CircuitPython del directorio utils a la unidad de memoria USB.
 * Copie el contenido del directorio lib al directorio lib de la unidad de memoria USB.
 * Copie el archivo keys.conf al directorio raiz de la unidad de memoria USB.
