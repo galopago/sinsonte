@@ -53,9 +53,9 @@ Clonar el repositorio del proyecto
 ~~~
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
-Modificar el archivo /SINSONTE/software/CMakeLists.txt cambiando las rutas del SDK Pico por la ruta en que se instalo en su propia maquina
-Borrar el archivo /SINSONTE/software/build/CMakeCache.txt
-Borrar el archivo /SINSONTE/software/build/elf2uf2/CMakeCache.txt
+* Modificar el archivo /SINSONTE/software/CMakeLists.txt cambiando las rutas del SDK Pico por la ruta en que se instalo en su propia maquina.
+* Borrar el archivo /SINSONTE/software/build/CMakeCache.txt
+* Borrar el archivo /SINSONTE/software/build/elf2uf2/CMakeCache.txt
 Mediante la linea de comando acceda al directorio /SINSONTE/software/build
 ~~~
 cd software/build
@@ -69,6 +69,7 @@ Y finalmente para compilar:
 make clean
 make all
 ~~~
+El programa compilado (.uf2) para descargar al Rpi Pico se encontrara en la carpeta /SINSONTE/software/build
 
 
 ## Como cambiar los archivos de sonido
