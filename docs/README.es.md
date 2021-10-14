@@ -5,8 +5,17 @@ Reproductor de sonido basado en Rpi Pico. Almacena los datos de sonido en la mem
 ![TARJETA](sinsonte.jpg)
 
 
-Materializado de forma rapida y robusta mediante el sistema de prototipado [TUSISTEMITA](https://github.com/galopago/TUSISTEMITA).
+Tarjeta de circuito impreso con todos los componentes montados.
 
+## Funcionamiento general
+
+El circuito se ha diseñado para que permanezca la mayoria del tiempo en silencio y alimentado por baterias AA, como es el caso de los relojes musicales o jueguetes que hablan. En el mejor de los casos, el Rpi Pico en su menor consumo usando las funciones de sueño profundo, drenara aproximadamente 1.3 mA de las baterias. Un par de baterias AA tiene una capacidad aproximada de 2000 mAh, por lo solamente en modo espera tendrian una duracion aproximada de dos meses. Inaceptable!.
+
+Se diseño un circuito externo que mantiene totalmente apagado el Rpi Pico usando el pin 3V3_EN de esta forma solo consumira aproximadamente unos 70 uA, lo que se traduce en unos 3 años en modo espera. Mucho mejor!
+
+El sistema funciona de la siguiente manera: En modo reposo, un condensador mediante una resistencia grande mantienen el voltaje de conduccion de un mosfet que que es el encargado de mantener activa la señal de apagar el Rpi Pico 3V3_EN . Para reproducir un sonido se debera pulsar brevemente un interruptor. Este interruptor descarga el condensador rapidamente, apagando el mosfet y haciendo que el Rpi Pico se encienda. Una vez encendido el Rpi Pico, este mantiene descargado el condensador mediante un GPIO durante la duracion del sonido. Al finalizar la ejecucion, el GPIO se pone en alta impedancia haciendo que el circuito externo cargue de nuevo el condensador y apague el Rpi Pico hasta la proxima pulsacion!
+
+El Rpi Pico tiene varios sonidos almacenados, y se reproducen en secuencia con cada pulsacion del interruptor. Para poder guardar cual sonido se repoducira en la siguiente pulsacion, se hace uso de la memoria flash interna, por lo que se debera analizar con cuidado la aplicacion final del circuito para evitar desgastes rapidos en la flash.
 
 Lea esto en otros idiomas: [English](../README.md)
 
