@@ -1,4 +1,7 @@
 # SINSONTE
+
+Read this in other languages: [Español](docs/README.es.md)
+
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
 git clone -b master https://github.com/raspberrypi/pico-sdk.git
 cd pico-sdk
