@@ -56,6 +56,7 @@ git clone https://github.com/galopago/SINSONTE.git
 * Modificar el archivo /SINSONTE/software/CMakeLists.txt cambiando las rutas del SDK Pico por la ruta en que se instalo en su propia maquina.
 * Borrar el archivo /SINSONTE/software/build/CMakeCache.txt
 * Borrar el archivo /SINSONTE/software/build/elf2uf2/CMakeCache.txt
+
 Mediante la linea de comando acceda al directorio /SINSONTE/software/build
 ~~~
 cd software/build
