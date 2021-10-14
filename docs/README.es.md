@@ -6,10 +6,11 @@ Reproductor de sonido basado en Rpi Pico. Almacena los datos de sonido en la mem
 
 
 Tarjeta de circuito impreso con todos los componentes montados.
+Lea esto en otros idiomas: [English](../README.md)
 
 ## Funcionamiento general
 
-El circuito se ha diseñado para que permanezca la mayoria del tiempo en silencio y alimentado por baterias AA, como es el caso de los relojes musicales o jueguetes que hablan. En el mejor de los casos, el Rpi Pico en su menor consumo usando las funciones de sueño profundo, drenara aproximadamente 1.3 mA de las baterias. Un par de baterias AA tiene una capacidad aproximada de 2000 mAh, por lo solamente en modo espera tendrian una duracion aproximada de dos meses. Inaceptable!.
+El circuito ([ver esquematico](docs/schematic.pdf)) se ha diseñado para que permanezca la mayoria del tiempo en silencio y alimentado por baterias AA, como es el caso de los relojes musicales o jueguetes que hablan. En el mejor de los casos, el Rpi Pico en su menor consumo usando las funciones de sueño profundo, drenara aproximadamente 1.3 mA de las baterias. Un par de baterias AA tiene una capacidad aproximada de 2000 mAh, por lo solamente en modo espera tendrian una duracion aproximada de dos meses. Inaceptable!.
 
 Se diseño un circuito externo que mantiene totalmente apagado el Rpi Pico usando el pin 3V3_EN de esta forma solo consumira aproximadamente unos 70 uA, lo que se traduce en unos 3 años en modo espera. Mucho mejor!
 
@@ -17,7 +18,6 @@ El sistema funciona de la siguiente manera: En modo reposo, un condensador media
 
 El Rpi Pico tiene varios sonidos almacenados, y se reproducen en secuencia con cada pulsacion del interruptor. Para poder guardar cual sonido se repoducira en la siguiente pulsacion, se hace uso de la memoria flash interna, por lo que se debera analizar con cuidado la aplicacion final del circuito para evitar desgastes rapidos en la flash.
 
-Lea esto en otros idiomas: [English](../README.md)
 
 ## Estructura de directorios
 
