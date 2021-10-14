@@ -38,14 +38,14 @@ El directorio docs contiene archivos adicionales
 
 ## Como usar este repositorio
 
-Descripcion breve de como instalar el Rpi Pico SDK. para mayor informacion ir a la guia oficial
+Descripcion breve de como instalar el Rpi Pico SDK. Para mayor informacion ir a la [informacion oficial](https://github.com/raspberrypi/pico-sdk)
 ~~~
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
 git clone -b master https://github.com/raspberrypi/pico-sdk.git
 cd pico-sdk
 git submodule update --init
 ~~~
-Se añade la siguiente linea al archivo .bashrc
+Se añade la siguiente linea al archivo .bashrc y despues de hacerlo reiniciar sesion para que tome efecto
 ~~~
 export PICO_SDK_PATH={ruta sdk}/pico-sdk
 ~~~
@@ -53,8 +53,25 @@ Clonar el repositorio del proyecto
 ~~~
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
+Modificar el archivo /SINSONTE/software/CMakeLists.txt cambiando las rutas del SDK Pico por la ruta en que se instalo en su propia maquina
+Borrar el archivo /SINSONTE/software/build/CMakeCache.txt
+Borrar el archivo /SINSONTE/software/build/elf2uf2/CMakeCache.txt
+Mediante la linea de comando acceda al directorio /SINSONTE/software/build
+~~~
+cd software/build
+~~~
+Crear los makefiles
+~~~
+cmake ..
+~~~
+Y finalmente para compilar:
+~~~
+make clean
+make all
+~~~
 
-## Enloquecio el puerto USB!
+
+## Como cambiar los archivos de sonido
 Si por alguna razon experimentando con el codigo se comete algun error, el puerto usb no responde o envia secuencias de teclas de forma muy rapida, se puede "formatear" la memoria haciendo lo siguiente: Desconecte el Rpi Pico, presione bootsel y mantenga presionado, conecte al computador y deje de presionar bootsel. Copi el archivo flash_nuke.uf2 que se encuentra en la carpeta util al directorio raiz de la unidad de memoria USB. Ahora el Rpi Pico esta como nuevo.
 
 ## Licencia
