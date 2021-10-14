@@ -42,6 +42,16 @@ Descripcion breve de como instalar el Rpi Pico SDK. para mayor informacion ir a 
 ~~~
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
 git clone -b master https://github.com/raspberrypi/pico-sdk.git
+cd pico-sdk
+git submodule update --init
+~~~
+Se añade la siguiente linea al archivo .bashrc
+~~~
+export PICO_SDK_PATH={ruta sdk}/pico-sdk
+~~~
+Clonar el repositorio del proyecto
+~~~
+git clone https://github.com/galopago/SINSONTE.git
 ~~~
 
 ## Enloquecio el puerto USB!
