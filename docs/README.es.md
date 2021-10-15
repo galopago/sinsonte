@@ -10,13 +10,13 @@ Lea esto en otros idiomas: [English](../README.md)
 
 ## Funcionamiento general
 
-El circuito ([ver esquematico](../docs/schematic.pdf)) se ha diseñado para que permanezca la mayoria del tiempo en silencio y alimentado por 2 baterias AA, como es el caso de los relojes musicales o jueguetes que hablan. En el mejor de los casos, el Rpi Pico en su menor consumo (usando funciones de sueño profundo), drenara aproximadamente 1.3 mAh de las baterias. Un par de baterias AA tiene una capacidad aproximada de 2000 mAh, por lo solamente en modo espera tendrian una duracion aproximada de dos meses. Inaceptable!.
+El circuito ([ver esquematico](../docs/schematic.pdf)) se ha diseñado para que permanezca la mayoria del tiempo en silencio y alimentado por 2 baterias AA, como es el caso de los relojes musicales o juguetes que hablan. En el mejor de los casos, el Rpi Pico en su menor consumo (usando funciones de sueño profundo), drenara aproximadamente 1.3 mAh de las baterias. Como un par de baterias AA tiene una capacidad aproximada de 2000 mAh, solamente en modo espera tendrian una duracion aproximada de dos meses. Inaceptable!.
 
 Se adiciono un circuito externo que mantiene totalmente apagado el Rpi Pico usando el pin 3V3_EN de esta forma solo consumira aproximadamente unos 70 uA, lo que se traduce en unos 3 años en modo espera. Mucho mejor!
 
-El sistema funciona de la siguiente manera: En modo reposo, un condensador mediante una resistencia grande mantienen el voltaje de conduccion de un mosfet que que es el encargado de poner a tierra la señal 3V3_EN, apagando totalmente la tarjeta. Para reproducir un sonido se debera pulsar brevemente un interruptor. Este interruptor descarga el condensador rapidamente, apagando el mosfet y haciendo que la señal 3V3_EN quede a V+ mediante su resistencia interna, haciendo que el Rpi Pico se encienda. Una vez encendido el Rpi Pico, este mantiene descargado el condensador mediante un GPIO durante la reproduccion del sonido. Al finalizar la reproduccion, el GPIO se pone en alta impedancia haciendo que el circuito externo cargue de nuevo el condensador y apague el Rpi Pico hasta la proxima pulsacion!
+El sistema funciona de la siguiente manera: En modo reposo, un condensador mediante una resistencia grande mantienen el voltaje de conduccion de un mosfet que es el encargado de poner a tierra la señal 3V3_EN, apagando totalmente la tarjeta. Para reproducir un sonido se debera pulsar brevemente un interruptor. Este interruptor descarga el condensador rapidamente, apagando el mosfet y haciendo que la señal 3V3_EN quede a V+ mediante su resistencia interna, haciendo que el Rpi Pico se encienda. Una vez encendido el Rpi Pico, este mantiene descargado el condensador mediante un GPIO durante la reproduccion del sonido. Al finalizar la reproduccion, el GPIO se pone en alta impedancia haciendo que el circuito externo cargue de nuevo el condensador y apague el Rpi Pico hasta la proxima pulsacion!
 
-El Rpi Pico tiene varios sonidos almacenados, y estos se reproducen en secuencia con cada pulsacion del interruptor. Para poder guardar cual sonido se repoducira en la siguiente pulsacion, se hace uso de la memoria flash interna, por lo que se debera analizar con cuidado la aplicacion final del circuito para evitar desgastes rapidos en la flash.
+En el Rpi Pico se almacenan varios sonidos, y estos se reproducen en secuencia con cada pulsacion del interruptor. Para poder guardar cual sonido se repoducira en la siguiente pulsacion, se hace uso de la memoria flash interna, por lo que se debera analizar con cuidado la aplicacion final del circuito para evitar desgastes rapidos de la flash.
 
 
 ## Estructura de directorios
@@ -29,7 +29,7 @@ El directorio hardware contiene el esquematico y circuito impreso.
 
 El directorio software contiene el codigo fuente del programa.
 * El directorio /software/ contiene el codigo fuente en C desarrollado en el Raspberry Pi Pico SDK.
-* El directorio /software/utils contiene scripts suplementarios en python.
+* El directorio /software/utils contiene scripts complementarios en python.
 * El directorio /software/uf2_binaries contiene archivos compilados listos para descargar al Rpi Pico.
 * El directorio /software/sounds contiene archivos de sonido en forma de arrays[] de C.
 * El directorio /software/build contendra los archivos cuando se compila el codigo.
@@ -38,14 +38,14 @@ El directorio docs contiene archivos adicionales
 
 ## Como usar este repositorio
 
-Esta es una descripcion breve de como instalar el Rpi Pico SDK. Para mayor informacion ir a la [informacion oficial](https://github.com/raspberrypi/pico-sdk)
+Esta es una descripcion breve de como instalar el Rpi Pico SDK en Linux (Ubuntu!). Para mayor informacion ir a la [informacion oficial](https://github.com/raspberrypi/pico-sdk)
 ~~~
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
 git clone -b master https://github.com/raspberrypi/pico-sdk.git
 cd pico-sdk
 git submodule update --init
 ~~~
-Se añade la siguiente linea al archivo .bashrc y despues de hacerlo reiniciar sesion para que tome efecto
+Se debera añadir la siguiente linea al archivo .bashrc y despues de hacerlo, reiniciar sesion para que tome efecto
 ~~~
 export PICO_SDK_PATH={ruta sdk}/pico-sdk
 ~~~
@@ -53,11 +53,11 @@ Clonar el repositorio del proyecto
 ~~~
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
-* Modificar el archivo /SINSONTE/software/CMakeLists.txt cambiando las rutas del SDK Pico por la ruta en que se instalo en su propia maquina.
+* Modificar el archivo /SINSONTE/software/CMakeLists.txt cambiando las rutas del SDK Pico por la ruta en que se instalo en su propia computadora.
 * Borrar el archivo /SINSONTE/software/build/CMakeCache.txt
 * Borrar el archivo /SINSONTE/software/build/elf2uf2/CMakeCache.txt
 
-Mediante la linea de comando acceda al directorio /SINSONTE/software/build
+Mediante la interfaz linea de comando acceda al directorio /SINSONTE/software/build
 ~~~
 cd software/build
 ~~~
@@ -83,10 +83,10 @@ El programa presentado aqui reproduce 12 diferentes archivos de sonido de forma 
 
 Una vez se tienen los archivos con las caracteristicas anteriormente mencionadas, se usara la aplicacion **wav2c.py** que se encuentra en la ruta /SINSONTE/software/utils/
 
-Esta aplicacion recibe dos parameteros: el nombre de entrada (.wav) y nombre de archivo de salida (.h). Los nombres de los archivos convertidos deberan llamarse 1.h a 12.h. Un ejemplo seria el siguiente:
+Esta aplicacion recibe dos parameteros: el nombre de arhcivo de entrada (.wav) y nombre de archivo de salida (.h). Los nombres de los archivos convertidos deberan llamarse 1.h a 12.h. Un ejemplo seria el siguiente:
 
 ~~~
-python3 wav2c.py sample.wav 5.h
+python3 wav2c.py ejemplo.wav 5.h
 ~~~
 
 El archivo generado (5.h) debera ponerse en la carpeta /SINSONTE/software/ y recompilar el codigo
