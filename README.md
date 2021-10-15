@@ -1,14 +1,14 @@
 # SOUND PLAYER BASED ON RPI PICO
 
-Reproductor de sonido basado en Raspberry Rpi Pico. Almacena los datos de sonido en la memoria interna. Requiere muy pocos componentes externos faciles de conseguir y de ensamblar. Fue diseñado con el objetivo de permanecer en modo espera durante muy largo tiempo alimentado por baterias. Puede usarse en relojes de pared musicales, como voz para alguna muñeca o juguete, etc.
+Sound player based on Raspberry Rpi Pico. Sound data is stored in internal memory. Very few external (easy to find & solder) components required. The project was designed to be in sleep mode for very long time powered by batteries. Can be used for musical wall clocks, talking dolls, toys, etc.
 
 ![BOARD](/docs/sinsonte.jpg)
 
-Tarjeta de circuito impreso con todos los componentes montados.
+Printed circuit board with all components soldered.
 
-Lea esto en otros idiomas: [Espanol](/docs/README.es.md)
+Also read this in other languages: [Espanol](/docs/README.es.md)
 
-## Funcionamiento general
+## Working principle
 
 El circuito ([ver esquematico](../docs/schematic.pdf)) se ha diseñado para que permanezca la mayoria del tiempo en silencio y alimentado por 2 baterias AA, como es el caso de los relojes musicales o juguetes que hablan. En el mejor de los casos, el Rpi Pico en su menor consumo (usando funciones de sueño profundo), drenara aproximadamente 1.3 mAh de las baterias. Como un par de baterias AA tiene una capacidad aproximada de 2000 mAh, solamente en modo espera tendrian una duracion aproximada de dos meses. Inaceptable!.
 

@@ -6,7 +6,7 @@ Reproductor de sonido basado en Raspberry Rpi Pico. Almacena los datos de sonido
 
 Tarjeta de circuito impreso con todos los componentes montados.
 
-Lea esto en otros idiomas: [English](../README.md)
+Tambien puede leer esto otros idiomas: [English](../README.md)
 
 ## Funcionamiento general
 
