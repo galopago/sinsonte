@@ -74,7 +74,23 @@ El programa compilado (.uf2) para descargar al Rpi Pico se encontrara en la carp
 
 
 ## Como cambiar los archivos de sonido
-Si por alguna razon experimentando con el codigo se comete algun error, el puerto usb no responde o envia secuencias de teclas de forma muy rapida, se puede "formatear" la memoria haciendo lo siguiente: Desconecte el Rpi Pico, presione bootsel y mantenga presionado, conecte al computador y deje de presionar bootsel. Copi el archivo flash_nuke.uf2 que se encuentra en la carpeta util al directorio raiz de la unidad de memoria USB. Ahora el Rpi Pico esta como nuevo.
+
+El programa presentado aqui reproduce 12 diferentes archivos de sonido de forma secuencial. Si se quiere cambiar uno o todos los archivos se debera tener en cuenta lo siguiente:
+
+* La duracion maxima de almacenamiento de la memoria es de 24 segundos (2 segundos por sonido * 12 = 24 segundos)
+* Los archivos deberan convertirse a formato .WAV monofonico de 16 bits y a 44100 hz
+
+
+Una vez se tienen los archivos con las caracteristicas anteriormente mencionadas, se usara la aplicacion **wav2c.py** que se encuentra en la ruta /SINSONTE/software/utils/
+
+Esta aplicacion recibe dos parameteros: el nombre de entrada (.wav) y nombre de archivo de salida (.h). Los nombres de los archivos convertidos deberan llamarse 1.h a 12.h. Un ejemplo seria el siguiente:
+
+~~~
+python3 wav2c.py sample.wav 5.h
+~~~
+
+El archivo generado (5.h) debera ponerse en la carpeta /SINSONTE/software/ y recompilar el codigo
+
 
 ## Licencia
 Este es un proyecto de Software Libre y esta licenciado bajo una licencia [MIT License](https://spdx.org/licenses/MIT.html)
