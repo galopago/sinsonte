@@ -67,7 +67,7 @@
 //   4			0x026		0.030615
    
 const float ADC_CONV_FACTOR = 3.3f / (1<<12);
-const float LIGHT_SENSOR_THRESHOLD = 0.039 ;
+const float LIGHT_SENSOR_THRESHOLD = 0.030615 ;
 bool nightime = 0;
 
 int wav_position = 0;
