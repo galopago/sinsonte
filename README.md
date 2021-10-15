@@ -16,8 +16,8 @@ An external circuit was added to totally power off Rpi Pico via 3V3_EN pin. Drai
 
 The circuit work in the following manner: In standby mode, a capacitor with a large resistor holds the conduction voltage of a mosfet wich is in charge for tying 3V3_EN to ground, powering off the board completly. To play a sound, click friefly on the push button which discharges the capacitor and stops conduction of the mosfet. Now 3V3_EN pin is tied to V+ via its internall pull up, powering on the Rpi Pico Board. Once powered on and program booted, it keeps the capacitor discharged via a GPIO while sound is played. When the sound ends, the RPI Pico puts the GPIO in high input state, so the capacitor charges again and Rpi Powers off until next button click!
 
+There are many stored sounds in the Rpi Pico, and they are played in sequence. To know wich sound needs to be played in the next click, some data needs to be preserved between power offs, that data is stored in the internal flash memory. Be carefull modyifing the program to keep flash writes to a minium
 
-En el Rpi Pico se almacenan varios sonidos, y estos se reproducen en secuencia con cada pulsacion del interruptor. Para poder guardar cual sonido se repoducira en la siguiente pulsacion, se hace uso de la memoria flash interna, por lo que se debera analizar con cuidado la aplicacion final del circuito para evitar desgastes rapidos de la flash.
 
 
 ## Estructura de directorios
