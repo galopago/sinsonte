@@ -48,7 +48,7 @@ git submodule update --init
 ~~~
 Add the line below to .bashrc file, and then restart session to allow changes to take effect.
 ~~~
-export PICO_SDK_PATH={ruta sdk}/pico-sdk
+export PICO_SDK_PATH={sdk path}/pico-sdk
 ~~~
 Clone project repository
 ~~~
@@ -76,22 +76,21 @@ make all
 
 ## How to change sound files
 
-El programa presentado aqui reproduce 12 diferentes archivos de sonido de forma secuencial. Si se quiere cambiar uno o todos los archivos se debera tener en cuenta lo siguiente:
+The sample program shown here, plays 12 different sound files sequentially. If you want to chane one or all of them, the following rules must be taken into account:
 
-* La duracion maxima de almacenamiento de la memoria es de 24 segundos (2 segundos por sonido * 12 = 24 segundos)
-* Los archivos deberan convertirse a formato .WAV monofonico de 16 bits y a 44100 hz antes de ser procesados por la aplicacion que los convertira en array[] de C.
+* Max sound storage capacity is 24 seconds total (~2 seconds per file * 12 files = ~24 seconds)
+* Sound files have to be in .WAV mono 16 bit @ 44100 hz before being processed by the script wich converts them inyo C array[]
 
+Look for **wav2c.py** script in /SINSONTE/software/utils/ folder to convert your own sounds.
 
-Una vez se tienen los archivos con las caracteristicas anteriormente mencionadas, se usara la aplicacion **wav2c.py** que se encuentra en la ruta /SINSONTE/software/utils/
-
-Esta aplicacion recibe dos parameteros: el nombre de arhcivo de entrada (.wav) y nombre de archivo de salida (.h). Los nombres de los archivos convertidos deberan llamarse 1.h a 12.h. Un ejemplo seria el siguiente:
+This scripts need two parameters: input sound file name (.wav) and output file name (.h). The files have to be named 1.h to 12.h. Here is an example:
 
 ~~~
-python3 wav2c.py ejemplo.wav 5.h
+python3 wav2c.py example.wav 5.h
 ~~~
 
-El archivo generado (5.h) debera ponerse en la carpeta /SINSONTE/software/ y recompilar el codigo
+Generated file (5.h) needs to be put in /SINSONTE/software/ folder and then recompile!
 
 
-## Licencia
-Este es un proyecto de Software Libre y esta licenciado bajo una licencia [MIT License](https://spdx.org/licenses/MIT.html)
+## License
+This is an Open Source project and is licensed under [MIT License](https://spdx.org/licenses/MIT.html)
