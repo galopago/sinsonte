@@ -29,17 +29,17 @@ Hardware folder contains schematic and printed circuit board.
 * /hardware/library folder contains additional symbols needed to edit schematic.
 
 Software folder contains program source code.
-* /software/ folder contains C source code develped in the Raspberry Pi Pico SDK.
+* /software/ folder contains C source code develped with the Raspberry Pi Pico SDK.
 * /software/utils folder contain additional python scripts.
 * /software/uf2_binaries folder contains compiled programs ready for download to the Rpi Pico.
 * /software/sounds folder contains sound files source in form of C arrays[].
 * /software/build folder will contain downloadable binaries once compiled.
 
-Docs folder conains additional info files
+Docs folder contains additional info files
 
 ## How to use this repository
 
-This is a very brief guide how to install Rpi Pico SDK in Linux (Ubuntu!). For more info please visit [oficial repo](https://github.com/raspberrypi/pico-sdk)
+This is a very brief guide how to install Rpi Pico SDK on Linux (Ubuntu!). For more info please visit [official repo](https://github.com/raspberrypi/pico-sdk)
 ~~~
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
 git clone -b master https://github.com/raspberrypi/pico-sdk.git
