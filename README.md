@@ -20,61 +20,61 @@ There are many stored sounds in the Rpi Pico, and they are played in sequence. T
 
 
 
-## Estructura de directorios
+## Directory structure
 
-El directorio hardware contiene el esquematico y circuito impreso.
-* El directorio /hardware/ contiene el proyecto completo en KiCad V5.1.
-* El directorio /hardware/gerber contiene los archivos de fabricacion del circuito impreso.
-* El directorio /hardware/modules contiene footprints adicionales necesarios para poder editar el circuito impreso.
-* El directorio /hardware/library contiene simbolos adicionales necesarios para poder editar el esquematico.
+Hardware folder contains schematic and printed circuit board.
+* /hardware/ folder contains KiCad V5.1 project
+* /hardware/gerber folder contains ready to manufacture files.
+* /hardware/modules folder contains additional footprints needed to edit printed circuit board.
+* /hardware/library folder contains additional symbols needed to edit schematic.
 
-El directorio software contiene el codigo fuente del programa.
-* El directorio /software/ contiene el codigo fuente en C desarrollado en el Raspberry Pi Pico SDK.
-* El directorio /software/utils contiene scripts complementarios en python.
-* El directorio /software/uf2_binaries contiene archivos compilados listos para descargar al Rpi Pico.
-* El directorio /software/sounds contiene archivos de sonido en forma de arrays[] de C.
-* El directorio /software/build contendra los archivos cuando se compila el codigo.
+Software folder contains program source code.
+* /software/ folder contains C source code develped in the Raspberry Pi Pico SDK.
+* /software/utils folder contain additional python scripts.
+* /software/uf2_binaries folder contains compiled programs ready for download to the Rpi Pico.
+* /software/sounds folder contains sound files source in form of C arrays[].
+* /software/build folder will contain downloadable binaries once compiled.
 
-El directorio docs contiene archivos adicionales
+Docs folder conains additional info files
 
-## Como usar este repositorio
+## How to use this repository
 
-Esta es una descripcion breve de como instalar el Rpi Pico SDK en Linux (Ubuntu!). Para mayor informacion ir a la [informacion oficial](https://github.com/raspberrypi/pico-sdk)
+This is a very brief guide how to install Rpi Pico SDK in Linux (Ubuntu!). For more info please visit [oficial repo](https://github.com/raspberrypi/pico-sdk)
 ~~~
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
 git clone -b master https://github.com/raspberrypi/pico-sdk.git
 cd pico-sdk
 git submodule update --init
 ~~~
-Se debera añadir la siguiente linea al archivo .bashrc y despues de hacerlo, reiniciar sesion para que tome efecto
+Add the line below to .bashrc file, and then restart session to allow changes to take effect.
 ~~~
 export PICO_SDK_PATH={ruta sdk}/pico-sdk
 ~~~
-Clonar el repositorio del proyecto
+Clone project repository
 ~~~
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
-* Modificar el archivo /SINSONTE/software/CMakeLists.txt cambiando las rutas del SDK Pico por la ruta en que se instalo en su propia computadora.
-* Borrar el archivo /SINSONTE/software/build/CMakeCache.txt
-* Borrar el archivo /SINSONTE/software/build/elf2uf2/CMakeCache.txt
+* Modify /SINSONTE/software/CMakeLists.txt file change Rpi Pico SDK paths with your own installation paths.
+* Delete /SINSONTE/software/build/CMakeCache.txt file
+* Delete /SINSONTE/software/build/elf2uf2/CMakeCache.txt file
 
-Mediante la interfaz linea de comando acceda al directorio /SINSONTE/software/build
+Using the command line terminall go to the folder /SINSONTE/software/build
 ~~~
 cd software/build
 ~~~
-Crear los makefiles
+Generate makefiles
 ~~~
 cmake ..
 ~~~
-Y finalmente para compilar:
+And finally compile:
 ~~~
 make clean
 make all
 ~~~
-El programa compilado (.uf2) para descargar al Rpi Pico se encontrara en la carpeta /SINSONTE/software/build
+(.uf2) downloadable compiled file lies in /SINSONTE/software/build
 
 
-## Como cambiar los archivos de sonido
+## How to change sound files
 
 El programa presentado aqui reproduce 12 diferentes archivos de sonido de forma secuencial. Si se quiere cambiar uno o todos los archivos se debera tener en cuenta lo siguiente:
 
