@@ -7,12 +7,13 @@ import digitalio
 import audiomp3
 import audiopwmio
 import os
-#import storage
+import microcontroller
+
 
 poweroff_gpio = board.GP14
 audio_gpio = board.GP28_A2
 next_hour_file = 'nexthour.conf'
-default_next_hour = '1'
+default_next_hour = 1
 
 # Do this ASAP!
 
@@ -26,32 +27,18 @@ led.value = True
 
 audio = audiopwmio.PWMAudioOut(audio_gpio)
 
-print("Reading next hour file")
-flist=os.listdir()
-if next_hour_file in flist:
-	print("config file found!:",next_hour_file)
-	fp = open(next_hour_file,'r')
-	next_hour = fp.readline().rstrip('\n')
-	fp.close()
-	# Search for valid values			
-	print("value read from file:",next_hour)
-	if next_hour in ['1','2','3','4','5','6','7','8','9','10','11','12'] :
-		print("Valid value:",next_hour)
-	else:
-		print("Invalid value:",next_hour)
-		# no valid value
-		# Writting default value to config file
-		#fp = open(next_hour_file,'w')
-		#fp.write(default_next_hour+'\n')
-		#fp.close()	
-else:
-	print("config file not found!, creating one:",next_hour_file)
-	# Creating config file with default value
-	#fp = open(next_hour_file,'w')
-	#fp.write(default_next_hour+'\n')
-	#fp.close()
-		
-#fp = open(next_hour_file,'w')
+#Reading next hour from NVM
+next_hour=microcontroller.nvm[0];
+print("Next hour from NVM:",next_hour)
+#check for a valid value
+if next_hour >0 and next_hour<13  :
+	print("Next hour from NVM value ok:",next_hour)
+else :
+	print("Next hour from NVM value invalid:",next_hour)
+	microcontroller.nvm[0]=default_next_hour
+	next_hour=microcontroller.nvm[0];
+	print("Next hour from NVM changed to:",next_hour)
+
 next_hour = '1'
 
 if next_hour == '12' :
