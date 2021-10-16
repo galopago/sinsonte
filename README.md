@@ -1,6 +1,6 @@
 # SOUND PLAYER BASED ON RPI PICO
 
-Sound player based on Raspberry Rpi Pico. Sound data is stored in internal memory. Very few external (easy to find & solder) components required. The project was designed to be in sleep mode for very long time powered by batteries. Can be used for musical wall clocks, talking dolls, toys, etc.
+Sound player based on Raspberry Rpi Pico. Sound data are stored in internal memory. Very few external (easy to find & solder) components required. The project was designed to be in sleep mode for a very long time powered by batteries. Can be used for musical wall clocks, talking dolls, toys, etc.
 
 ![BOARD](/docs/sinsonte.jpg)
 
