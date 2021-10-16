@@ -58,7 +58,7 @@ git clone https://github.com/galopago/SINSONTE.git
 * Delete /SINSONTE/software/build/CMakeCache.txt file
 * Delete /SINSONTE/software/build/elf2uf2/CMakeCache.txt file
 
-Using the command line terminall go to the folder /SINSONTE/software/build
+Using the command line terminal go to the folder /SINSONTE/software/build
 ~~~
 cd software/build
 ~~~
@@ -76,20 +76,20 @@ make all
 
 ## How to change sound files
 
-The sample program shown here, plays 12 different sound files sequentially. If you want to chane one or all of them, the following rules must be taken into account:
+The sample program shown here, plays 12 different sound files sequentially. If you want to change one or all of them, the following rules must be taken into account:
 
 * Max sound storage capacity is 24 seconds total (~2 seconds per file * 12 files = ~24 seconds)
-* Sound files have to be in .WAV mono 16 bit @ 44100 hz before being processed by the script wich converts them inyo C array[]
+* Sound files have to be in .WAV mono 16 bit @ 44100 hz before being processed by the script which converts them into C array[]
 
 Look for **wav2c.py** script in /SINSONTE/software/utils/ folder to convert your own sounds.
 
-This scripts need two parameters: input sound file name (.wav) and output file name (.h). The files have to be named 1.h to 12.h. Here is an example:
+This script need two parameters: input sound file name (.wav) and output file name (.h). The files have to be named 1.h to 12.h. Here is an example:
 
 ~~~
 python3 wav2c.py example.wav 5.h
 ~~~
 
-Generated file (5.h) needs to be put in /SINSONTE/software/ folder and then recompile!
+The generated file (5.h) needs to be put in /SINSONTE/software/ folder and then recompile!
 
 
 ## License
