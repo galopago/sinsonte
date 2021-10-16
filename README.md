@@ -1,6 +1,6 @@
 # SOUND PLAYER BASED ON RPI PICO
 
-Sound player based on Raspberry Rpi Pico. Sound data are stored in internal memory. Very few external (easy to find & solder) components required. The project was designed to be in sleep mode for a very long time powered by batteries. Can be used for musical wall clocks, talking dolls, toys, etc.
+Sound player based on Raspberry Rpi Pico. Sound data are stored in onboard memory. Very few external (easy to find & solder) components required. The project was designed to be in sleep mode for a very long time powered by batteries. Can be used for musical wall clocks, talking dolls, toys, etc.
 
 ![BOARD](/docs/sinsonte.jpg)
 
@@ -29,14 +29,16 @@ Hardware folder contains schematic and printed circuit board.
 * /hardware/library folder contains additional symbols needed to edit schematic.
 
 Software folder contains program source code.
-* /software/ folder contains C source code develped with the Raspberry Pi Pico SDK.
-* /software/utils folder contain additional python scripts.
-* /software/uf2_binaries folder contains compiled programs ready for download to the Rpi Pico.
-* /software/sounds folder contains sound files source in form of C arrays[].
-* /software/build folder will contain downloadable binaries once compiled.
+* /software/sdk folder contains C source code develped with the Raspberry Pi Pico SDK.
+* /software/sdk/utils folder contain additional python scripts.
+* /software/sdk/uf2_binaries folder contains compiled programs ready for download to the Rpi Pico.
+* /software/sdk/sounds folder contains sound files source in form of C arrays[].
+* /software/sdk/build folder will contain downloadable binaries once compiled.
+* /software/cp folder contains C source code develped with CircuitPython.
 
 Docs folder contains additional info files
 
+# SDK
 ## How to use this repository
 
 This is a very brief guide how to install Rpi Pico SDK on Linux (Ubuntu!). For more info please visit [official repo](https://github.com/raspberrypi/pico-sdk)
@@ -54,13 +56,13 @@ Clone project repository
 ~~~
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
-* Modify /SINSONTE/software/CMakeLists.txt file change Rpi Pico SDK paths with your own installation paths.
-* Delete /SINSONTE/software/build/CMakeCache.txt file
-* Delete /SINSONTE/software/build/elf2uf2/CMakeCache.txt file
+* Modify /SINSONTE/software/sdk/CMakeLists.txt file change Rpi Pico SDK paths with your own installation paths.
+* Delete /SINSONTE/software/sdk/build/CMakeCache.txt file
+* Delete /SINSONTE/software/sdk/build/elf2uf2/CMakeCache.txt file
 
-Using the command line terminal go to the folder /SINSONTE/software/build
+Using the command line terminal go to the folder /SINSONTE/software/sdk/build
 ~~~
-cd software/build
+cd software/sdk/build
 ~~~
 Generate makefiles
 ~~~
@@ -71,7 +73,7 @@ And finally compile:
 make clean
 make all
 ~~~
-(.uf2) downloadable compiled file lies in /SINSONTE/software/build
+(.uf2) downloadable compiled file lies in /SINSONTE/software/sdk/build
 
 
 ## How to change sound files
@@ -81,7 +83,7 @@ The sample program shown here, plays 12 different sound files sequentially. If y
 * Max sound storage capacity is 24 seconds total (~2 seconds per file * 12 files = ~24 seconds)
 * Sound files have to be in .WAV mono 16 bit @ 44100 hz before being processed by the script which converts them into C array[]
 
-Look for **wav2c.py** script in /SINSONTE/software/utils/ folder to convert your own sounds.
+Look for **wav2c.py** script in /SINSONTE/software/sdk/utils/ folder to convert your own sounds.
 
 This script need two parameters: input sound file name (.wav) and output file name (.h). The files have to be named 1.h to 12.h. Here is an example:
 
@@ -89,8 +91,14 @@ This script need two parameters: input sound file name (.wav) and output file na
 python3 wav2c.py example.wav 5.h
 ~~~
 
-The generated file (5.h) needs to be put in /SINSONTE/software/ folder and then recompile!
+The generated file (5.h) needs to be put in /SINSONTE/software/sdk folder and then recompile!
 
+# CircuitPython
+## How to use this repository
+Clone project repository
+~~~
+git clone https://github.com/galopago/SINSONTE.git
+~~~
 
 ## License
 This is an Open Source project and is licensed under [MIT License](https://spdx.org/licenses/MIT.html)
