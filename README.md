@@ -12,7 +12,7 @@ Also read this in other languages: [Espanol](/docs/README.es.md)
 
 The circuit ([see schematic](/docs/schematic.pdf)) has been designed to stay most of the time in silence powered by 2 AA batteries, like musical wall clocks or talking toys. In the best scenario, Rpi Pico in in deep sleep mode, will drain approx 1.3 mAh from the batteries. A pair of AA batteries in series have around 2000 mAh of juice, just in standby they will last only for two months. Unacceptable!.
 
-An external circuit was added to totally power off Rpi Pico via 3V3_EN pin. Drainin just only 70 uA, wich translates to 3 years of standby. Much better!
+An external circuit was added to totally power off Rpi Pico via 3V3_EN pin. Draining just only 70 uA, which translates to 3 years of standby. Much better!
 
 The circuit work in the following manner: In standby mode, a capacitor with a large resistor holds the conduction voltage of a mosfet wich is in charge for tying 3V3_EN to ground, powering off the board completly. To play a sound, click friefly on the push button which discharges the capacitor and stops conduction of the mosfet. Now 3V3_EN pin is tied to V+ via its internall pull up, powering on the Rpi Pico Board. Once powered on and program booted, it keeps the capacitor discharged via a GPIO while sound is played. When the sound ends, the RPI Pico puts the GPIO in high input state, so the capacitor charges again and Rpi Powers off until next button click!
 
