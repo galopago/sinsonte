@@ -10,7 +10,7 @@ Also read this in other languages: [Espanol](/docs/README.es.md)
 
 ## Working principle
 
-The circuit ([see schematic](/docs/schematic.pdf)) has been designed to stay most of the time in silence powered by 2 AA bateries, like musical wall clocks or talking toys. In the best scenario, Rpi Pico in in deep sleep mode, will drain aprox 1.3 mAh from the batteries. A pair of AA batteries in series have around 2000 mAh of juice, just in standby they will last only for two months. Unnaceptable!.
+The circuit ([see schematic](/docs/schematic.pdf)) has been designed to stay most of the time in silence powered by 2 AA batteries, like musical wall clocks or talking toys. In the best scenario, Rpi Pico in in deep sleep mode, will drain approx 1.3 mAh from the batteries. A pair of AA batteries in series have around 2000 mAh of juice, just in standby they will last only for two months. Unacceptable!.
 
 An external circuit was added to totally power off Rpi Pico via 3V3_EN pin. Drainin just only 70 uA, wich translates to 3 years of standby. Much better!
 
