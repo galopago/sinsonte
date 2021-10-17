@@ -21,7 +21,7 @@
 
 
 #define LED 		   		25	// Onboard debug led
-#define LED_EXTERNAL   		21	// External led
+#define LED_EXTERNAL   		10	// External led
 #define POWERON 	   		14	// Poweron/poweroff pin (via external mosfet)
 #define LIGHTSENSOR    		26	// analog light sensor to detect nightime
 #define ADC_INPUT_LIGHT 	 0	// analog light sensor to detect nightime
