@@ -12,7 +12,6 @@ import microcontroller
 
 poweroff_gpio = board.GP14
 audio_gpio = board.GP28_A2
-next_hour_file = 'nexthour.conf'
 default_next_hour = 1
 
 # Do this ASAP!
@@ -38,25 +37,66 @@ else :
 	microcontroller.nvm[0]=default_next_hour
 	next_hour=microcontroller.nvm[0];
 	print("Next hour from NVM changed to:",next_hour)
-
-next_hour = '1'
-
-if next_hour == '12' :
-	print("playing sound 12")
-	decoder = audiomp3.MP3Decoder(open("12.mp3", "rb"))
-	#fp.write('1\n')
-
-if next_hour == '1' :
+	
+if next_hour == 1 :
 	print("playing sound 1")
 	decoder = audiomp3.MP3Decoder(open("1.mp3", "rb"))
-	#fp.write('12\n')
 
-#fp.close()
-#storage.remount("/",readonly=True)
+if next_hour == 2 :
+	print("playing sound 2")
+	decoder = audiomp3.MP3Decoder(open("2.mp3", "rb"))
+
+if next_hour == 3 :
+	print("playing sound 3")
+	decoder = audiomp3.MP3Decoder(open("3.mp3", "rb"))
+
+if next_hour == 4 :
+	print("playing sound 4")
+	decoder = audiomp3.MP3Decoder(open("4.mp3", "rb"))
+
+if next_hour == 5 :
+	print("playing sound 5")
+	decoder = audiomp3.MP3Decoder(open("5.mp3", "rb"))
+
+if next_hour == 6 :
+	print("playing sound 6")
+	decoder = audiomp3.MP3Decoder(open("6.mp3", "rb"))
+
+if next_hour == 7 :
+	print("playing sound 7")
+	decoder = audiomp3.MP3Decoder(open("7.mp3", "rb"))
+
+if next_hour == 8 :
+	print("playing sound 8")
+	decoder = audiomp3.MP3Decoder(open("8.mp3", "rb"))
+
+if next_hour == 9 :
+	print("playing sound 9")
+	decoder = audiomp3.MP3Decoder(open("9.mp3", "rb"))
+
+if next_hour == 10 :
+	print("playing sound 10")
+	decoder = audiomp3.MP3Decoder(open("10.mp3", "rb"))
+
+if next_hour == 11 :
+	print("playing sound 11")
+	decoder = audiomp3.MP3Decoder(open("11.mp3", "rb"))
+
+if next_hour == 12 :
+	print("playing sound 12")
+	decoder = audiomp3.MP3Decoder(open("12.mp3", "rb"))
 
 audio.play(decoder)
+
 while audio.playing:
     pass
+
+#Updating next hour to NVM
+if next_hour < 12 :
+	next_hour = next_hour +1
+	microcontroller.nvm[0]=next_hour
+else :
+	microcontroller.nvm[0]=1
 
 print("Done playing!")
 
