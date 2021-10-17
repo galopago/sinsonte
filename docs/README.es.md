@@ -2,7 +2,7 @@
 
 Reproductor de sonido basado en Raspberry Rpi Pico. Almacena los datos de sonido en la memoria interna. Requiere muy pocos componentes externos faciles de conseguir y de ensamblar. Fue diseñado con el objetivo de permanecer en modo espera durante muy largo tiempo alimentado por baterias. Puede usarse en relojes de pared musicales, como voz para alguna muñeca o juguete, etc.
 
-![TARJETA](sinsonte.jpg)
+![TARJETA](sinsonte.png)
 
 Tarjeta de circuito impreso con todos los componentes montados.
 
