@@ -33,6 +33,7 @@ light_sensor_threshold = 0.030615
 analog_gpio = board.GP26_A0
 poweroff_gpio = board.GP14
 audio_gpio = board.GP28_A2
+ext_led_gpio = board.GP10
 default_next_hour = 1
 night_time = 0
 # Do this ASAP!
