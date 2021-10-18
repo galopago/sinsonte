@@ -28,17 +28,21 @@ El directorio hardware contiene el esquematico y circuito impreso.
 * El directorio /hardware/library contiene simbolos adicionales necesarios para poder editar el esquematico.
 
 El directorio software contiene el codigo fuente del programa.
-* El directorio /software/ contiene el codigo fuente en C desarrollado en el Raspberry Pi Pico SDK.
-* El directorio /software/utils contiene scripts complementarios en python.
-* El directorio /software/uf2_binaries contiene archivos compilados listos para descargar al Rpi Pico.
-* El directorio /software/sounds contiene archivos de sonido en forma de arrays[] de C.
-* El directorio /software/build contendra los archivos cuando se compila el codigo.
+* El directorio /software/sdk contiene el codigo fuente en C desarrollado en el **Raspberry Pi Pico SDK**.
+* El directorio /software/sdk/utils contiene scripts complementarios en python.
+* El directorio /software/sdk/uf2_binaries contiene archivos compilados listos para descargar al Rpi Pico.
+* El directorio /software/sdk/sounds contiene archivos de sonido en forma de arrays[] de C.
+* El directorio /software/sdk/build contendra los archivos cuando se compila el codigo.
+* El directorio /software/cp contiene el codigo fuente en Python desarrollado en el **CircuitPython**.
+* El directorio /software/cp/sounds contiene archivos de sonido en formato mp3.
+* El directorio /software/cp/utils contiene archivos binarios.
 
 El directorio docs contiene archivos adicionales
 
+# C/C++ SDK
 ## Como usar este repositorio
 
-Esta es una descripcion breve de como instalar el Rpi Pico SDK en Linux (Ubuntu!). Para mayor informacion ir a la [informacion oficial](https://github.com/raspberrypi/pico-sdk)
+Esta es una descripcion breve de como instalar el Rpi Pico SDK en Linux (Ubuntu!). Para mayor informacion ir al [repo oficial](https://github.com/raspberrypi/pico-sdk)
 ~~~
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
 git clone -b master https://github.com/raspberrypi/pico-sdk.git
@@ -91,6 +95,21 @@ python3 wav2c.py ejemplo.wav 5.h
 
 El archivo generado (5.h) debera ponerse en la carpeta /SINSONTE/software/ y recompilar el codigo
 
+# CircuitPython
+## Como usar este repositorio
+
+Clonar el repositorio del proyecto
+~~~
+git clone https://github.com/galopago/SINSONTE.git
+~~~
+* Poner el Rpi Pico en modo programacion y luego conectar a un PC
+* Para iniciar con todo limpio, descargar al Rpi Pico el archivo **flash_nuke.uf2** que se encuentra en /SINSONTE/software/cp/utils
+* Poner nuevamente el Rpi Pico en modo programacion y conectar a un PC
+* Instalar CircuitPython descargandole el archivo **adafruit-circuitpython-raspberry_pi_pico-en_US-6.3.0.uf2** que se encuentra en /SINSONTE/software/cp/utils
+* Una vez ya se ha instalado CircuitPython, descargar al Rpi Pico el archivo **code.py** y los archivos de sonido (1.mp3 al 12.mp3) que se encuentran en /SINSONTE/software/cp/ f
+
+## Como cambiar los archivos de sonido
+Descargar al Pico sus propios archivos .mp3, estos deben llamarse 1.mp3 al 12.mp3
 
 ## Licencia
 Este es un proyecto de Software Libre y esta licenciado bajo una licencia [MIT License](https://spdx.org/licenses/MIT.html)
