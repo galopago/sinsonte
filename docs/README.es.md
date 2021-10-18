@@ -18,6 +18,7 @@ El sistema funciona de la siguiente manera: En modo reposo, un condensador media
 
 En el Rpi Pico se almacenan varios sonidos, y estos se reproducen en secuencia con cada pulsacion del interruptor. Para poder guardar cual sonido se repoducira en la siguiente pulsacion, se hace uso de la memoria flash interna, por lo que se debera analizar con cuidado la aplicacion final del circuito para evitar desgastes rapidos de la flash.
 
+El programa fue escrito usando el Rpi Pico SDK y se porto mas o menos la misma funcionalidad a CircuitPython tambien!
 
 ## Estructura de directorios
 
