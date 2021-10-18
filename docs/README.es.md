@@ -107,7 +107,7 @@ git clone https://github.com/galopago/SINSONTE.git
 * Para iniciar con todo limpio, descargar al Rpi Pico el archivo **flash_nuke.uf2** que se encuentra en /SINSONTE/software/cp/utils
 * Poner nuevamente el Rpi Pico en modo programacion y conectar a un PC
 * Instalar CircuitPython descargandole el archivo **adafruit-circuitpython-raspberry_pi_pico-en_US-6.3.0.uf2** que se encuentra en /SINSONTE/software/cp/utils
-* Una vez ya se ha instalado CircuitPython, descargar al Rpi Pico el archivo **code.py** y los archivos de sonido (1.mp3 al 12.mp3) que se encuentran en /SINSONTE/software/cp/ f
+* Una vez ya se ha instalado CircuitPython, descargar al Rpi Pico el archivo **code.py** y los archivos de sonido (1.mp3 al 12.mp3) que se encuentran en /SINSONTE/software/cp/ 
 
 ## Como cambiar los archivos de sonido
 Descargar al Pico sus propios archivos .mp3, estos deben llamarse 1.mp3 al 12.mp3
