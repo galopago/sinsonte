@@ -1,7 +1,7 @@
 """
 ***************************************************************************************
 MP3 audio player based on Rpi Pico
-audio data is stored in onboard flash Up to 800 KB of sound capacity
+audio data is stored in onboard flash filesystem Up to 800 KB of sound capacity
 plays one clip of sound on every power on
 and uses external circuit for very low power 
 ***************************************************************************************
@@ -13,6 +13,7 @@ import audiomp3
 import audiopwmio
 import os
 import microcontroller
+import pwmio
 
 """
 *****************************************************
@@ -36,7 +37,8 @@ audio_gpio = board.GP28_A2
 ext_led_gpio = board.GP10
 default_next_hour = 1
 night_time = 0
-# Do this ASAP!
+
+# Do this ASAP! to keep board powered on
 
 poweroff = digitalio.DigitalInOut(poweroff_gpio)
 poweroff.direction = digitalio.Direction.OUTPUT
@@ -124,6 +126,7 @@ if next_hour == 12 :
 
 #Only play sounds on DayLight
 
+blink_led=pwmio.PWMOut(ext_led_gpio,duty_cycle=50,frequency=1,variable_frequency=False)	
 if 	night_time == 0 :
 	audio.play(decoder)
 
@@ -139,6 +142,7 @@ else :
 
 print("Done playing!")
 
+blink_led.duty_cycle=0
 led.value = False
 
 poweroff.value = True
