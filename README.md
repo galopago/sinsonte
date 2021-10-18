@@ -41,7 +41,7 @@ Software folder contains program source code.
 
 Docs folder contains additional info files
 
-# SDK
+# C/C++ SDK
 ## How to use this repository
 
 This is a very brief guide how to install Rpi Pico SDK on Linux (Ubuntu!). For more info please visit [official repo](https://github.com/raspberrypi/pico-sdk)
