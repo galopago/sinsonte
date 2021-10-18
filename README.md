@@ -18,6 +18,7 @@ The circuit work in the following manner: In standby mode, a capacitor with a la
 
 There are many stored sounds in the Rpi Pico, and they are played in sequence. To know which sound needs to be played in the next click, some data needs to be preserved between power offs, that data is stored in the internal flash memory. Be careful modifying the program to keep flash writes to a minimum.
 
+The program was written using the Rpi Pico SDK and more or less the same functionality also in CircuitPython too!
 
 
 ## Directory structure
@@ -29,12 +30,14 @@ Hardware folder contains schematic and printed circuit board.
 * /hardware/library folder contains additional symbols needed to edit schematic.
 
 Software folder contains program source code.
-* /software/sdk folder contains C source code develped with the Raspberry Pi Pico SDK.
+* /software/sdk folder contains C source code develped with the Raspberry **Pi Pico SDK**.
 * /software/sdk/utils folder contain additional python scripts.
 * /software/sdk/uf2_binaries folder contains compiled programs ready for download to the Rpi Pico.
 * /software/sdk/sounds folder contains sound files source in form of C arrays[].
 * /software/sdk/build folder will contain downloadable binaries once compiled.
-* /software/cp folder contains C source code develped with CircuitPython.
+* /software/cp folder contains Python source code develped with **CircuitPython**.
+* /software/cp/sounds folder contains sound files source in .mp3 format
+* /software/cp/utils folder contains contains binary files
 
 Docs folder contains additional info files
 
@@ -99,6 +102,15 @@ Clone project repository
 ~~~
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
+Put Rpi Pico in programming mode and then plug into PC
+To start fresh, download to the Rpi Pico the file flash_nuke.uf2 located in /software/cp/utils
+Put Rpi Pico in programming mode again and then plug into PC
+Install CircuitPython runtime downloading the file adafruit-circuitpython-raspberry_pi_pico-en_US-6.3.0.uf2 located in /software/cp/utils
+Once CircuitPython is installed download to the Rpi Pico code.py and the sound files in (1.mp3 to 12.mp3) located in /software/cp/ folder
+
+## How to change sound files
+Download to the Rpi Pico your own .mp3 file, it needs to be named 1.mp3 to 12.mp3
+
 
 ## License
 This is an Open Source project and is licensed under [MIT License](https://spdx.org/licenses/MIT.html)
