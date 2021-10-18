@@ -102,9 +102,9 @@ Clone project repository
 ~~~
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
-* Put Rpi Pico in programming mode and then plug into PC
+* Put Rpi Pico in programming mode and then plug into a PC
 * To start fresh, download to the Rpi Pico the file **flash_nuke.uf2** located in /SINSONTE/software/cp/utils
-* Put Rpi Pico in programming mode again and then plug into PC
+* Put Rpi Pico in programming mode again and then plug into a PC
 * Install CircuitPython runtime downloading the file **adafruit-circuitpython-raspberry_pi_pico-en_US-6.3.0.uf2** located in /SINSONTE/software/cp/utils
 * Once CircuitPython is installed, download to the Rpi Pico **code.py** and the sound files (1.mp3 to 12.mp3) located in /SINSONTE/software/cp/ folder
 
