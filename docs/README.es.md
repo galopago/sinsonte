@@ -29,14 +29,14 @@ El directorio hardware contiene el esquematico y circuito impreso.
 * El directorio /hardware/library contiene simbolos adicionales necesarios para poder editar el esquematico.
 
 El directorio software contiene el codigo fuente del programa.
-* El directorio /software/sdk contiene el codigo fuente en C desarrollado en el **Raspberry Pi Pico SDK**.
+* El directorio /software/sdk contiene el codigo fuente en C de varias apps desarrolladas en el **Raspberry Pi Pico SDK**.
 * El directorio /software/sdk/utils contiene scripts complementarios en python.
 * El directorio /software/sdk/uf2_binaries contiene archivos compilados listos para descargar al Rpi Pico.
 * El directorio /software/sdk/sounds contiene archivos de sonido en forma de arrays[] de C.
 * El directorio /software/sdk/build contendra los archivos cuando se compila el codigo.
-* El directorio /software/cp contiene el codigo fuente en Python desarrollado en el **CircuitPython**.
-* El directorio /software/cp/sounds contiene archivos de sonido en formato mp3.
-* El directorio /software/cp/utils contiene archivos binarios.
+* El directorio /software/cp contiene el codigo fuente de en Python de varias apps desarrolladas en el **CircuitPython**.
+* El directorio /software/cp/_sounds contiene archivos de sonido en formato mp3.
+* El directorio /software/cp/_utils contiene archivos binarios.
 
 El directorio docs contiene archivos adicionales
 

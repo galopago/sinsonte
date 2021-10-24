@@ -30,14 +30,14 @@ Hardware folder contains schematic and printed circuit board.
 * /hardware/library folder contains additional symbols needed to edit schematic.
 
 Software folder contains program source code.
-* /software/sdk folder contains C source code develped with the Raspberry **Pi Pico SDK**.
+* /software/sdk folder contains C source code for multiple apps develped with the Raspberry **Pi Pico SDK**.
 * /software/sdk/utils folder contain additional python scripts.
 * /software/sdk/uf2_binaries folder contains compiled programs ready for download to the Rpi Pico.
 * /software/sdk/sounds folder contains sound files source in form of C arrays[].
 * /software/sdk/build folder will contain downloadable binaries once compiled.
-* /software/cp folder contains Python source code develped with **CircuitPython**.
-* /software/cp/sounds folder contains sound files source in .mp3 format
-* /software/cp/utils folder contains contains binary files
+* /software/cp folder contains Python source code for multiple apps develped with **CircuitPython**.
+* /software/cp/_sounds folder contains sound files source in .mp3 format
+* /software/cp/_utils folder contains contains binary files
 
 Docs folder contains additional info files
 
