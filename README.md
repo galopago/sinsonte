@@ -31,10 +31,11 @@ Hardware folder contains schematic and printed circuit board.
 
 Software folder contains program source code.
 * /software/sdk folder contains C source code for multiple apps develped with the Raspberry **Pi Pico SDK**.
-* /software/sdk/utils folder contain additional python scripts.
-* /software/sdk/uf2_binaries folder contains compiled programs ready for download to the Rpi Pico.
-* /software/sdk/sounds folder contains sound files source in form of C arrays[].
-* /software/sdk/build folder will contain downloadable binaries once compiled.
+* /software/sdk/clock/build folder will contain downloadable binaries once compiled.
+* /software/sdk/_utils folder contain additional python scripts.
+* /software/sdk/_uf2_binaries folder contains compiled programs ready for download to the Rpi Pico.
+* /software/sdk/_sounds folder contains sound files source in form of C arrays[].
+
 * /software/cp folder contains Python source code for multiple apps develped with **CircuitPython**.
 * /software/cp/_sounds folder contains sound files source in .mp3 format
 * /software/cp/_utils folder contains contains binary files
@@ -59,13 +60,13 @@ Clone project repository
 ~~~
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
-* Modify /SINSONTE/software/sdk/CMakeLists.txt file change Rpi Pico SDK paths with your own installation paths.
-* Delete /SINSONTE/software/sdk/build/CMakeCache.txt file
-* Delete /SINSONTE/software/sdk/build/elf2uf2/CMakeCache.txt file
+* Modify /SINSONTE/software/sdk/clock/CMakeLists.txt file change Rpi Pico SDK paths with your own installation paths.
+* Delete /SINSONTE/software/sdk/clock/build/CMakeCache.txt file
+* Delete /SINSONTE/software/sdk/clock/build/elf2uf2/CMakeCache.txt file
 
-Using the command line terminal go to the folder /SINSONTE/software/sdk/build
+Using the command line terminal go to the folder /SINSONTE/software/sdk/clock/build
 ~~~
-cd software/sdk/build
+cd software/sdk/clock/build
 ~~~
 Generate makefiles
 ~~~
@@ -76,7 +77,7 @@ And finally compile:
 make clean
 make all
 ~~~
-(.uf2) downloadable compiled file lies in /SINSONTE/software/sdk/build
+(.uf2) downloadable compiled file lies in /SINSONTE/software/sdk/clock/build
 
 
 ## How to change sound files
@@ -86,7 +87,7 @@ The sample program shown here, plays 12 different sound files sequentially. If y
 * Max sound storage capacity is 24 seconds total (~2 seconds per file * 12 files = ~24 seconds)
 * Sound files have to be in .WAV mono 16 bit @ 44100 hz before being processed by the script which converts them into C array[]
 
-Look for **wav2c.py** script in /SINSONTE/software/sdk/utils/ folder to convert your own sounds.
+Look for **wav2c.py** script in /SINSONTE/software/sdk/_utils/ folder to convert your own sounds.
 
 This script need two parameters: input sound file name (.wav) and output file name (.h). The files have to be named 1.h to 12.h. Here is an example:
 
@@ -94,7 +95,7 @@ This script need two parameters: input sound file name (.wav) and output file na
 python3 wav2c.py example.wav 5.h
 ~~~
 
-The generated file (5.h) needs to be put in /SINSONTE/software/sdk folder and then recompile!
+The generated file (5.h) needs to be put in /SINSONTE/software/sdk/clock folder and then recompile!
 
 # CircuitPython
 ## How to use this repository
@@ -103,10 +104,10 @@ Clone project repository
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
 * Put Rpi Pico in programming mode and then plug into a PC
-* To start fresh, download to the Rpi Pico the file **flash_nuke.uf2** located in /SINSONTE/software/cp/utils
+* To start fresh, download to the Rpi Pico the file **flash_nuke.uf2** located in /SINSONTE/software/cp/_utils
 * Put Rpi Pico in programming mode again and then plug into a PC
-* Install CircuitPython runtime downloading the file **adafruit-circuitpython-raspberry_pi_pico-en_US-6.3.0.uf2** located in /SINSONTE/software/cp/utils
-* Once CircuitPython is installed, download to the Rpi Pico **code.py** and the sound files (1.mp3 to 12.mp3) located in /SINSONTE/software/cp/ folder
+* Install CircuitPython runtime downloading the file **adafruit-circuitpython-raspberry_pi_pico-en_US-6.3.0.uf2** located in /SINSONTE/software/cp/_utils
+* Once CircuitPython is installed, download to the Rpi Pico **code.py** and the sound files (1.mp3 to 12.mp3) located in /SINSONTE/software/cp/clock folder
 
 ## How to change sound files
 Download to the Rpi Pico your own .mp3 file, it needs to be named 1.mp3 to 12.mp3

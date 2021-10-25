@@ -30,10 +30,11 @@ El directorio hardware contiene el esquematico y circuito impreso.
 
 El directorio software contiene el codigo fuente del programa.
 * El directorio /software/sdk contiene el codigo fuente en C de varias apps desarrolladas en el **Raspberry Pi Pico SDK**.
-* El directorio /software/sdk/utils contiene scripts complementarios en python.
-* El directorio /software/sdk/uf2_binaries contiene archivos compilados listos para descargar al Rpi Pico.
-* El directorio /software/sdk/sounds contiene archivos de sonido en forma de arrays[] de C.
-* El directorio /software/sdk/build contendra los archivos cuando se compila el codigo.
+* El directorio /software/sdk/clock/build contendra los archivos cuando se compila el codigo.
+* El directorio /software/sdk/_utils contiene scripts complementarios en python.
+* El directorio /software/sdk/_uf2_binaries contiene archivos compilados listos para descargar al Rpi Pico.
+* El directorio /software/sdk/_sounds contiene archivos de sonido en forma de arrays[] de C.
+
 * El directorio /software/cp contiene el codigo fuente de en Python de varias apps desarrolladas en el **CircuitPython**.
 * El directorio /software/cp/_sounds contiene archivos de sonido en formato mp3.
 * El directorio /software/cp/_utils contiene archivos binarios.
@@ -58,13 +59,13 @@ Clonar el repositorio del proyecto
 ~~~
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
-* Modificar el archivo /SINSONTE/software/CMakeLists.txt cambiando las rutas del SDK Pico por la ruta en que se instalo en su propia computadora.
-* Borrar el archivo /SINSONTE/software/build/CMakeCache.txt
-* Borrar el archivo /SINSONTE/software/build/elf2uf2/CMakeCache.txt
+* Modificar el archivo /SINSONTE/software/sdk/clock/CMakeLists.txt cambiando las rutas del SDK Pico por la ruta en que se instalo en su propia computadora.
+* Borrar el archivo /SINSONTE/software/sdk/clock/build/CMakeCache.txt
+* Borrar el archivo /SINSONTE/software/sdk/clock/build/elf2uf2/CMakeCache.txt
 
-Mediante la interfaz linea de comando acceda al directorio /SINSONTE/software/build
+Mediante la interfaz linea de comando acceda al directorio /SINSONTE/software/sdk/clock/build
 ~~~
-cd software/build
+cd software/sdk/clock/build
 ~~~
 Crear los makefiles
 ~~~
@@ -75,7 +76,7 @@ Y finalmente para compilar:
 make clean
 make all
 ~~~
-El programa compilado (.uf2) para descargar al Rpi Pico se encontrara en la carpeta /SINSONTE/software/build
+El programa compilado (.uf2) para descargar al Rpi Pico se encontrara en la carpeta /SINSONTE/software/sdk/clock/build
 
 
 ## Como cambiar los archivos de sonido
@@ -86,7 +87,7 @@ El programa presentado aqui reproduce 12 diferentes archivos de sonido de forma 
 * Los archivos deberan convertirse a formato .WAV monofonico de 16 bits y a 44100 hz antes de ser procesados por la aplicacion que los convertira en array[] de C.
 
 
-Una vez se tienen los archivos con las caracteristicas anteriormente mencionadas, se usara la aplicacion **wav2c.py** que se encuentra en la ruta /SINSONTE/software/utils/
+Una vez se tienen los archivos con las caracteristicas anteriormente mencionadas, se usara la aplicacion **wav2c.py** que se encuentra en la ruta /SINSONTE/software/sdk/_utils
 
 Esta aplicacion recibe dos parameteros: el nombre de arhcivo de entrada (.wav) y nombre de archivo de salida (.h). Los nombres de los archivos convertidos deberan llamarse 1.h a 12.h. Un ejemplo seria el siguiente:
 
@@ -94,7 +95,7 @@ Esta aplicacion recibe dos parameteros: el nombre de arhcivo de entrada (.wav) y
 python3 wav2c.py ejemplo.wav 5.h
 ~~~
 
-El archivo generado (5.h) debera ponerse en la carpeta /SINSONTE/software/ y recompilar el codigo
+El archivo generado (5.h) debera ponerse en la carpeta /SINSONTE/software/sdk/clock y recompilar el codigo
 
 # CircuitPython
 ## Como usar este repositorio
@@ -104,10 +105,10 @@ Clonar el repositorio del proyecto
 git clone https://github.com/galopago/SINSONTE.git
 ~~~
 * Poner el Rpi Pico en modo programacion y luego conectar a un PC
-* Para iniciar con todo limpio, descargar al Rpi Pico el archivo **flash_nuke.uf2** que se encuentra en /SINSONTE/software/cp/utils
+* Para iniciar con todo limpio, descargar al Rpi Pico el archivo **flash_nuke.uf2** que se encuentra en /SINSONTE/software/cp/_utils
 * Poner nuevamente el Rpi Pico en modo programacion y conectar a un PC
-* Instalar CircuitPython descargandole el archivo **adafruit-circuitpython-raspberry_pi_pico-en_US-6.3.0.uf2** que se encuentra en /SINSONTE/software/cp/utils
-* Una vez ya se ha instalado CircuitPython, descargar al Rpi Pico el archivo **code.py** y los archivos de sonido (1.mp3 al 12.mp3) que se encuentran en /SINSONTE/software/cp/ 
+* Instalar CircuitPython descargandole el archivo **adafruit-circuitpython-raspberry_pi_pico-en_US-6.3.0.uf2** que se encuentra en /SINSONTE/software/cp/_utils
+* Una vez ya se ha instalado CircuitPython, descargar al Rpi Pico el archivo **code.py** y los archivos de sonido (1.mp3 al 12.mp3) que se encuentran en /SINSONTE/software/cp/clock 
 
 ## Como cambiar los archivos de sonido
 Descargar al Pico sus propios archivos .mp3, estos deben llamarse 1.mp3 al 12.mp3
