@@ -1,17 +1,17 @@
 // ***************************************************************************************
 // WAV audio player based on Rpi Pico
 // audio data is stored in onboard flash Up to 24 seconds in total of 8 bit mono wav sounds @44 KHz
-// plays one clip of sound on every power on
+// plays one (random) clip of sound on every power on
 // and uses external circuit for very low power 
 // ***************************************************************************************
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "pico/stdlib.h"   // stdlib 
 #include "hardware/irq.h"  // interrupts
 #include "hardware/pwm.h"  // pwm 
 #include "hardware/gpio.h" // gpio push-button 
 #include "hardware/sync.h" // wait for interrupt 
-#include "hardware/flash.h" // read/store from flash
 #include "hardware/adc.h" // analog light sensor
 #include "hardware/uart.h" // analog light sensor
 
@@ -30,6 +30,7 @@
 #define UART_TX_PIN 		 0
 #define UART_RX_PIN 		 1
 
+#define MAX_SOUND_FILES		12
 
 /* 
  * This includes brings in static arrays which contain audio samples. 
@@ -75,11 +76,8 @@ uint8_t hour_count = 0;
 bool play_sound = 0;
 bool flash_updated = 0;
 const uint8_t * wav_data;
-uint8_t flash_buff[FLASH_PAGE_SIZE];
 uint32_t wav_data_length;
 
-const uint8_t * flash_storage_r = (const uint8_t *) (XIP_BASE+(FLASH_SECTOR_SIZE*511));		// first byte of last sector of flash used as storage
-const uint8_t * flash_storage_w = (const uint8_t *) (FLASH_SECTOR_SIZE*511);
 
 /*
  * PWM Interrupt Handler which outputs PWM level and advances the 
@@ -185,9 +183,16 @@ int main(void) {
 	adc_select_input(ADC_INPUT_LIGHT);
 	uint16_t adcresult=adc_read();
 
+	// Init adc internal temperature sensor, as a seed for random
+	adc_set_temp_sensor_enabled(true);
+	adc_select_input(4);
+	uint16_t tempsensorint=adc_read();
+	// Get random number to know which file to play
+	srand(tempsensorint);
+	hour_count=(rand()%(MAX_SOUND_FILES-1))+1;
+	
 	//printf("Raw:0x%03x,Volt:%f V\n",adcresult,adcresult * adc_conv_factor);
-    
-    
+    			        
 	if(adcresult * ADC_CONV_FACTOR < LIGHT_SENSOR_THRESHOLD )
 		{
 			nightime=1;
@@ -197,16 +202,6 @@ int main(void) {
 			nightime=0;	
 		}
 			
-	// read actual hour data from flash!
-	
-	if(flash_storage_r[0]>11)
-	{
-		hour_count = 0;
-	}
-	else
-	{
-		hour_count = flash_storage_r[0];
-	}
 	
 	// select wav data sound according to hour
 	
@@ -282,23 +277,7 @@ int main(void) {
       			{      				      				
 					//disable pwm interupts, store to flash and self power off!!
 					irq_set_enabled(PWM_IRQ_WRAP, false);			      				
-								    						
-					// calculate next hour
-					if(hour_count>10)
-					{hour_count=0;}
-					else
-					{hour_count++;}
-					
-					//store hour to flash
-					flash_buff[0]=hour_count;
-					if (flash_updated == 0 )													
-					{
-						flash_updated = 1;
-						// crude flash storage code!!!
-						// one write/erase cycle per hour, 24 per day, 8760 per year. W25Q16JVUXIQ 100K cycles per sector, so a couple of years! 
-						flash_range_erase((uint32_t)flash_storage_w,FLASH_SECTOR_SIZE);
-						flash_range_program((uint32_t)flash_storage_w,flash_buff,FLASH_PAGE_SIZE);
-					}
+								    										
 					
 					// Shut down I/O								
 					gpio_put(POWERON,1);

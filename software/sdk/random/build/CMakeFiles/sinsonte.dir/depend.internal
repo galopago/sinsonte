@@ -863,7 +863,6 @@ CMakeFiles/sinsonte.dir/sinsonte.c.obj
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
- /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h
  /home/oportunidad/Desktop/repos/pico-sdk/src/rp2_common/hardware_pwm/include/hardware/pwm.h
