@@ -422,7 +422,7 @@ Wire Wire Line
 	3900 3450 3900 3650
 Connection ~ 3900 3650
 Wire Wire Line
-	3750 4350 4900 4350
+	3750 4350 4650 4350
 Wire Wire Line
 	3900 4700 3900 4900
 Wire Wire Line
@@ -575,8 +575,6 @@ Wire Wire Line
 	4800 3750 4800 4250
 Connection ~ 4800 4250
 Wire Wire Line
-	4800 4250 4700 4250
-Wire Wire Line
 	6400 3250 6450 3250
 Connection ~ 6400 3250
 Connection ~ 6450 3250
@@ -631,66 +629,60 @@ Wire Wire Line
 	6950 5000 9000 5000
 Text Notes 3150 3350 0    50   ~ 0
 Increase to 470K\nfor CircuitPython
-$Comp
-L Connector:Conn_01x18_Male J4
-U 1 1 618ACA73
-P 4500 3350
-F 0 "J4" H 4608 4331 50  0000 C CNN
-F 1 "Conn_01x18_Male" H 4608 4240 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x18_P2.54mm_Vertical" H 4500 3350 50  0001 C CNN
-F 3 "~" H 4500 3350 50  0001 C CNN
-	1    4500 3350
-	1    0    0    -1  
-$EndComp
-Connection ~ 4700 4250
-Wire Wire Line
-	4700 4250 4600 4250
-Wire Wire Line
-	4700 2550 4900 2550
-Wire Wire Line
-	4700 2650 4900 2650
-Wire Wire Line
-	4700 2750 4800 2750
-Wire Wire Line
-	4700 2850 4900 2850
-Wire Wire Line
-	4700 2950 4900 2950
-Wire Wire Line
-	4700 3050 4900 3050
-Wire Wire Line
-	4700 3150 4900 3150
-Wire Wire Line
-	4700 3250 4800 3250
-Wire Wire Line
-	4700 3350 4900 3350
-Wire Wire Line
-	4700 3450 4900 3450
-Wire Wire Line
-	4700 3550 4900 3550
-Wire Wire Line
-	4700 3650 4900 3650
-Wire Wire Line
-	4700 3750 4800 3750
-Wire Wire Line
-	4700 3850 4900 3850
-Wire Wire Line
-	4700 3950 4900 3950
-Wire Wire Line
-	4700 4050 4900 4050
-Wire Wire Line
-	4700 4150 4900 4150
-$Comp
-L Connector:Conn_01x01_Male J15
-U 1 1 6193CA8B
-P 4500 4450
-F 0 "J15" H 4608 4631 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 4608 4540 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4500 4450 50  0001 C CNN
-F 3 "~" H 4500 4450 50  0001 C CNN
-	1    4500 4450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4700 4450 4800 4450
 Connection ~ 4800 4450
+Wire Wire Line
+	4600 4250 4650 4250
+$Comp
+L Connector:Conn_01x20_Male J4
+U 1 1 618AE8C2
+P 4450 3450
+F 0 "J4" H 4558 4531 50  0000 C CNN
+F 1 "Conn_01x20_Male" H 4558 4440 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" H 4450 3450 50  0001 C CNN
+F 3 "~" H 4450 3450 50  0001 C CNN
+	1    4450 3450
+	1    0    0    -1  
+$EndComp
+Connection ~ 4650 4250
+Wire Wire Line
+	4650 4250 4800 4250
+Connection ~ 4650 4350
+Wire Wire Line
+	4650 4350 4900 4350
+Wire Wire Line
+	4650 2550 4900 2550
+Wire Wire Line
+	4650 2650 4900 2650
+Wire Wire Line
+	4650 2750 4800 2750
+Wire Wire Line
+	4650 2850 4900 2850
+Wire Wire Line
+	4650 2950 4900 2950
+Wire Wire Line
+	4650 3050 4900 3050
+Wire Wire Line
+	4650 3150 4900 3150
+Wire Wire Line
+	4650 3250 4800 3250
+Wire Wire Line
+	4650 3350 4900 3350
+Wire Wire Line
+	4650 3450 4900 3450
+Wire Wire Line
+	4650 3550 4900 3550
+Wire Wire Line
+	4650 3650 4900 3650
+Wire Wire Line
+	4650 3750 4800 3750
+Wire Wire Line
+	4650 3850 4900 3850
+Wire Wire Line
+	4650 3950 4900 3950
+Wire Wire Line
+	4650 4050 4900 4050
+Wire Wire Line
+	4650 4150 4900 4150
+Wire Wire Line
+	4650 4450 4800 4450
 $EndSCHEMATC
