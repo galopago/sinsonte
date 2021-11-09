@@ -674,4 +674,6 @@ Wire Wire Line
 Connection ~ 6950 5000
 Wire Wire Line
 	6950 5000 9000 5000
+Text Notes 3150 3350 0    50   ~ 0
+Increase to 470K\nfor CircuitPython
 $EndSCHEMATC
