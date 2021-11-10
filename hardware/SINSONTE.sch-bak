@@ -722,10 +722,10 @@ Wire Wire Line
 Wire Wire Line
 	9200 5500 9200 5400
 $Comp
-L Connector:Conn_01x02_Male J?
+L Connector:Conn_01x02_Male J18
 U 1 1 61984084
 P 9750 6200
-F 0 "J?" H 9858 6381 50  0000 C CNN
+F 0 "J18" H 9858 6381 50  0000 C CNN
 F 1 "Conn_01x02_Male" H 9858 6290 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9750 6200 50  0001 C CNN
 F 3 "~" H 9750 6200 50  0001 C CNN
@@ -733,10 +733,10 @@ F 3 "~" H 9750 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J?
+L Connector:Conn_01x02_Male J17
 U 1 1 61984FA8
 P 9750 6000
-F 0 "J?" H 9858 6181 50  0000 C CNN
+F 0 "J17" H 9858 6181 50  0000 C CNN
 F 1 "Conn_01x02_Male" H 9858 6090 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9750 6000 50  0001 C CNN
 F 3 "~" H 9750 6000 50  0001 C CNN
@@ -744,10 +744,10 @@ F 3 "~" H 9750 6000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J?
+L Connector:Conn_01x02_Male J16
 U 1 1 61985BD2
 P 9750 5800
-F 0 "J?" H 9858 5981 50  0000 C CNN
+F 0 "J16" H 9858 5981 50  0000 C CNN
 F 1 "Conn_01x02_Male" H 9858 5890 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9750 5800 50  0001 C CNN
 F 3 "~" H 9750 5800 50  0001 C CNN
@@ -755,10 +755,10 @@ F 3 "~" H 9750 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J?
+L Connector:Conn_01x02_Male J15
 U 1 1 61986D11
 P 9750 5600
-F 0 "J?" H 9858 5781 50  0000 C CNN
+F 0 "J15" H 9858 5781 50  0000 C CNN
 F 1 "Conn_01x02_Male" H 9858 5690 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9750 5600 50  0001 C CNN
 F 3 "~" H 9750 5600 50  0001 C CNN
@@ -766,10 +766,10 @@ F 3 "~" H 9750 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J?
+L Connector:Conn_01x02_Male J14
 U 1 1 619876D5
 P 9750 5400
-F 0 "J?" H 9858 5581 50  0000 C CNN
+F 0 "J14" H 9858 5581 50  0000 C CNN
 F 1 "Conn_01x02_Male" H 9858 5490 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9750 5400 50  0001 C CNN
 F 3 "~" H 9750 5400 50  0001 C CNN
