@@ -788,4 +788,15 @@ Wire Wire Line
 	10250 6250 10250 6350
 Text Notes 9750 5150 0    50   ~ 0
 PROTO AREA
+$Comp
+L Connector:Conn_01x06_Male J19
+U 1 1 618C77ED
+P 10200 4300
+F 0 "J19" H 10308 4681 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 10308 4590 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 10200 4300 50  0001 C CNN
+F 3 "~" H 10200 4300 50  0001 C CNN
+	1    10200 4300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
