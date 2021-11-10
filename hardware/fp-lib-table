@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name MCU_RaspberryPi_and_Boards)(type KiCad)(uri ${KIPRJMOD}/modules/MCU_RaspberryPi_and_Boards.pretty)(options "")(descr ""))
-  (lib (name Logos_Galopago)(type KiCad)(uri ${KIPRJMOD}/modules/Logos_Galopago.pretty)(options "")(descr ""))
-)
